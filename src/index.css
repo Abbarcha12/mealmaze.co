@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+body{
+  padding: 0;
+  margin: 0px;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Inter";
+}
+.MainHeading{
+  color: #09090B;
+font-family: Inter !important;
+font-size: 36px !important;
+font-style: normal !important;
+font-weight: 600 !important;
+line-height: 24px !important; /* 60% */
+}
+.MainSubHeading{
+  color: #71717A;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 24px !important; /* 120% */
+}
+.centerClass{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;align-items: center;
+}
+.Label{
+  color: var(--blue-grey-500, #B5B3B4) !important;
+font-family: Inter !important;
+font-size: 18px !important;
+font-style: normal !important;
+font-weight: 500 !important;
+line-height: 24px !important; /* 133.333% */
+}
+.Input{
+margin-top: 30px !important;
+padding: 5px 13px !important;
+gap: 10px !important;
+border-radius: 10px !important;
+border: 2px solid rgba(128, 249, 168, 0.50) !important ;
+background: rgba(128, 249, 168, 0.10) !important;
+}
+.css-v4u5dn-MuiInputBase-root-MuiInput-root:before{
+  border-bottom: none !important;
+}
+.Password{
+  color: #00B23B;
+  text-decoration: none;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+}
+.Button{
+  border-radius: 10px !important;
+background: var(--colors-green-500, #22C55E) !important;
+display: flex;
+width: 100%;
+
+padding: 12px !important;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: rgba(255, 255, 255, 1) !important;
+font-family: Inter !important;
+font-size: 18px !important;
+font-weight: 700 !important;
 }
