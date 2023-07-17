@@ -5,7 +5,7 @@ body{
   font-family: "Inter";
 }
 .MainHeading{
-  color: #09090B;
+  color: #09090B !important;
 font-family: Inter !important;
 font-size: 36px !important;
 font-style: normal !important;
@@ -13,7 +13,7 @@ font-weight: 600 !important;
 line-height: 24px !important; /* 60% */
 }
 .MainSubHeading{
-  color: #71717A;
+  color: #71717A !important;
   font-family: Inter !important;
   font-size: 18px !important;
   font-style: normal !important;
@@ -26,7 +26,7 @@ line-height: 24px !important; /* 60% */
   justify-content: center;align-items: center;
 }
 .Label{
-  color: var(--blue-grey-500, #B5B3B4) !important;
+  color:  #B5B3B4 !important;
 font-family: Inter !important;
 font-size: 18px !important;
 font-style: normal !important;
@@ -45,13 +45,13 @@ background: rgba(128, 249, 168, 0.10) !important;
   border-bottom: none !important;
 }
 .Password{
-  color: #00B23B;
-  text-decoration: none;
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px; /* 150% */
+  color: #00B23B !important;
+  text-decoration: none !important;
+font-family: Inter !important;
+font-size: 16px !important;
+font-style: normal !important;
+font-weight: 600 !important;
+line-height: 24px !important; /* 150% */
 }
 .Button{
   border-radius: 10px !important;
@@ -68,3 +68,27 @@ font-family: Inter !important;
 font-size: 18px !important;
 font-weight: 700 !important;
 }
+.Logo{
+  height: 30px;
+  width: 273px;
+}
+.cardSubPageMainHeading{
+  color: #4C4448 !important;
+
+  font-family: Inter !important;
+  font-size: 24px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  opacity: 0.6800000071525574 !important;
+}
+.cardPageMainHeading{
+  color:  #4C4448 !important;
+ 
+  font-family: Inter !important;
+  font-size: 32px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+}
+

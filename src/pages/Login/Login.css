@@ -9,10 +9,7 @@
 .leftSide{
     background: var(--colors-green-500, #22C55E);
 }
-.Logo{
-    height: 30px;
-    width: 273px;
-}
+
 .BannerImage{
    
 height: 400px !important;

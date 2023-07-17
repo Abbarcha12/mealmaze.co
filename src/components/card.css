@@ -1,0 +1,92 @@
+.days{
+
+font-family: Inter !important;
+font-size: 24px !important;
+font-style: normal !important;
+font-weight: 700 !important;
+line-height: normal !important;
+}
+.p1{
+    color:  #2C2126  !important;
+font-family: Inter !important;
+font-size: 16px !important;
+font-style: normal !important;
+
+font-weight: 400 !important;
+line-height: normal !important;
+}
+.p2{
+    color:  #fff !important;
+font-family: Inter !important;
+font-size: 16px !important;
+font-style: normal !important;
+
+font-weight: 400 !important;
+line-height: normal !important;
+}
+.MarginLeft{
+    margin-left: 10px;
+}
+.Amount{
+    opacity: 0.9599999785423279;
+color:  #2C2126;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.Amount1{
+    color: #FFF;
+    opacity: 0.9599999785423279;
+    font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.plan1{
+color: #FFF;
+opacity: 0.6800000071525574;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+opacity: 0.6800000071525574;
+line-height: normal;
+}
+.plan{
+    color:  #2C2126;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+opacity: 0.6800000071525574;
+line-height: normal;
+}
+.selectBtn{
+    border-radius: 8px !important ;
+    background:  #DCFCE7 !important;
+    color:  #16A34A !important;
+    text-align: center !important;
+  
+    font-family: Inter !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal;
+    padding: 10px 47px !important;
+}
+.selectBtn1{
+    border-radius: 8px !important ;
+    background:  #04A03E !important;
+    color:  #FFF !important;
+    text-align: center !important;
+  
+    font-family: Inter !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal;
+    padding: 10px 47px !important;
+}
