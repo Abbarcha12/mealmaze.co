@@ -1,0 +1,140 @@
+.paymentCard {
+  border-radius: 18.107px !important;
+  background: #fff !important;
+
+  box-shadow: 0px 3.6213507652282715px 44.361541748046875px 0px
+    rgba(74, 207, 119, 0.13) !important;
+}
+/* Keyframes for the scaleUp animation */
+.PricingDaysHeading {
+  color: #0a0d13 !important;
+
+  /* Sub Headline 1 */
+  font-family: Inter !important;
+  font-size: 24px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 28px !important; /* 116.667% */
+  letter-spacing: -0.48px !important;
+}
+.Divider {
+  background: #efe3e3 !important ;
+  height: 0.5px !important;
+  margin-top: 15px;
+  opacity: 0.888 !important;
+}
+.span {
+  margin-left: 10px;
+}
+.amount {
+  opacity: 0.9599999785423279 !important;
+  color: var(--blue-grey-900, #2c2126);
+  font-family: Inter;
+  font-size: 68.203px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+}
+.doller {
+  color: var(--blue-grey-900, #2c2126);
+  font-family: Inter;
+  font-size: 51.152px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.payWith {
+  color: #0a0d13 !important;
+
+  /* Sub Headline 3 Bold */
+  font-family: Inter !important;
+  font-size: 18px !important;
+
+  font-weight: 600 !important;
+  line-height: 12px !important; /* 66.667% */
+}
+.radio {
+  color: #0a0d13 !important;
+  font-family: Inter !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 22px !important; /* 137.5% */
+}
+.radio1 {
+  color: #acacac !important;
+  font-family: Inter !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 22px !important; /* 137.5% */
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  height: 0.4375em !important;
+}
+.reading {
+  color: #acacac !important;
+  margin-top: 15px !important;
+  /* Body Small */
+  font-family: Inter;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 22px; /* 157.143% */
+}
+
+.otp-field {
+  display: flex;
+}
+
+.otp-field input {
+  width: 40px;
+  height: 42px;
+  padding: 10px;
+  text-align: center;
+
+  margin: 4px;
+  border-radius: 4px;
+  border: 1.5px solid #acacac;
+  font-size: 24px !important;
+  font-family: inherit !important;
+  font-weight: bold;
+  color: #000000;
+}
+
+.otp-field input:focus {
+  border: 2px solid #2c2a2e;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.space {
+  margin-right: 1rem !important;
+}
+.Otpheading{
+  color: #0A0D13 !important;
+font-family: Inter !important;
+font-size: 18px !important;
+font-style: normal !important;
+font-weight: 400 !important;
+line-height: 20px !important; /* 111.111% */
+}
+.processing{
+  color: #09090B;
+text-align: center;
+
+font-size: 40.435px;
+font-style: normal;
+font-weight: 600;
+line-height: 38.329px; /* 94.792% */
+}
+.order{
+  color: var(--text, #0A0D13);
+font-family: Inter;
+font-size: 26px;
+font-style: normal;
+font-weight: 500;
+ /* 93.333% */
+}

@@ -1,79 +1,95 @@
-body{
+body {
   padding: 0;
   margin: 0px;
 
   font-family: "Inter";
 }
-.MainHeading{
-  color: #09090B !important;
-font-family: Inter !important;
-font-size: 36px !important;
-font-style: normal !important;
-font-weight: 600 !important;
-line-height: 24px !important; /* 60% */
+.MainHeading {
+  color: #09090b !important;
+  font-family: Inter !important;
+  font-size: 36px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 24px !important; /* 60% */
 }
-.MainSubHeading{
-  color: #71717A !important;
+.MainSubHeading {
+  color: #71717a !important;
   font-family: Inter !important;
   font-size: 18px !important;
   font-style: normal !important;
   font-weight: 400 !important;
   line-height: 24px !important; /* 120% */
 }
-.centerClass{
+.centerClass {
   display: flex;
   flex-direction: row;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-.Label{
-  color:  #B5B3B4 !important;
-font-family: Inter !important;
-font-size: 18px !important;
-font-style: normal !important;
-font-weight: 500 !important;
-line-height: 24px !important; /* 133.333% */
+.Label {
+  color: #b5b3b4 !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 24px !important; /* 133.333% */
 }
-.Input{
-margin-top: 30px !important;
-padding: 5px 13px !important;
-gap: 10px !important;
-border-radius: 10px !important;
-border: 2px solid rgba(128, 249, 168, 0.50) !important ;
-background: rgba(128, 249, 168, 0.10) !important;
+.Input {
+  margin-top: 30px !important;
+  padding: 5px 13px !important;
+  gap: 10px !important;
+  border-radius: 10px !important;
+  border: 2px solid rgba(128, 249, 168, 0.5) !important ;
+  background: rgba(128, 249, 168, 0.1) !important;
 }
-.css-v4u5dn-MuiInputBase-root-MuiInput-root:before{
+.css-v4u5dn-MuiInputBase-root-MuiInput-root:before {
   border-bottom: none !important;
 }
-.Password{
-  color: #00B23B !important;
+.Password {
+  color: #00b23b !important;
   text-decoration: none !important;
-font-family: Inter !important;
-font-size: 16px !important;
-font-style: normal !important;
-font-weight: 600 !important;
-line-height: 24px !important; /* 150% */
+  font-family: Inter !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 24px !important; /* 150% */
 }
-.Button{
+.Button {
   border-radius: 10px !important;
-background: var(--colors-green-500, #22C55E) !important;
-display: flex;
-width: 100%;
+  background: var(--colors-green-500, #22c55e) !important;
+  display: flex;
+  width: 100%;
 
-padding: 12px !important;
-justify-content: center;
-align-items: center;
-gap: 10px;
-color: rgba(255, 255, 255, 1) !important;
-font-family: Inter !important;
-font-size: 18px !important;
-font-weight: 700 !important;
+  padding: 12px !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 1) !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
 }
-.Logo{
+.PayButton {
+  border-radius: 10px !important;
+  background: var(--colors-green-500, #22c55e) !important;
+  display: flex;
+  width: 100%;
+
+  padding: 4px 12px !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 1) !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+.Logo {
   height: 30px;
   width: 273px;
 }
-.cardSubPageMainHeading{
-  color: #4C4448 !important;
+.cardSubPageMainHeading {
+  color: #4c4448 !important;
 
   font-family: Inter !important;
   font-size: 24px !important;
@@ -82,9 +98,9 @@ font-weight: 700 !important;
   line-height: normal !important;
   opacity: 0.6800000071525574 !important;
 }
-.cardPageMainHeading{
-  color:  #4C4448 !important;
- 
+.cardPageMainHeading {
+  color: #4c4448 !important;
+
   font-family: Inter !important;
   font-size: 32px !important;
   font-style: normal !important;
@@ -92,3 +108,40 @@ font-weight: 700 !important;
   line-height: normal !important;
 }
 
+.css-1atkyoe-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+  color: #acacac !important;
+}
+.css-19ckexn-MuiFormControl-root-MuiTextField-root {
+  padding: 0px !important;
+}
+@media screen and (max-width:414px){
+  .otp-field input {
+    width: 35px !important;
+    height: 34px !important;}
+} 
+  
+.Generate{
+  color: #9DA3A1 !important;
+  text-decoration: none !important;
+}
+@media screen and (max-width:540px){
+  .homebannerimg{
+    height: 300px !important;
+  }
+  .homebanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px !important;
+  }
+  .homebannerimg1{
+    height: 220px !important;
+  }
+  .HomeSectionfour{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items:center !important;
+    background-color: red !important;
+  }
+} 
+  

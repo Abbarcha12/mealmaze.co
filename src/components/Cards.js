@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "./card.css";
+import { Link } from "react-router-dom";
 const Card = ({ item, handleClick, cardId }) => {
   const { id, amount, p1, p2, p3, p4, p5, p6, days } = item;
 
@@ -253,9 +254,11 @@ const Card = ({ item, handleClick, cardId }) => {
         </Typography>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={2}>
+        <Link to={`/payment/${id}`}>
         <Button className={cardId===id?"selectBtn1":"selectBtn"} onClick={() => handleClick(item.id)}>
           Select Plan
         </Button>
+        </Link>
       </Box>
     </Box>
   );

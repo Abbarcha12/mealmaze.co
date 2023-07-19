@@ -1,0 +1,84 @@
+ 
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  margin: 10px auto; 
+  padding: 1rem;
+}
+ 
+.toggleBtn {
+  display: none !important; 
+}
+  /* Responsive layout for even smaller screens (max-width: 600px) */
+  @media (max-width: 600px) {
+    .header{
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+    }
+    .link{
+      margin-top: 15px;
+    }
+    .Homebtn{
+      margin-top: 18px !important;
+    }
+
+  }
+
+
+
+/* Links container styles */
+
+
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.link {
+margin-left: 20px;
+text-decoration: none;
+color:  #888587;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.link:focus{
+  color:  #000;
+}
+.Links{
+  display: flex;
+  flex-wrap: wrap;
+}
+  .logoPage{
+    height: 27.115px;
+  }
+  .Homebtn{
+    color:  #888587 !important;
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+padding: 10px 16px !important;
+font-weight: 500;
+line-height: normal;
+  }
+  .Homebtn:focus{
+    border-radius: 10px !important;
+background: #02A63A !important;
+color: #F8F8FA !important;
+font-family: Inter;
+font-size: 16px !important;
+font-style: normal;
+font-weight: 500;
+padding: 10px 16px !important;
+line-height: normal;
+  }
+  .css-hip9hq-MuiPaper-root-MuiAppBar-root{
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }

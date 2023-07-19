@@ -1,31 +1,28 @@
-.MainClass{
-    height: 100vh;
+.MainClass {
+  height: 100vh;
 }
 
-.rightSide{
-    background: #FAFAFA;
-  
+.rightSide {
+  background: #fafafa;
 }
-.leftSide{
-    background: var(--colors-green-500, #22C55E);
+.leftSide {
+  background: var(--colors-green-500, #22c55e);
 }
 
-.BannerImage{
-   
-height: 400px !important;
+.BannerImage {
+  height: 400px !important;
 }
 @media only screen and (max-width: 414px) {
-    .BannerImage{
-   
-        height: 300px !important;
-        }
+  .BannerImage {
+    height: 300px !important;
   }
-  .BannerText{
-    color: var(--blue-grey-100, #F8F8F8);
-text-align: center;
-font-family: Inter;
-font-size: 28px !important;
-font-style: italic;
-font-weight: 600;
-line-height: 24px; /* 85.714% */
-  }
+}
+.BannerText {
+  color: var(--blue-grey-100, #f8f8f8);
+  text-align: center;
+  font-family: Inter;
+  font-size: 28px !important;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 24px; /* 85.714% */
+}
