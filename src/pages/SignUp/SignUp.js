@@ -31,12 +31,12 @@ const SignUp = () => {
             <Grid container mt={6} direction='column' alignItems='center'>
               <Grid item xs={12}>
                 <Typography variant='h1' className='MainHeading'>
-                Sign Up
+                  Sign Up
                 </Typography>
               </Grid>
               <Grid item xs={12} mt={1.8}>
                 <Typography variant='normal' className='MainSubHeading'>
-                Unlock all Features!
+                  Unlock all Features!
                 </Typography>
               </Grid>
               <Grid xs={12} item></Grid>
@@ -155,13 +155,8 @@ const SignUp = () => {
             </FormControl>
           </Grid>
           <Grid lg={8} xs={10}>
-            <Grid
-              container
-              m={1}
-              direction='row'
-         
-              alignItems='center'>
-              <Grid item xs={12} lg={12} display={'flex'}  alignItems='center' >
+            <Grid container m={1} direction='row' alignItems='center'>
+              <Grid item xs={12} lg={12} display={"flex"} alignItems='center'>
                 <FormControlLabel
                   control={
                     <Checkbox
@@ -175,21 +170,26 @@ const SignUp = () => {
                       }}
                     />
                   }
-                 
                 />
-                  <Typography > <span  className='Label'>Accept</span> <span className='Password'>terms and conditions</span></Typography>
+                <Typography>
+                  {" "}
+                  <span className='Label'>Accept</span>{" "}
+                  <span className='Password'>terms and conditions</span>
+                </Typography>
               </Grid>
-             
+
               <Grid item xs={12} lg={12} mt={1}>
-                <Button className='Button'>LOG IN</Button>
+                <Link className='Button' to={'/'}>Create Account</Link>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
         <Box className='centerClass'>
           <Typography className='Label' mt={2}>
-          Already registered? 
-            <Link className='Password'>Sign in</Link>
+            Already registered?
+            <Link className='Password' to='/login'>
+              Sign in
+            </Link>
           </Typography>
         </Box>
       </Grid>

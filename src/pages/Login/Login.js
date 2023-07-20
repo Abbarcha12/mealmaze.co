@@ -25,7 +25,7 @@ const Login = () => {
       <Grid item xs={12} lg={6} md={6} className='rightSide'>
         <Grid container>
           <Grid item xs={12} m={2}>
-            <img src={Logo} alt='logo' className='Logo'/>
+            <img src={Logo} alt='logo' className='Logo' />
           </Grid>
           <Grid item xs={12}>
             <Grid container mt={6} direction='column' alignItems='center'>
@@ -188,7 +188,9 @@ const Login = () => {
                 <Link className='Password'>Forgot Password?</Link>
               </Grid>
               <Grid item xs={12} lg={12} mt={1}>
-                <Button className='Button'>LOG IN</Button>
+                <Link className='Button' to='/'>
+                  LOG IN
+                </Link>
               </Grid>
             </Grid>
           </Grid>
@@ -196,7 +198,9 @@ const Login = () => {
         <Box className='centerClass'>
           <Typography className='Label' mt={2}>
             Don’t have an account?{" "}
-            <Link className='Password'>Register here</Link>
+            <Link className='Password' to='/sign'>
+              Register here
+            </Link>
           </Typography>
         </Box>
       </Grid>

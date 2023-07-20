@@ -59,6 +59,7 @@ body {
   background: var(--colors-green-500, #22c55e) !important;
   display: flex;
   width: 100%;
+  text-decoration: none !important;
 
   padding: 12px !important;
   justify-content: center;
@@ -114,34 +115,43 @@ body {
 .css-19ckexn-MuiFormControl-root-MuiTextField-root {
   padding: 0px !important;
 }
-@media screen and (max-width:414px){
+@media screen and (max-width: 414px) {
   .otp-field input {
     width: 35px !important;
-    height: 34px !important;}
-} 
-  
-.Generate{
-  color: #9DA3A1 !important;
+    height: 34px !important;
+  }
+}
+
+.Generate {
+  color: #9da3a1 !important;
   text-decoration: none !important;
 }
-@media screen and (max-width:540px){
-  .homebannerimg{
+@media screen and (max-width: 540px) {
+  .homebannerimg {
     height: 300px !important;
   }
-  .homebanner{
+  .homebanner {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 45px !important;
   }
-  .homebannerimg1{
+  .homebannerimg1 {
     height: 220px !important;
   }
-  .HomeSectionfour{
+  .HomeSectionfour {
     display: flex !important;
     flex-direction: column-reverse !important;
-    align-items:center !important;
+    align-items: center !important;
     background-color: red !important;
   }
-} 
-  
+}
+
+@media screen and (max-width: 630px) {
+  .homebannerimg2 {
+    height: 135px;
+  }
+  .homebannerimg3 {
+    height: 300px;
+  }
+}

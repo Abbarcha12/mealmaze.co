@@ -6,7 +6,7 @@ const Card = ({ item, handleClick, cardId }) => {
   const { id, amount, p1, p2, p3, p4, p5, p6, days } = item;
 
   return (
-    <Box m={3}>
+    <Box m={3} onClick={() => handleClick(item.id)}>
       <Typography
         variant='h4'
         className='days'
@@ -255,7 +255,7 @@ const Card = ({ item, handleClick, cardId }) => {
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={2}>
         <Link to={`/payment/${id}`}>
-        <Button className={cardId===id?"selectBtn1":"selectBtn"} onClick={() => handleClick(item.id)}>
+        <Button className={cardId===id?"selectBtn1":"selectBtn"} >
           Select Plan
         </Button>
         </Link>

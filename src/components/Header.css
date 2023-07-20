@@ -1,14 +1,19 @@
  
 .header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 30px;
+}
+ .footer{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+ 
 
   margin: 10px auto; 
   padding: 1rem;
-}
- 
+ }
 .toggleBtn {
   display: none !important; 
 }
@@ -18,6 +23,15 @@
       flex-direction: column;
       align-items: start;
       justify-content: space-between;
+    }
+    .footer{
+      flex-direction: column;
+      align-items: start;
+      margin-top: 30px;
+    }
+    .Link1{
+    display: flex;
+    flex-wrap: wrap;
     }
     .link{
       margin-top: 15px;
@@ -67,7 +81,7 @@ padding: 10px 16px !important;
 font-weight: 500;
 line-height: normal;
   }
-  .Homebtn:focus{
+  .Homebtn:hover{
     border-radius: 10px !important;
 background: #02A63A !important;
 color: #F8F8FA !important;

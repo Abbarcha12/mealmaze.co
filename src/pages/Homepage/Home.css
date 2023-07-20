@@ -1,113 +1,145 @@
-.Home{
+.Home {
     /* background: linear-gradient(180deg, #cce6e0 0%, rgba(220, 241, 236, 0.00) 100%) !important; */
     /* height: 100vh; */
     background-image: url('../../assest/home1bc.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
-.HomeSectionTwo{
+
+.HomeSectionTwo {
     background-image: url('../../assest//home2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.HomeSectionThird{
+
+.HomeSectionThird {
     background-image: url('../../assest//home3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.HomeHeading{
-    color: #191A15 !important;
-font-family: Inter !important;
-font-size: 56px !important;
-font-style: normal;
-font-weight: 600 !important;
-line-height: 69.994px !important; /* 124.99% */
-}
-.spanHome{
-    color: #191A15 !important;
-font-family: Inter;
-font-size: 56px;
-font-style: normal;
-font-weight: 700;
-line-height: 69.994px;
-}
-.HomeSubHeading{
-    color:  #4C4448 !important;
-font-family: Inter !important;
-font-size: 16px !important;
-font-style: normal;
-font-weight: 500 !important;
-max-width: 468px;
-line-height: 25.608px !important; /* 160.048% */
-}
-.Homebtn1{
-    color:  #16A34A !important;
-font-family: Inter !important;
-font-size: 15.365px !important;
-font-style: normal !important;
-font-weight: 500 !important;
-line-height: normal !important;
-border-radius: 34.143px !important;
-border: 1.707px solid  #16A34A !important;
-padding: 14.072px 39.265px !important; 
-}
-.Homebtn1:focus{
-    color:  #f3f3f3 !important;
-font-family: Inter !important;
-font-size: 15.365px !important;
-font-style: normal !important;
-font-weight: 500 !important;
-line-height: normal !important;
-border-radius: 34.143px !important;
-border: 1.707px solid  #16A34A !important;
-padding: 14.072px 39.265px !important; 
 
-background:  #16A34A !important;
+.HomeHeading {
+    color: #191A15 !important;
+    font-family: Inter !important;
+    font-size: 56px !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: 69.994px !important;
+    /* 124.99% */
 }
-.line{
+
+.spanHome {
+    color: #191A15 !important;
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 69.994px;
+}
+
+.HomeSubHeading {
+    color: #4C4448 !important;
+    font-family: Inter !important;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    max-width: 468px;
+    line-height: 25.608px !important;
+    /* 160.048% */
+}
+
+.Homebtn1 {
+    color: #16A34A !important;
+    font-family: Inter !important;
+    font-size: 15.365px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+    border-radius: 34.143px !important;
+    border: 1.707px solid #16A34A !important;
+    padding: 14.072px 39.265px !important;
+}
+
+.Homebtn1:hover {
+    color: #f3f3f3 !important;
+    font-family: Inter !important;
+    font-size: 15.365px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+    border-radius: 34.143px !important;
+    border: 1.707px solid #16A34A !important;
+    padding: 14.072px 39.265px !important;
+
+    background: #16A34A !important;
+}
+
+.line {
     width: 64%;
 }
-.homeSectionTwoHeading{
+
+.homeSectionTwoHeading {
     color: #191A15 !important;
     max-width: 550px !important;
-text-align: center !important ;
-font-family: Inter !important;
-font-size: 50px !important;
-font-style: normal !important;
-font-weight: 600 !important;
-line-height: normal !important;
+    text-align: center !important;
+    font-family: Inter !important;
+    font-size: 50px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
 }
-.sectionTwoHeading{
+
+.sectionTwoHeading {
     color: #191A15 !important;
-font-family: Inter !important;
-font-size: 36px !important;
-font-style: normal !important;
-font-weight: 500 !important;
-line-height: 54.916px  !important; /* 152.544% */
+    font-family: Inter !important;
+    font-size: 36px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 54.916px !important;
+    /* 152.544% */
 }
-.spanHome1{
+
+.spanHome1 {
     color: #191A15;
-font-family: Inter;
-font-size: 36px;
-font-style: normal;
-font-weight: 600;
-line-height: 54.916px; /* 152.544% */
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54.916px;
+    /* 152.544% */
 }
-.HomeSectionFourth{
-    background-image: url('../../assest//home4.jpg');
+
+.HomeSectionFour {
+    background-image: url('../../assest/home5.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sectionfourHeading{
+
+.HomeSectionFive {
+    background-image: url('../../assest/home6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sectionfourHeading {
     color: #191A15 !important;
-font-family: Inter !important;
-font-size: 40px !important;
-font-style: normal !important;
-font-weight: 600 !important;
-line-height: 60.909px !important; /* 152.273% */
+    font-family: Inter !important;
+    font-size: 40px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 60.909px !important;
+    /* 152.273% */
+}
+
+.contact {
+    border-radius: 24px !important;
+    background: #FFF !important;
+    box-shadow: 0px 20px 40px 10px rgba(0, 135, 45, 0.06) !important;
+    padding: 32px 29px 32px 53px !important;
 }

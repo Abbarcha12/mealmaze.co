@@ -1,17 +1,14 @@
-import React from "react";
-import { Container } from "@mui/material";
-import Button from "@mui/material/Button";
+import React, { useState } from "react";
 import Logo from "../assest/logo.png";
-import { Link, animateScroll as scroll } from "react-scroll";
 import "./Header.css"; // Import your custom CSS file
-
-const Header = () => {
+import { Link, animateScroll as scroll } from "react-scroll";
+const Footer = () => {
   return (
-    <Container className='header'>
+    <div className='footer'>
       <div className='logo-container'>
         <img src={Logo} alt='Logo' className='logoPage' />
       </div>
-      <div className='Links'>
+      <div className='Link1'>
         <Link
           to='section1'
           spy={true}
@@ -68,16 +65,8 @@ const Header = () => {
           Become an Affiliate
         </Link>
       </div>
-      <div>
-        <Button href='/login' className='Homebtn'>
-          Login
-        </Button>
-        <Button href='/sign' className='Homebtn'>
-          Sign Up
-        </Button>
-      </div>
-    </Container>
+    </div>
   );
 };
 
-export default Header;
+export default Footer;
