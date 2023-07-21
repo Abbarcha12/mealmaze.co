@@ -128,7 +128,7 @@ const CreateMeal = () => {
               and if you don't like Brussel sprouts don't forget to tell us.
             </Typography>
             <Grid container spacing={3} mt={1}>
-              <Grid item lg={3}>
+              <Grid item lg={3} xs={12}>
                 <InputLabel
                   sx={{
                     color: " #888587",
@@ -150,7 +150,7 @@ const CreateMeal = () => {
                   }}
                 />
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={3} xs={12}>
                 <InputLabel
                   sx={{
                     color: " #888587",
@@ -171,7 +171,7 @@ const CreateMeal = () => {
                   }}
                 />
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={3} xs={12}>
                 <InputLabel
                   sx={{
                     color: " #888587",
@@ -193,7 +193,7 @@ const CreateMeal = () => {
                   }}
                 />
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={3}  xs={12}>
                 <InputLabel
                   sx={{
                     color: " #888587",
@@ -523,8 +523,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-
-                    fontSize: "16px",
+                    fontSize: {lg:"16px",xs:"14px"},
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>

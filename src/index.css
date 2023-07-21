@@ -107,7 +107,9 @@ body {
   font-weight: 700 !important;
   line-height: normal !important;
 }
-
+.borderbottom{
+  text-decoration: none !important;
+}
 .css-1atkyoe-MuiButtonBase-root-MuiRadio-root.Mui-checked {
   color: #acacac !important;
 }
@@ -150,6 +152,10 @@ body {
 }
 
 @media screen and (max-width: 630px) {
+  .generate{
+    font-size: 20px !important;
+    padding: 8px 15px !important;
+  }
   .homebannerimg2 {
     height: 135px;
   }

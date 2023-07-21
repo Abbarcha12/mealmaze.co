@@ -353,7 +353,7 @@ const Payment = () => {
                     />
                   </Box>
                   <Box mt={1}>
-                    <Link to={`/account/${id}`}>
+                    <Link to={`/account/${id}`} className="borderbottom">
                       {" "}
                       <Button className='PayButton'>Pay USD15</Button>
                     </Link>

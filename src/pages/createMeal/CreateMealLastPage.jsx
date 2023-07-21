@@ -29,7 +29,7 @@ const Meal = () => {
               sx={{
                 color: "#16A34A",
                 fontFamily: "Inter",
-                fontSize: "40px",
+                fontSize:{lg: "40px",sm:"32p" ,xs:"24px"},
                 marginTop: "10px",
                 fontWeight: 600,
 
