@@ -23,12 +23,12 @@ const Thankyou = () => {
            <Box p={2}> <p className='Otpheading'>Thank You For Your Purchase</p></Box>
            <Box> <img src={ThankYoulogo} alt="ThankYoulogo" height={ "200px"}/> </Box>
            <Box > <p className='order'>Order #123RGR231567Y Confirmed</p></Box>
-           <Link to="/">
+           <Link to="/createMeal">
                      
                       <Button sx={{width:"42%"}} className='PayButton'>Create you meal plan</Button>
                     </Link>
                     <Box mt={2}>
-                    <Link to="/" className="Generate">
+                    <Link to="/createMeal" className="Generate">
                      
                      Generate Receipt
                     </Link>
