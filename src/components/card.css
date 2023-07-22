@@ -97,7 +97,8 @@ border: 1px solid #F1F1F6;
 height: 300px !important;
 background: #FFF;
 }
-.Homecard1{
+.Homecard:hover{
+    transition: all 1s;
     padding: 48px 30.999px 25.87px 22.668px;
     border-radius: 16px;
 border: 1px solid #F1F1F6;
@@ -113,7 +114,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-.miniSq1{
+.Homecard:hover .miniSq{
     width: 54.13px !important;
 height: 54.13px !important;
 border-radius: 7.792px !important;
@@ -130,7 +131,7 @@ font-style: normal !important;
 font-weight: 600 !important;
 line-height: 30px !important ; /* 107.143% */
 }
-.title1{
+.Homecard:hover .title{
     color: #fff !important;
 font-family: Inter !important;
 font-size: 28px !important;
@@ -146,7 +147,7 @@ font-style: normal !important;
 font-weight: 500 !important;
 line-height: 30px !important; /* 187.5% */
 }
-.description{
+.Homecard:hover .description{
     color: #fff !important;
 font-family: Inter !important;
 font-size: 16px !important;

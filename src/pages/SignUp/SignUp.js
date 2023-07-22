@@ -179,7 +179,9 @@ const SignUp = () => {
               </Grid>
 
               <Grid item xs={12} lg={12} mt={1}>
-                <Link className='Button' to={'/'}>Create Account</Link>
+                <Link className='Button' to={"/"}>
+                  Create Account
+                </Link>
               </Grid>
             </Grid>
           </Grid>
@@ -197,11 +199,14 @@ const SignUp = () => {
         <Grid
           container
           direction='row'
+          textAlign={'center'}
           justifyContent='center'
           alignItems='center'>
           <Grid item xs={8} lg={8} mt={10}>
             {" "}
+            <div>
             <img src={BannerImage} className='BannerImage' alt='banner' />
+            </div>
             <Typography className='BannerText' mt={2}>
               <i>
                 “To eat is a necessity, <br />

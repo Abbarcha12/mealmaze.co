@@ -13,7 +13,7 @@ import {
   Button,
 } from "@mui/material";
 import Logo from "../../assest/logo.png";
-import {cardData} from "../Pricing/data";
+import { cardData } from "../../components/data";
 const OtpPage = () => {
   const [radio, setRadio] = useState();
   const { id } = useParams();

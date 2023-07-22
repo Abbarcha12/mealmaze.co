@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "@mui/material";
 import Button from "@mui/material/Button";
 import Logo from "../assest/logo.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./Header.css"; // Import your custom CSS file
 
+
 const Header = () => {
+const [Id , setID] = useState(2)
+  const handleToggle=(id)=>{
+    setID(id)
+  }
   return (
     <Container className='header'>
       <div className='logo-container'>
@@ -69,10 +74,10 @@ const Header = () => {
         </Link>
       </div>
       <div>
-        <Button href='/login' className='Homebtn'>
+        <Button href='/login' className={Id===1? "Homebtn1":"Homebtn"} onClick={()=>handleToggle(1)}>
           Login
         </Button>
-        <Button href='/sign' className='Homebtn'>
+        <Button href='/sign'  className={Id===2? "Homebtn1":"Homebtn"} onClick={()=>handleToggle(2)}>
           Sign Up
         </Button>
       </div>

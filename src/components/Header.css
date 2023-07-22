@@ -77,10 +77,11 @@
   padding: 10px 16px !important;
   font-weight: 500 !important;
   line-height: normal;
+  text-transform: capitalize !important;
   border-radius: 10px !important;
   
 }
-.Homebtn:hover {
+.Homebtn1 {
   border-radius: 10px !important;
   background: #02a63a !important;
   color: #f8f8fa !important;

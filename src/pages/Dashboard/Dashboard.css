@@ -1,0 +1,27 @@
+.DashboradSideBar{
+    padding: 32px 24px 621px 24px !important    ; 
+    background: rgba(255, 255, 255, 0.30) !important;
+box-shadow: 9px 0px 63px 0px rgba(0, 0, 0, 0.03) !important;
+backdrop-filter: blur(15px) !important;
+}
+.DashboardLink{
+  text-decoration: none !important;
+  display: flex;
+  justify-content: space-between !important;
+  padding: 17px 47px 15px 20px !important;
+}
+.DashboardLink1{
+    border-radius: 16px !important;
+background: #22C55E !important;
+padding: 17px 40px 15px 10px !important;
+text-decoration: none !important;
+display: flex;
+justify-content: space-evenly !important;
+}
+.DashboardText{
+    font-family: Inter !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+}

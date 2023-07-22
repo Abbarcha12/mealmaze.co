@@ -15,7 +15,6 @@ import {
   Input,
   InputAdornment,
   Box,
-  Button,
 } from "@mui/material";
 const Login = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -71,7 +70,7 @@ const Login = () => {
                         d='M5.82405 8.21638C6.07296 7.84302 6.57741 7.74213 6.95078 7.99104L11.0471 10.7219C12.2297 11.5103 13.7704 11.5103 14.9531 10.7219L19.0494 7.99104C19.4228 7.74213 19.9272 7.84302 20.1761 8.21638C20.425 8.58975 20.3241 9.09421 19.9508 9.34312L15.8545 12.074C14.126 13.2263 11.8742 13.2263 10.1457 12.074L6.04939 9.34312C5.67603 9.09421 5.57513 8.58975 5.82405 8.21638Z'
                         fill='white'
                       />
-                    </svg>{" "}
+                    </svg>
                   </InputAdornment>
                 }
               />
@@ -207,18 +206,21 @@ const Login = () => {
       <Grid item xs={12} lg={6} md={6} className='leftSide'>
         <Grid
           container
-          direction='row'
+          textAlign={"center"}
           justifyContent='center'
           alignItems='center'>
           <Grid item xs={8} lg={8} mt={10}>
-            {" "}
-            <img src={BannerImage} className='BannerImage' alt='banner' />
-            <Typography className='BannerText' mt={2}>
-              <i>
-                “To eat is a necessity, <br />
-                But to eat intelligently is an art.”
-              </i>
-            </Typography>
+            <div>
+              <img src={BannerImage} className='BannerImage' alt='banner' />
+            </div>
+            <div>
+              <Typography className='BannerText' mt={2}>
+                <i>
+                  “To eat is a necessity, <br />
+                  But to eat intelligently is an art.”
+                </i>
+              </Typography>
+            </div>
           </Grid>
         </Grid>
       </Grid>

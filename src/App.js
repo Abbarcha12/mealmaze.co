@@ -9,13 +9,16 @@ import Processing from "./pages/paymentPage/Processing";
 import Homepage from "./pages/Homepage/Homepage";
 import CreateMeal from "./pages/createMeal/CreateMeal";
 import Meal from "./pages/createMeal/CreateMealLastPage";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Faq from "./components/Faq";
 const App = () => {
   const inputRef = useRef(null);
   return (
     <Routes>
       <Route path='/' element={<Homepage />} />
       <Route path='/meal' element={<Meal />} />
-
+      <Route path='/faq' element={<Faq />} />
+      <Route path="/dashboard" element={<Dashboard/>}/>
       <Route path='/login' element={<Login />} />
       <Route path='/sign' element={<SignUp />} />
       <Route path='/pricing' element={<PricingCard />} />

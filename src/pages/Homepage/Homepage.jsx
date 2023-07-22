@@ -3,29 +3,28 @@ import "./Home.css";
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import Header from "../../components/Header";
 import Line from "../../assest/line.png";
-import HomeBannerImg from "../../assest/home11.png";
+import HomeBannerImg from "../../assest/home11-removebg-preview.png";
 import HomeBannerImgtwo from "../../assest/HomeBannerimg.3.png";
 import HomeBannerImgfour from "../../assest/four.png";
 import HomeBannerImgFive from "../../assest/HomeImg.png";
-import { HomeCardData } from "../Pricing/data";
-import { cardData } from "../Pricing/data";
+import { HomeCardData } from "../../components/data";
+import { cardData } from "../../components/data";
 import HomeCard from "../../components/HomeCard";
 import Card from "../../components/Cards";
 import contactImg from "../../assest/contact.png";
 import SpeakerImg from "../../assest/affliate.png";
 import Footer from "../../components/Footer";
-
+import Faq from "../../components/Faq";
 const Homepage = () => {
-  
-  const [cardId, setCardId] = useState(3);
+  const [cardId, setCardId] = useState(2);
   const handleClick = (id) => {
     setCardId(id);
   };
   return (
     <>
-      <Box className='Home'  id="section1" smooth={true} duration={500}>
+      <Box className='Home' id='section1' smooth={true} duration={500}>
         <Header />
-        <Container maxWidth='lg' >
+        <Container maxWidth='lg'>
           <Grid container mt={5}>
             <Grid item xs={12} lg={7}>
               <Typography className='HomeHeading'>
@@ -43,8 +42,17 @@ const Homepage = () => {
                 </Typography>
               </Box>
               <Box mt={5}>
-                <Button href="/login" className='Homebtn1'>Login</Button>
-                <Button href="/sign" className='Homebtn1' sx={{ marginLeft: "20px" }}>
+                <Button
+                  href='/login'
+                  className={cardId === 1 ? "Homebtn2" : "Homebtn3"}
+                  onClick={() => handleClick(1)}>
+                  Login
+                </Button>
+                <Button
+                  href='/sign'
+                  className={cardId === 2 ? "Homebtn2" : "Homebtn3"}
+                  onClick={() => handleClick(1)}
+                  sx={{ marginLeft: "20px" }}>
                   Sign Up
                 </Button>
               </Box>
@@ -61,7 +69,7 @@ const Homepage = () => {
           </Grid>
         </Container>
       </Box>
-      <Box className='HomeSectionTwo' id="section2" >
+      <Box className='HomeSectionTwo' id='section2'>
         <Container maxWidth='lg'>
           <Box textAlign={"center"} display={"flex"} justifyContent={"center"}>
             <Typography className='homeSectionTwoHeading' mt={15}>
@@ -83,14 +91,20 @@ const Homepage = () => {
           </Grid>
         </Container>
       </Box>
-      <Box className='HomeSectionThird' id="section4">
+      <Box className='HomeSectionThird' id='section4'>
         <Container maxWidth='lg'>
-          <Box  display={"flex"}sx={{justifyContent:{lg:"center",xs:"start"}}}>
+          <Box
+            display={"flex"}
+            sx={{ justifyContent: { lg: "center", xs: "start" } }}>
             <Typography className='homeSectionTwoHeading' mt={15}>
               How it works
             </Typography>
           </Box>
-          <Grid container mt={3} justifyContent={"space-between"} sx={{flexDirection:{xs:"column-reverse",lg:"row"},}}>
+          <Grid
+            container
+            mt={3}
+            justifyContent={"space-between"}
+            sx={{ flexDirection: { xs: "column-reverse", lg: "row" } }}>
             <Grid item xs={12} lg={5} className='homebanner'>
               <img
                 src={HomeBannerImgtwo}
@@ -114,10 +128,7 @@ const Homepage = () => {
           </Grid>
         </Container>
         <Container maxWidth='lg'>
-          <Grid
-          mt={4}
-            container
-            justifyContent={"space-around"}>
+          <Grid mt={4} container justifyContent={"space-around"}>
             <Grid
               item
               xs={12}
@@ -140,7 +151,11 @@ const Homepage = () => {
           </Grid>
         </Container>
         <Container maxWidth='lg'>
-          <Grid container mt={4} justifyContent={"space-around"} sx={{flexDirection:{xs:"column-reverse",lg:"row"}}}>
+          <Grid
+            container
+            mt={4}
+            justifyContent={"space-around"}
+            sx={{ flexDirection: { xs: "column-reverse", lg: "row" } }}>
             <Grid item xs={12} lg={6} className='homebanner'>
               <img
                 src={HomeBannerImgFive}
@@ -163,8 +178,7 @@ const Homepage = () => {
           </Grid>
         </Container>
       </Box>
-
-      <Box className='HomeSectionFour' id="section3">
+      <Box className='HomeSectionFour' id='section3'>
         <Container maxWidth='lg'>
           <Box textAlign={"center"} display={"flex"} justifyContent={"center"}>
             <Typography className='homeSectionTwoHeading' mt={15}>
@@ -208,7 +222,10 @@ const Homepage = () => {
           </Grid>
         </Container>
       </Box>
-      <Box className='HomeSectionFour' id="section5">
+      <Box className='HomeSectionseven' id='section3'>
+        <Faq/>
+      </Box>
+      <Box className='HomeSectionfive' id='section5'>
         <Container maxWidth='lg'>
           <Grid container justifyContent={"center"} alignItems={"center"}>
             <Grid
@@ -278,7 +295,7 @@ const Homepage = () => {
           </Grid>
         </Container>
       </Box>
-      <Box className='HomeSectionFive' id="section6">
+      <Box className='HomeSectionsix' id='section6'>
         <Container maxWidth='lg'>
           <Grid container pt={5}>
             <Grid lg={6} md={12}>
@@ -289,7 +306,14 @@ const Homepage = () => {
                 className='homebannerimg3'
               />
             </Grid>
-            <Grid lg={6} md={12} justifyContent={'center'} alignContent={'center'} display={'flex'} flexDirection={'column'} alignItems={'start'}>
+            <Grid
+              lg={6}
+              md={12}
+              justifyContent={"center"}
+              alignContent={"center"}
+              display={"flex"}
+              flexDirection={"column"}
+              alignItems={"start"}>
               <Typography
                 sx={{
                   color: "#15803D",
@@ -322,13 +346,13 @@ const Homepage = () => {
                 affiliate program. Start monetizing your online influence and
                 join us today!
               </Typography>
-              <Button className='Homebtn1' sx={{marginTop:"20px"}} >
-                 Learn more
-                </Button>
+              <Button className='Homebtn2' sx={{ marginTop: "20px" }}>
+                Learn more
+              </Button>
             </Grid>
           </Grid>
           <Box>
-            <Footer/>
+            <Footer />
           </Box>
         </Container>
       </Box>

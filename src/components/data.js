@@ -118,4 +118,80 @@ const HomeCardData = [
   },
 ];
 
-export { cardData, HomeCardData };
+const accordionData = [
+  {
+    id: 1,
+    title: "What are Macros? ",
+    content:
+      "Macronutrients are the essential nutrients that our bodies require in larger quantities to maintain proper functioning and overall wellbeing. They encompass three primary categories, namely carbohydrates, proteins, and fats.",
+  },
+  {
+    id: 2,
+    title: "How does your online meal plan generator work?",
+    content:
+      "Our online meal plan generator utilizes advanced algorithms and a vast recipe database to create personalized meal plans based on your preferences and requirements. Simply input your dietary preferences, restrictions, and other relevant information, and the generator will create a customized meal plan for you.",
+  },
+  {
+    id: 3,
+    title: "Can I customize my meal plan based on my dietary preferences and restrictions?",
+    content:
+      "Absolutely! Our meal plan generator takes into account your dietary preferences and restrictions. You can specify if you follow a particular diet (e.g., vegetarian, vegan, gluten-free) or if you have any specific allergies or dislikes. The generated meal plan will be tailored to meet your unique needs.",
+  },
+  {
+    id: 4,
+    title: "How many meals per day does the generator provide?",
+    content:
+      "Our meal plan generator can generate meal plans for various frequencies, including three meals a day, or you can specify the number of meals you want per day. It offers flexibility to cater to your desired meal frequency.",
+  },
+  {
+    id: 5,
+    title: "Are the recipes provided in the meal plans easy to follow?",
+    content:
+      "We strive to provide recipes that are user-friendly and easy to follow. Each recipe includes step-by-step instructions, ingredient quantities, and cooking times. We aim to ensure that both beginner and experienced cooks can easily prepare the meals in the generated plans.",
+  },
+  {
+    id: 6,
+    title: "Can I specify ingredient preferences or exclude certain ingredients?",
+    content:
+      "Yes, our meal plan generator allows you to specify ingredient preferences, such as specific proteins, vegetables, or grains you enjoy. You can also exclude ingredients you don't like or are allergic to. The generator will take these preferences into account when generating your meal plan.",
+  },
+  {
+    id: 7,
+    title: "Does the meal plan generator consider nutritional balance and variety?",
+    content:
+      "Absolutely! Our meal plan generator is designed to prioritize nutritional balance and variety. It considers the recommended intake of macronutrients, vitamins, and minerals, and aims to provide a diverse range of ingredients and recipes to ensure a well-rounded meal plan.",
+  },
+  {
+    id: 8,
+    title: "Can I generate meal plans for specific durations, like a week or a month?",
+    content:
+      "Yes, our meal plan generator allows you to generate meal plans for one week, two weeks, three weeks or four weeks. This provides flexibility and convenience in planning your meals ahead of time.",
+  },
+  {
+    id: 9,
+    title: "Is nutritional information provided for the generated meal plans?",
+    content:
+      "Yes, the generated meal plans include nutritional information for each meal. You can easily view details such as calories, carbohydrates, proteins, fats, and other relevant nutritional values to help you track your intake and make informed choices.",
+  },
+  {
+    id: 10,
+    title: "Can I download or share the generated meal plans for future reference?",
+    content:
+      "Absolutely, it's your meal plan! You'll have the options to download or share them. You can even print your mealplan and put them on the fridge.",
+  },
+  {
+    id: 11,
+    title: "Are there options for generating meal plans for weight loss or specific health goals?",
+    content:
+      "Absolutely! Our meal plan generator offers options to generate meal plans tailored to specific health goals, including weight loss, muscle gain, or overall wellness.",
+  },
+  {
+    id: 12,
+    title: "How accurate is mealmaze?",
+    content:
+      "Mealmaze uses one of the most advanced artificial intelligence to power its amazing recipes! The AI is constantly improving so our recipes will only improve and get better! As with any AI, nothings perfect. If you do notice any issues or something’s not right please get in touch at: info@mealmaze.co",
+  },
+];
+
+
+export { cardData, HomeCardData,accordionData};

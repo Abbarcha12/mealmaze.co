@@ -5,6 +5,7 @@
 .rightSide {
   background: #fafafa;
 }
+
 .leftSide {
   background: var(--colors-green-500, #22c55e);
 }
@@ -12,11 +13,13 @@
 .BannerImage {
   height: 400px !important;
 }
+
 @media only screen and (max-width: 414px) {
   .BannerImage {
     height: 300px !important;
   }
 }
+
 .BannerText {
   color: var(--blue-grey-100, #f8f8f8);
   text-align: center;
@@ -24,5 +27,6 @@
   font-size: 28px !important;
   font-style: italic;
   font-weight: 600;
-  line-height: 24px; /* 85.714% */
+  line-height: 24px;
+  /* 85.714% */
 }

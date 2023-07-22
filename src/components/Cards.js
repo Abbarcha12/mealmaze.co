@@ -250,7 +250,7 @@ const Card = ({ item, handleClick, cardId }) => {
       <Box mt={2}>
         <Typography variant='normal' className={cardId === id ? "p2" : "p1"}>
           $<span className={cardId===id?"Amount1":"Amount"}>{amount}</span>
-          <sub className={cardId===id?"plan1":"plan"}>/plan</sub>
+          
         </Typography>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={2}>

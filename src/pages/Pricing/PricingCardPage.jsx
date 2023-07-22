@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "../../components/Cards";
 import { Grid, Typography, Box } from "@mui/material";
 import Logo from "../../assest/logo.png";
-import {cardData} from "./data";
+import { cardData } from "../../components/data";
 import "./pricing.css";
 const PricingCard = () => {
   const [cardId, setCardId] = useState(3);
