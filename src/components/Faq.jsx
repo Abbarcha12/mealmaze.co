@@ -33,14 +33,14 @@ const Faq = () => {
           </Grid>
           <Grid lg={12} xs={12} pt={3}>
             <Typography
-              sx={{ color: "#191A15", fontSize: "32px", fontWeight: 400 }}>
+              sx={{ color: "#191A15", fontSize: {lg:"32px",sm:"24px", xs:"24px"}, fontWeight: 400 }}>
               Find answers to some common <br /> questions about mealmaze
             </Typography>
           </Grid>
         </Grid>
         <Grid>
           <Container>
-            <Grid container spacing={5}>
+            <Grid container spacing={5} mt={3}>
               {accordionData.map((accordion) => (
                 <Grid item lg={6} md={6} sm={12} xs={12}>
                   <Accordion
@@ -138,10 +138,10 @@ const Faq = () => {
                           </svg>
                         )
                       }>
-                      <Typography className={expanded===accordion.id?"Faqtitle":"Faqtitle1"}>{accordion.title}</Typography>
+                      <Typography className={expanded===accordion.id?"Faqtitle":"Faqtitle"}>{accordion.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Typography>{accordion.content}</Typography>
+                      <Typography className="FaqContent">{accordion.content}</Typography>
                     </AccordionDetails>
                   </Accordion>
                 </Grid>

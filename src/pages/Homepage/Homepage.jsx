@@ -72,7 +72,7 @@ const Homepage = () => {
       <Box className='HomeSectionTwo' id='section2'>
         <Container maxWidth='lg'>
           <Box textAlign={"center"} display={"flex"} justifyContent={"center"}>
-            <Typography className='homeSectionTwoHeading' mt={15}>
+            <Typography className='homeSectionTwoHeading' >
               What makes mealmaze different?
             </Typography>
           </Box>
@@ -222,7 +222,7 @@ const Homepage = () => {
           </Grid>
         </Container>
       </Box>
-      <Box className='HomeSectionseven' id='section3'>
+      <Box className='HomeSectionseven' id='section7'>
         <Faq/>
       </Box>
       <Box className='HomeSectionfive' id='section5'>

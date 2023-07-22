@@ -93,6 +93,7 @@
   font-style: normal !important;
   font-weight: 600 !important;
   line-height: normal !important;
+  margin-top: 55px !important;
 }
 .homeSectionTwoHeading1 {
   color: #191a15 !important;
@@ -157,4 +158,32 @@
 .HomeSectionsix {
   background: linear-gradient(180deg, #DCF1EC 0%, rgba(220, 241, 236, 0.00) 100%) !important;
   
+}
+@media screen and (max-width:576px) {
+  .HomeHeading{
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+  .spanHome{
+    font-size: 32px !important;
+    line-height: 38px !important;
+
+  }
+  .homeSectionTwoHeading{
+    font-size: 32px !important;
+    line-height: 38px !important;
+    margin-top: 34px !important;
+  }
+  .sectionTwoHeading{
+    font-size: 24px !important;
+    line-height: 37px !important;
+  }
+  .spanHome1{
+    font-size: 24px !important;
+    line-height: 37px !important;
+  }
+  .sectionfourHeading{
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
 }

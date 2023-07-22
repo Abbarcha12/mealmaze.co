@@ -45,7 +45,7 @@ const [Id , setID] = useState(2)
           Pricing
         </Link>
         <Link
-          to='section4'
+          to='section7'
           spy={true}
           smooth={true}
           offset={70}
