@@ -218,7 +218,10 @@ line-height: 32px !important; /* 185% */
     align-items: center;
     margin-top: 45px !important;
   }
- 
+ .Faqtitle{
+  font-size: 18px !important;
+  line-height: 24px !important;
+ }
   .homebannerimg1 {
     height: 220px !important;
   }
@@ -227,6 +230,9 @@ line-height: 32px !important; /* 185% */
     flex-direction: column-reverse !important;
     align-items: center !important;
     background-color: red !important;
+  }
+  .homeSectionTwoHeading1{
+  font-size: 28px !important;
   }
 }
 

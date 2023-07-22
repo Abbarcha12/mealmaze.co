@@ -318,7 +318,7 @@ const Homepage = () => {
                 sx={{
                   color: "#15803D",
                   fontFamily: "Inter",
-                  fontSize: "26px",
+                  fontSize: {lg:"26px",xs:"18px"},
                   fontWeight: 500,
                   lineHeight: "22.141px",
                 }}>
@@ -328,7 +328,7 @@ const Homepage = () => {
                 sx={{
                   color: "#191A15",
                   fontFamily: "Inter",
-                  fontSize: "50px",
+                  fontSize: {lg:"50px",xs:"32px"},
                   fontWeight: 700,
                   marginTop: "15px",
                 }}>
