@@ -122,7 +122,7 @@
   font-family: Inter;
   font-size: 36px;
   font-style: normal;
-  font-weight: 600 !important;
+  font-weight: bolder !important;
   line-height: 54.916px;
   /* 152.544% */
 }
@@ -186,4 +186,12 @@
     font-size: 30px !important;
     line-height: 40px !important;
   }
+}
+.Announce{
+  height: 377px !important;
+  width: 100% !important;
+}
+.homebannerimg{
+  height: 450px !important;
+  width: 100% !important;
 }

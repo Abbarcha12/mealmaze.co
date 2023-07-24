@@ -5,9 +5,10 @@ width: 260px;
 height: 398px;
 }
 
-.scale-animation {
-   position: relative;
-  top: -10px;
-  transition: all 1.5s;
+
+  .card:hover{
+   background-color: #166534 !important;
   }
-  
+  .card:hover .days{
+   color: rgb(255, 255, 255) !important;
+  }

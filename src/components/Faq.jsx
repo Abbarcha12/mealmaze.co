@@ -17,7 +17,6 @@ const Faq = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-
   return (
     <>
       <Container maxWidth='lg' textAlign={"center"}>
@@ -33,8 +32,12 @@ const Faq = () => {
           </Grid>
           <Grid lg={12} xs={12} pt={3}>
             <Typography
-              sx={{ color: "#191A15", fontSize: {lg:"32px",sm:"24px", xs:"18px"} ,lineHeight:{lg:"1.5rem",xs:"1.4rem"
-  }, fontWeight: 400 }}>
+              sx={{
+                color: "#191A15",
+                fontSize: { lg: "32px", sm: "24px", xs: "18px" },
+                lineHeight: { lg: "2.5rem", xs: "1.4rem" },
+                fontWeight: 400,
+              }}>
               Find answers to some common <br /> questions about mealmaze
             </Typography>
           </Grid>
@@ -139,10 +142,17 @@ const Faq = () => {
                           </svg>
                         )
                       }>
-                      <Typography className={expanded===accordion.id?"Faqtitle":"Faqtitle"}>{accordion.title}</Typography>
+                      <Typography
+                        className={
+                          expanded === accordion.id ? "Faqtitle" : "Faqtitle"
+                        }>
+                        {accordion.title}
+                      </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Typography className="FaqContent">{accordion.content}</Typography>
+                      <Typography className='FaqContent'>
+                        {accordion.content}
+                      </Typography>
                     </AccordionDetails>
                   </Accordion>
                 </Grid>

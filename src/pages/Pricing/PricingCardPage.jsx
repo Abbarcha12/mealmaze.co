@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../../components/Cards";
 import { Grid, Typography, Box } from "@mui/material";
 import Logo from "../../assest/logo.png";
 import { cardData } from "../../components/data";
 import "./pricing.css";
 const PricingCard = () => {
-  const [cardId, setCardId] = useState(3);
-  const handleClick = (id) => {
-    setCardId(id);
-
-  };
   return (
     <>
       <Grid container>
@@ -44,20 +39,8 @@ const PricingCard = () => {
             {cardData.map((item) => {
               return (
                 <>
-                  <Box
-                    mt={2}
-                    className={`card ${
-                      cardId === item.id ? "scale-animation" : ""
-                    }`}
-                    sx={{
-                      backgroundColor: cardId === item.id ? "#166534" : "#fff",
-                    }}>
-                    <Card
-                      key={item.id}
-                      item={item}
-                      handleClick={handleClick}
-                      cardId={cardId}
-                    />
+                  <Box mt={2} className='card'>
+                    <Card key={item.id} item={item} />
                   </Box>
                 </>
               );

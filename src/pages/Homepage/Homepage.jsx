@@ -3,7 +3,7 @@ import "./Home.css";
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import Header from "../../components/Header";
 import Line from "../../assest/line.png";
-import HomeBannerImg from "../../assest/home11-removebg-preview.png";
+import {ReactComponent as HomeBannerImg} from "../../assest/top.svg";
 import HomeBannerImgtwo from "../../assest/HomeBannerimg.3.png";
 import HomeBannerImgfour from "../../assest/four.png";
 import HomeBannerImgFive from "../../assest/HomeImg.png";
@@ -12,7 +12,7 @@ import { cardData } from "../../components/data";
 import HomeCard from "../../components/HomeCard";
 import Card from "../../components/Cards";
 import contactImg from "../../assest/contact.png";
-import SpeakerImg from "../../assest/affliate.png";
+import {ReactComponent as SpeakerImg} from "../../assest/promote-scaledfdsf 2.svg";
 import Footer from "../../components/Footer";
 import Faq from "../../components/Faq";
 const Homepage = () => {
@@ -59,10 +59,8 @@ const Homepage = () => {
             </Grid>
 
             <Grid item xs={12} lg={5} className='homebanner'>
-              <img
-                src={HomeBannerImg}
-                alt={HomeBannerImg}
-                height={"420px"}
+              <HomeBannerImg
+                
                 className='homebannerimg'
               />
             </Grid>
@@ -298,13 +296,8 @@ const Homepage = () => {
       <Box className='HomeSectionsix' id='section6'>
         <Container maxWidth='lg'>
           <Grid container pt={5}>
-            <Grid lg={6} md={12}>
-              <img
-                src={SpeakerImg}
-                alt={SpeakerImg}
-                height={"490px"}
-                className='homebannerimg3'
-              />
+            <Grid lg={6} md={12} display="flex " justifyContent={"start"}>
+             <SpeakerImg    className="Announce" />
             </Grid>
             <Grid
               lg={6}
