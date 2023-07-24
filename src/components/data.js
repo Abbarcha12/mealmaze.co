@@ -78,7 +78,7 @@ const HomeCardData = [
   },
   {
     id: 2,
-    title: "Weekly meal plans",
+    title: "Ingredient list & Recipe",
     description:
       "An easy step by step instruction to cook your delicious meal. Not sure what ingredients you'll need? We've got you covered! Full ingredients list for all your meals. ",
     img: 
@@ -99,7 +99,7 @@ const HomeCardData = [
   },
   {
     id: 3,
-    title: "Weekly meal plans",
+    title: "Foodmatch generator",
     description:
       "Have spare ingredients but not sure what to make? mealmaze it. Tell us what ingredients you have and we'll tell you what delicious meals you can make. ",
     img: 
