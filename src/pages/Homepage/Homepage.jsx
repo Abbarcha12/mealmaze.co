@@ -12,8 +12,9 @@ import { cardData } from "../../components/data";
 import HomeCard from "../../components/HomeCard";
 import Card from "../../components/Cards";
 import contactImg from "../../assest/contact.png";
-import {ReactComponent as SpeakerImg} from "../../assest/promote-scaledfdsf 2.svg";
+import {ReactComponent as SpeakerImg} from "../../assest/speaker.svg";
 import Footer from "../../components/Footer";
+import AnouncementImg from "../../assest/aff (2).png"
 import Faq from "../../components/Faq";
 const Homepage = () => {
   const [cardId, setCardId] = useState(2);
@@ -119,8 +120,8 @@ const Homepage = () => {
               justifyContent={"center"}
               alignItems={"center"}>
               <Typography className='sectionTwoHeading'>
-                <span className='spanHome1'> Let us know </span> your likes and
-                dislikes, your allergies and what your goals are. Simple
+                <span className='spanHome1'> Let us know  your likes and
+                dislikes, your allergies and what your goals are. Simple</span>
               </Typography>
             </Grid>
           </Grid>
@@ -297,7 +298,9 @@ const Homepage = () => {
         <Container maxWidth='lg'>
           <Grid container pt={5}>
             <Grid lg={6} md={12} display="flex " justifyContent={"start"}>
-             <SpeakerImg    className="Announce" />
+             {/* <SpeakerImg  className="Announce" />
+              */}
+              <img className="Announce" src={AnouncementImg} alt={AnouncementImg} />
             </Grid>
             <Grid
               lg={6}

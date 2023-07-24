@@ -234,6 +234,7 @@ line-height: 32px !important; /* 185% */
   .homeSectionTwoHeading1{
   font-size: 28px !important;
   }
+ 
 }
 
 @media screen and (max-width: 630px) {
@@ -258,6 +259,7 @@ line-height: 32px !important; /* 185% */
   margin-bottom: 15px !important;
 
  }
+
 }
 .css-192up22{
   background-color: white !important;

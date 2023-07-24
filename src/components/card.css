@@ -62,7 +62,7 @@ align-items: center;
   background: #dcfce7 !important;
   color: #16a34a !important;
   text-align: center !important;
-border: none !important;
+  border: none !important;
   font-family: Inter !important;
   font-size: 16px !important;
   font-style: normal !important;
@@ -70,10 +70,7 @@ border: none !important;
   line-height: normal;
   padding: 10px 47px !important;
 }
-.card:hover .selectBtn {
-  background: #04A03E !important;
-  color:  white !important;
-}
+
 .Homecard {
   padding: 48px 30.999px 25.87px 22.668px;
   border-radius: 16px;
