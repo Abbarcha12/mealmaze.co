@@ -3,7 +3,7 @@ import "./Home.css";
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import Header from "../../components/Header";
 import Line from "../../assest/line.png";
-import {ReactComponent as HomeBannerImg} from "../../assest/top.svg";
+import { ReactComponent as HomeBannerImg } from "../../assest/top.svg";
 import HomeBannerImgtwo from "../../assest/HomeBannerimg.3.png";
 import HomeBannerImgfour from "../../assest/four.png";
 import HomeBannerImgFive from "../../assest/HomeImg.png";
@@ -12,9 +12,9 @@ import { cardData } from "../../components/data";
 import HomeCard from "../../components/HomeCard";
 import Card from "../../components/Cards";
 import contactImg from "../../assest/contact.png";
-import {ReactComponent as SpeakerImg} from "../../assest/speaker.svg";
+import { ReactComponent as SpeakerImg } from "../../assest/speaker.svg";
 import Footer from "../../components/Footer";
-import AnouncementImg from "../../assest/aff (2).png"
+import AnouncementImg from "../../assest/aff (2).png";
 import Faq from "../../components/Faq";
 const Homepage = () => {
   const [cardId, setCardId] = useState(2);
@@ -60,10 +60,7 @@ const Homepage = () => {
             </Grid>
 
             <Grid item xs={12} lg={5} className='homebanner'>
-              <HomeBannerImg
-                
-                className='homebannerimg'
-              />
+              <HomeBannerImg className='homebannerimg' />
             </Grid>
           </Grid>
         </Container>
@@ -71,7 +68,7 @@ const Homepage = () => {
       <Box className='HomeSectionTwo' id='section2'>
         <Container maxWidth='lg'>
           <Box textAlign={"center"} display={"flex"} justifyContent={"center"}>
-            <Typography className='homeSectionTwoHeading' >
+            <Typography className='homeSectionTwoHeading'>
               What makes mealmaze different?
             </Typography>
           </Box>
@@ -79,11 +76,7 @@ const Homepage = () => {
             {HomeCardData.map((item) => {
               return (
                 <Grid item xs={12} lg={4}>
-                  <HomeCard
-                    item={item}
-                    handleClick={handleClick}
-                    cardId={cardId}
-                  />
+                  <HomeCard item={item} />
                 </Grid>
               );
             })}
@@ -120,8 +113,11 @@ const Homepage = () => {
               justifyContent={"center"}
               alignItems={"center"}>
               <Typography className='sectionTwoHeading'>
-                <span className='spanHome1'> Let us know  your likes and
-                dislikes, your allergies and what your goals are. Simple</span>
+                <span className='spanHome1'>
+                  {" "}
+                  Let us know your likes and dislikes, your allergies and what
+                  your goals are. Simple
+                </span>
               </Typography>
             </Grid>
           </Grid>
@@ -197,21 +193,8 @@ const Homepage = () => {
                 {cardData.map((item) => {
                   return (
                     <>
-                      <Box
-                        mt={2}
-                        className={`card ${
-                          cardId === item.id ? "scale-animation" : ""
-                        }`}
-                        sx={{
-                          backgroundColor:
-                            cardId === item.id ? "#166534" : "#fff",
-                        }}>
-                        <Card
-                          key={item.id}
-                          item={item}
-                          handleClick={handleClick}
-                          cardId={cardId}
-                        />
+                      <Box mt={2} className='card'>
+                        <Card key={item.id} item={item} />
                       </Box>
                     </>
                   );
@@ -222,7 +205,7 @@ const Homepage = () => {
         </Container>
       </Box>
       <Box className='HomeSectionseven' id='section7'>
-        <Faq/>
+        <Faq />
       </Box>
       <Box className='HomeSectionfive' id='section5'>
         <Container maxWidth='lg'>
@@ -297,10 +280,14 @@ const Homepage = () => {
       <Box className='HomeSectionsix' id='section6'>
         <Container maxWidth='lg'>
           <Grid container pt={5}>
-            <Grid lg={6} md={12} display="flex " justifyContent={"start"}>
-             {/* <SpeakerImg  className="Announce" />
-              */}
-              <img className="Announce" src={AnouncementImg} alt={AnouncementImg} />
+            <Grid lg={6} md={12} display='flex ' justifyContent={"start"}>
+              {/* <SpeakerImg  className="Announce" />
+               */}
+              <img
+                className='Announce'
+                src={AnouncementImg}
+                alt={AnouncementImg}
+              />
             </Grid>
             <Grid
               lg={6}
@@ -314,7 +301,7 @@ const Homepage = () => {
                 sx={{
                   color: "#15803D",
                   fontFamily: "Inter",
-                  fontSize: {lg:"26px",xs:"18px"},
+                  fontSize: { lg: "26px", xs: "18px" },
                   fontWeight: 500,
                   lineHeight: "22.141px",
                 }}>
@@ -324,7 +311,7 @@ const Homepage = () => {
                 sx={{
                   color: "#191A15",
                   fontFamily: "Inter",
-                  fontSize: {lg:"50px",xs:"32px"},
+                  fontSize: { lg: "50px", xs: "32px" },
                   fontWeight: 700,
                   marginTop: "15px",
                 }}>
@@ -334,7 +321,7 @@ const Homepage = () => {
                 sx={{
                   color: "#888587",
                   fontFamily: "Inter",
-                  fontSize: {lg:"24px",xs:"20px"},
+                  fontSize: { lg: "24px", xs: "20px" },
                   fontWeight: 400,
                   marginTop: "15px",
                 }}>

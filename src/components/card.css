@@ -71,6 +71,10 @@ align-items: center;
   padding: 10px 47px !important;
 }
 
+.card:hover .selectBtn {
+  background: #16a34a !important;
+  color: #ffffff !important
+}
 .Homecard {
   padding: 48px 30.999px 25.87px 22.668px;
   border-radius: 16px;
