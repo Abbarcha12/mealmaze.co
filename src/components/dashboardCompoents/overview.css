@@ -1,0 +1,295 @@
+.spanOrange {
+  color: #ef4444;
+  background-color: #fee2e2;
+}
+.spanGreen {
+  color: #22c05c;
+  background-color: #dcfce7 !important;
+}
+.yellowSpan {
+  color: #eab308;
+  background-color: #fef9c3;
+}
+.createNewPlan {
+  border-radius: 11.602px !important;
+  background: #dcfce7 !important;
+  padding: 12px 16px !important;
+  color: #22c55e !important;
+  font-size: 15.504px !important;
+  font-weight: 700 !important;
+}
+.profileBox {
+  padding: 12px 16px;
+  border-radius: 7.689px !important;
+  background: #fff !important;
+position: absolute;
+width: 90% !important;
+  box-shadow: 0px 7.688852787017822px 16.659181594848633px 0px
+    rgba(34, 197, 94, 0.1) !important;
+}
+.profileBox img {
+  border-radius: 50%;
+}
+.Name {
+  color: #1e2029 !important;
+  font-family: Inter !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+}
+.email {
+  color: #1e2029 !important;
+  font-family: Inter;
+  font-size: 12px !important;
+
+  font-weight: 500 !important;
+}
+.subHeading {
+  color: #2c2126 !important;
+  font-family: Inter !important;
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+}
+.subHeadingSpan {
+  color: #4c4448 !important;
+  font-family: Inter !important;
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal;
+}
+.dashboardCardBox {
+  border-radius: 16px !important;
+  background: #fff !important;
+  padding: 23.056px 32px 22.056px 32px;
+  box-shadow: 0px 7.927051544189453px 15.854103088378906px 0px
+    rgba(143, 149, 178, 0.15) !important;
+}
+.CardTitle {
+  color: #8f95b2 !important;
+
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 17.531px; /* 125.22% */
+}
+.CardAmount {
+  color: #283651 !important;
+  font-family: Inter;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 28.049px;
+}
+
+.dashboradCardBoxTwo {
+  border-radius: 16px !important;
+  padding: 24px 32px !important;
+  background: #fff !important ;
+  box-shadow: 0px 7.927051544189453px 15.854103088378906px 0px
+    rgba(143, 149, 178, 0.15) !important;
+}
+.MealBox {
+  border-radius: 15px !important;
+  border: 1px solid #e8e8ed !important;
+  background: #fff !important;
+  padding: 18px;
+}
+.MealName {
+  color: #62585d !important;
+  font-family: Inter;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 20.698px; /* 114.991% */
+}
+.MealTitle {
+  color: #151d48 !important;
+
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 32px; /* 133.333% */
+}
+.Ingredients {
+  color: #8f95b2 !important;
+
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 13.799px; /* 86.243% */
+}
+.MealList {
+  color: #8f95b2 !important;
+  font-family: Inter;
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 166.8% !important;
+  list-style: circle !important; /* 20.016px */
+}
+.openBox {
+  border-radius: 7.436px !important;
+  padding: 8px 16px !important;
+
+  background: var(--colors-green-100, #dcfce7) !important;
+}
+.dot {
+  padding: 0px 10px 0px 0px !important;
+}
+.MealBage1 {
+  border-radius: 4px !important;
+  background: var(--secondary-color-shade-2, #cdf4ff) !important;
+  padding: 8px 12px !important;
+  color: var(--secondary-color-shade-3, #3f8cff);
+  text-align: center !important;
+  font-family: Inter !important;
+  font-size: 10px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+.MealBage2 {
+  border-radius: 4px;
+  background: var(--colors-red-100, #fee2e2) !important;
+  padding: 8px 12px !important;
+  color: var(--secondary-color-shade-3, #ef4444) !important;
+  text-align: center !important;
+  font-family: Inter !important;
+  font-size: 10px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+.MealBage3 {
+  border-radius: 4px;
+  background: var(--colors-red-100, #fef3c7);
+  padding: 8px 12px !important;
+  color: var(--secondary-color-shade-3, #fb923c);
+  text-align: center !important;
+  font-family: Inter !important;
+  font-size: 10px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+.MealBage4 {
+  border-radius: 4px;
+  background: var(--colors-violet-100, #ede9fe);
+  padding: 8px 12px !important;
+  color: var(--secondary-color-shade-3, #a855f7);
+  text-align: center !important;
+  font-family: Inter !important;
+  font-size: 10px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+.weekBox {
+  padding: 28px 18px !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0px 7.927051544189453px 15.854103088378906px 0px
+    rgba(143, 149, 178, 0.15) !important;
+  border-bottom: 2px solid #e6e8f0 !important;
+}
+.weekBoxHeading {
+  color: var(--dark-color, #081735) !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 23.781px !important; /* 132.118% */
+}
+.arrows {
+  height: 12px;
+  width: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px !important;
+  padding: 3px !important;
+  background: #fff !important;
+  box-shadow: 0px 2.1176469326019287px 15.882351875305176px 0px
+    rgba(0, 0, 0, 0.1) !important;
+}
+.WeekNumber {
+  color: var(--dark-color, #081735);
+  font-family: Inter;
+  font-size: 17.836px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23.781px;
+}
+.WeekDays {
+  display: flex !important;
+  justify-content: start;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 9px 12px;
+  align-items: center;
+  text-decoration: none !important;
+}
+.WeekDays:focus {
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: var(--colors-green-100, #dcfce7);
+  box-shadow: 0px 7.927051544189453px 15.854103088378906px 0px
+    rgba(143, 149, 178, 0.15);
+}
+.DayCirlcle {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Day1 {
+  color: #62585d !important;
+  padding-left: 30px !important;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 15.854px !important; /* 79.271% */
+}
+.ShowWeeklyIngredientsButton {
+  color: #fff !important;
+  font-family: Inter;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  text-transform: capitalize !important;
+  padding: 15px 12px !important;
+  margin-top: 70px !important;
+  border-radius: 9.053px !important;
+  background: var(--colors-green-500, #22c55e) !important;
+}
+.Setting {
+  display: flex;
+  padding-top: 20px !important;
+  align-items: center;
+  text-decoration: none !important;
+}
+.settingtitle {
+  color: #62585d !important;
+
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  padding-left: 20px !important;
+  line-height: 21.728px; /* 144.854% */
+}
+.logOut {
+  color: #ef4444 !important;
+  padding-left: 20px !important;
+  font-family: Inter;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 21.728px; /* 144.854% */
+}
