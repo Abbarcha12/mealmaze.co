@@ -1,0 +1,27 @@
+.MyplansBox{
+    border-radius: 10px !important;
+background: #FFF !important;
+padding: 12px;
+}
+.MyPlansHeader{
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+.MyPlantitle{
+    color: var(--greys-blue-grey-800, #445C6D) !important;
+
+font-size: 12px;
+font-style: normal;
+font-weight: 600 !important;
+line-height: 14.179px; /* 118.157% */
+}
+.MyPlansMiddleSectionTitle{
+    color: #738391 !important;
+font-family: Inter;
+font-size: 14px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: 24px; /* 171.429% */
+padding: 3px;
+}

@@ -11,12 +11,14 @@ import CreateMeal from "./pages/createMeal/CreateMeal";
 import Meal from "./pages/createMeal/CreateMealLastPage";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Faq from "./components/Faq";
+import WeeklyIngredients from "./components/dashboardCompoents/WeeklyIngredients";
 const App = () => {
   const inputRef = useRef(null);
   return (
     <Routes>
       <Route path='/' element={<Homepage />} />
       <Route path='/meal' element={<Meal />} />
+      <Route path='/weekly' element={<WeeklyIngredients />} />
       <Route path='/faq' element={<Faq />} />
       <Route path="/dashboard" element={<Dashboard/>}/>
       <Route path='/login' element={<Login />} />

@@ -42,6 +42,14 @@ body {
   border: 2px solid rgba(128, 249, 168, 0.5) !important ;
   background: rgba(128, 249, 168, 0.1) !important;
 }
+.InputPassword{
+  margin-top: 30px !important;
+  padding: 5px 13px !important;
+  gap: 10px !important;
+  border-radius: 10px !important;
+  border: 2px solid #F0EDEE !important ;
+  background: #F0EDEE!important;
+}
 .css-v4u5dn-MuiInputBase-root-MuiInput-root:before {
   border-bottom: none !important;
 }
@@ -266,4 +274,15 @@ line-height: 32px !important; /* 185% */
 }
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
   transition: none !important;
+}
+.Label1{
+  color: var(--neutral-0450, rgba(108, 114, 117, 0.50)) !important;
+
+/* Base 2 */
+font-family: Inter;
+font-size: 14px !important;
+font-style: normal;
+font-weight: 500 !important;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.14px;
 }
