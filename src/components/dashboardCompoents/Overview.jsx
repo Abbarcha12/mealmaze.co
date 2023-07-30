@@ -302,9 +302,9 @@ const Overview = () => {
                           <Typography className='MealName'>
                             {item.Name}
                           </Typography>
-                          <Box>{item.heartIcon}</Box>
+                         <Box display={'flex'} alignItems={"center"} justifyContent={'space-between'}> <Box mr={3}>{item.heartIcon}</Box>
 
-                          <Box className='openBox'>open {item.openIcon}</Box>
+<Box className='openBox'>open {item.openIcon}</Box></Box>
                         </Box>
                         <Box mt={2}>
                           <Typography className='MealTitle'>

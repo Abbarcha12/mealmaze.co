@@ -52,7 +52,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -95,7 +95,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -138,7 +138,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -181,7 +181,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -224,7 +224,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -267,11 +267,11 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
-              200g steamed vegetables, e.g. broccoli, zucchini, bell peppers
+              200g steamed vegetables, 
             </Typography>
           </Box>
           <Box
@@ -310,7 +310,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -353,7 +353,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -396,7 +396,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -406,10 +406,14 @@ const Recipe = () => {
           <Box mt={10}>
             <Divider />
             <Box mt={4} display='flex' justifyContent={"space-between"}>
-              <Box className='MealBage1'>348 Cal</Box>
-              <Box className='MealBage2'>28g Protein</Box>
-              <Box className='MealBage3'>28g Protein</Box>
-              <Box className='MealBage4'>4g Fat</Box>
+              <Box className='MealBage1'width="80%" >348 Cal</Box>
+              <Box className='MealBage2' width="80%" ml={3}>28g Protein</Box>
+              
+            </Box>
+            <Box mt={4} display='flex' justifyContent={"space-between"}>
+              
+              <Box className='MealBage3' width="80%">28g Protein</Box>
+              <Box className='MealBage4' width="80%" ml={3}>4g Fat</Box>
             </Box>
           </Box>
         </Box>
@@ -435,7 +439,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -444,7 +448,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -460,7 +464,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -469,7 +473,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -486,7 +490,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -495,7 +499,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -512,7 +516,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -521,7 +525,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -538,7 +542,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -547,7 +551,7 @@ const Recipe = () => {
             <Typography
               sx={{
                 color: "#8F95B2",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
@@ -568,7 +572,7 @@ const Recipe = () => {
                     color: "#888587",
                     fontSize: "20",
                     fontWeight: 500,
-                    marginRight:"20px"
+                    marginRight:"18px"
                   }}>
                     copy
                   </Button>

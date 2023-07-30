@@ -11,7 +11,7 @@ padding: 12px;
 .MyPlantitle{
     color: var(--greys-blue-grey-800, #445C6D) !important;
 
-font-size: 12px;
+font-size: 13px !important;
 font-style: normal;
 font-weight: 600 !important;
 line-height: 14.179px; /* 118.157% */

@@ -80,13 +80,13 @@ const CreateMeal = () => {
     setSelectedOption3(event.target.value);
   };
 
-  const handleClose = (itemToRemove) => {
+  const handleClose1 = (itemToRemove) => {
     setData((prevData) => prevData.filter((item) => item !== itemToRemove));
   };
-  const handleClose1 = (itemToRemove) => {
+  const handleClose2 = (itemToRemove) => {
     setData1((prevData) => prevData.filter((item) => item !== itemToRemove));
   };
-  const handleClose2 = (itemToRemove) => {
+  const handleClose3 = (itemToRemove) => {
     setData2((prevData) => prevData.filter((item) => item !== itemToRemove));
   };
   return (
@@ -398,7 +398,7 @@ const CreateMeal = () => {
                         <div> {item}</div>
                         <Box
                           marginLeft={"6px"}
-                          onClick={() => handleClose(item)}>
+                          onClick={() => handleClose1(item)}>
                           <svg
                             xmlns='http://www.w3.org/2000/svg'
                             width='10'
@@ -490,7 +490,7 @@ const CreateMeal = () => {
                         <div> {item}</div>
                         <Box
                           marginLeft={"6px"}
-                          onClick={() => handleClose1(item)}>
+                          onClick={() => handleClose2(item)}>
                           <svg
                             xmlns='http://www.w3.org/2000/svg'
                             width='9'
@@ -576,7 +576,7 @@ const CreateMeal = () => {
                         <div>{item}</div>
                         <Box
                           marginLeft={"6px"}
-                          onClick={() => handleClose2(item)}>
+                          onClick={() => handleClose3(item)}>
                           <svg
                             xmlns='http://www.w3.org/2000/svg'
                             width='10'

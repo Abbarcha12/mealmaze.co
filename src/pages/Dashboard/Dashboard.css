@@ -1,90 +1,88 @@
-.DashboradSideBar{
-    padding: 32px 24px 621px 24px !important    ; 
-    background: rgba(255, 255, 255, 0.30) !important;
-box-shadow: 9px 0px 63px 0px rgba(0, 0, 0, 0.03) !important;
-backdrop-filter: blur(15px) !important;
-text-align: center !important;
+.DashboradSideBar {
+  padding: 32px 24px 621px 24px !important    ;
+  background: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 9px 0px 63px 0px rgba(0, 0, 0, 0.03) !important;
+  backdrop-filter: blur(15px) !important;
+  text-align: center !important;
 }
-.DashboardLink{
-    border-radius: 16px !important;
-background: transparent !important;
-padding: 17px 40px 15px 10px !important;    
-text-decoration: none !important;
-display: flex;
-justify-content: space-around !important;
+.DashboardLink {
+  border-radius: 16px !important;
+  background: transparent !important;
+  padding: 17px 40px 15px 10px !important;
+  text-decoration: none !important;
+  align-items: center !important;
+  display: flex;
+  justify-content: space-between !important;
 }
-.DashboardLink1{
-    border-radius: 16px !important;
-background: #22C55E !important;
-padding: 17px 40px 15px 10px !important;    
-text-decoration: none !important;
-display: flex;
-justify-content: space-around !important;
+.DashboardLink1 {
+  border-radius: 16px !important;
+  background: #22c55e !important;
+  padding: 17px 40px 15px 10px !important;
+  text-decoration: none !important;
+  display: flex;
+  justify-content: space-between !important;
 }
-.DashboardText{
-    font-family: Inter !important;
-    font-size: 17px !important;
-    font-style: normal !important;
-    font-weight: 700 !important;
-    line-height: normal !important;
+.DashboardText {
+  font-family: Inter !important;
+  font-size: 17px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
 }
-.logo2{
-    display: none;
+.logo2 {
+  display: none;
 }
-.miniSidebar{
-    padding: 32px 24px 621px 24px !important    ; 
-    
-    background: #FFF !important;
-    box-shadow: 0px 7.688852787017822px 16.659181594848633px 0px rgba(34, 197, 94, 0.10) !important;
-backdrop-filter: blur(15px) !important;
-text-align: center !important;
-}
-.miniSidebar{
-    
-    justify-content: space-between;
-}
-.miniSidebarText{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-.ToggleAction{
-    display: flex !important;
-    position: relative;
-    z-index: 0 !important;
+.miniSidebar {
+  padding: 32px 24px 621px 24px !important    ;
 
+  background: #fff !important;
+  box-shadow: 0px 7.688852787017822px 16.659181594848633px 0px
+    rgba(34, 197, 94, 0.1) !important;
+  backdrop-filter: blur(15px) !important;
+  text-align: center !important;
 }
-.ToggleBtn{
-    position: absolute !important;
-   
-    top: 50% !important;
-    z-index: 1 !important;
-    background-color: linear-gradient(90deg, #FCFCFC 0%, #FFF 100%) !important;
-box-shadow: 9px 0px 63px rgba(0, 0, 0, 0.03) !important;
-width: 21px !important;
-height: 84px !important;
+.miniSidebar {
+  justify-content: space-between;
+}
+.miniSidebarText {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.ToggleAction {
+  display: flex !important;
+  position: relative;
+  z-index: 0 !important;
+}
+.ToggleBtn {
+  position: absolute !important;
 
+  top: 50% !important;
+  z-index: 1 !important;
+  background-color: linear-gradient(90deg, #fcfcfc 0%, #fff 100%) !important;
+  box-shadow: 9px 0px 63px rgba(0, 0, 0, 0.03) !important;
+  width: 21px !important;
+  height: 84px !important;
 }
-@media screen and (max-width:912px) {
-.DashboardText{
+@media screen and (max-width: 912px) {
+  .DashboardText {
     display: none;
-}
-.DashboardLink1{
+  }
+  .DashboardLink1 {
     justify-content: center !important;
     align-items: center !important;
     padding: 10px 10px !important;
-}
-.logo1{
+  }
+  .logo1 {
     display: none;
-}
-.logo2{
-    display: block ;
-}
-.DashboradSideBar{
+  }
+  .logo2 {
+    display: block;
+  }
+  .DashboradSideBar {
     display: flex !important;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-    
+  }
 }

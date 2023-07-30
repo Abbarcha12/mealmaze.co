@@ -461,8 +461,8 @@ const DashboardSidebar = ({open,Id,handleOpen,handelClick}) => {
                         )}
                       </Box>
                       <Typography
-                        className='DashboardText'
-                        sx={{ color: Id === 3 ? "#fff" : "#7D8DA7" }}>
+                        className='DashboardText' 
+                        sx={{ color: Id === 3 ? "#fff" : "#7D8DA7",marginLeft:"10px" }}>
                         My ❤️ meals
                       </Typography>
                     </Link>

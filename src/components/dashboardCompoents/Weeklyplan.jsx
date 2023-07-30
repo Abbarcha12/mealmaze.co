@@ -9,7 +9,7 @@ const Weeklyplan = () => {
       <Box
         sx={{ display: "flex", justifyContent: "space-between" }}
         p={1}
-        mt={10}>
+        mt={5}>
         <Typography className='subHeading'>
           Oatmeal And Egg Whites{" "}
           <span className='subHeadingSpan'>(Lounch)</span>{" "}
@@ -52,7 +52,9 @@ const Weeklyplan = () => {
           padding: "32px 32px 43px 32px",
           borderRadius: "24px",
           background: "#fff",
-        }}>
+        }}
+        mt={3}
+        >
         <Recipe />
       </Box>
     </div>
