@@ -27,6 +27,9 @@
   font-size: 17px !important;
   font-style: normal !important;
   font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   line-height: normal !important;
 }
 .logo2 {
@@ -65,9 +68,6 @@
   height: 84px !important;
 }
 @media screen and (max-width: 912px) {
-  .DashboardText {
-    display: none;
-  }
   .DashboardLink1 {
     justify-content: center !important;
     align-items: center !important;
@@ -84,5 +84,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .miniSidebar {
+    padding: 5px 5px 30px 5px !important;
+    height: 100vh !important;
+  }
+  .minilogo {
+    width: 35px !important;
+  }
+  .css-tfsn2y {
+    left: 5px !important;
   }
 }

@@ -23,7 +23,7 @@ const Weeklyplan = () => {
             color: "#888587",
             fontSize: "18px",
             fontWeight: "500",
-            
+
             borderRadius: "9px",
             background: "#fff",
             boxShadow: "0px 2px 19px 2px rgba(0, 122, 41, 0.08)",
@@ -53,8 +53,7 @@ const Weeklyplan = () => {
           borderRadius: "24px",
           background: "#fff",
         }}
-        mt={3}
-        >
+        mt={3}>
         <Recipe />
       </Box>
     </div>

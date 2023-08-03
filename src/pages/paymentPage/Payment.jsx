@@ -43,7 +43,7 @@ const Payment = () => {
                 sx={{ borderRight: "1px solid #D9D9D9 " }}>
                 {cardData.map((item) => {
                   return (
-                    item.id == id && (
+                   Number( item.id) === Number(id) && (
                       <Box mt={3}>
                         <Typography className='PricingDaysHeading'>
                           {item.days} meal plan
@@ -353,7 +353,7 @@ const Payment = () => {
                     />
                   </Box>
                   <Box mt={1}>
-                    <Link to={`/account/${id}`} className="borderbottom">
+                    <Link to={`/account/${id}`} className='borderbottom'>
                       {" "}
                       <Button className='PayButton'>Pay USD15</Button>
                     </Link>

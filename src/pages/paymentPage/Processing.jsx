@@ -3,7 +3,7 @@ import "./payment.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Grid, Box } from "@mui/material";
 import Logo from "../../assest/logo.png";
-import { cardData } from "../../components/data";
+
 import Thankyou from "./ThankYou";
 const Processing = () => {
   const [timeIsUp, setTimeIsUp] = useState(false);

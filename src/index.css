@@ -286,3 +286,33 @@ font-weight: 500 !important;
 line-height: 24px; /* 171.429% */
 letter-spacing: -0.14px;
 }
+@media screen and (max-width:768px) {
+.ToggleBtn {
+  display: none!important;
+}
+
+}
+.Money{
+  display: flex;
+}
+.BuyBtn{
+  text-decoration: none !important;
+}
+.BuyBtn:hover div{
+  background-color: #15803D !important;
+}
+.BuyBtn:hover div div .Money{
+  color: #fff !important;
+}
+.BuyBtn:hover div  button{
+  color: #fff !important;
+  transition: none !important;
+  background-color:  #22C55E !important;
+}
+button{
+  transition: none !important;
+}
+.redheart{
+  color: #EF4444 !important;
+  font-size: 18px !important;
+}

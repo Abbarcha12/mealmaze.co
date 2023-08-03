@@ -3,9 +3,9 @@ import profileImg from "../../assest/profile.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import React from "react";
-import { Grid, Typography, Box, Button, Divider } from "@mui/material";
+import {  Typography, Box,  Divider } from "@mui/material";
 
-const Profile = ({handleOpen}) => {
+const Profile = ({ handleOpen }) => {
   const [open, setOpen] = React.useState(false);
   const handleToggle = () => {
     setOpen(!open);
@@ -28,22 +28,33 @@ const Profile = ({handleOpen}) => {
                   width={"40px"}
                 />
               </div>
-              <div>
+              <Box sx={{ display: { lg: "block", sm: "none", xs: "none" } }}>
                 <Typography className='Name' sx={{ paddingLeft: "10px" }}>
                   Khalid Hosen
                 </Typography>
                 <Typography sx={{ paddingLeft: "10px" }} className='email'>
                   kh.khaliduiux@gmail.com
                 </Typography>
-              </div>
+              </Box>
             </Box>
-            <Box onClick={handleToggle}>
+            <Box onClick={handleToggle} sx={{ marginLeft: { xs: "10px" } }}>
               {open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
             </Box>
           </Box>
           {open ? (
             <>
+              <Box sx={{ display: { lg: "none", md: "none", sm: "block" } }}>
+                <div>
+                  <Typography className='Name' sx={{ paddingLeft: "10px" }}>
+                    Khalid Hosen
+                  </Typography>
+                  <Typography sx={{ paddingLeft: "10px" }} className='email'>
+                    kh.khaliduiux@gmail.com
+                  </Typography>
+                </div>
+              </Box>
               <Divider sx={{ paddingTop: "10px" }} />
+
               <Link className='Setting' onClick={handleOpen}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

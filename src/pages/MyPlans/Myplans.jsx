@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid,Container, Typography, Box, Button, Divider } from "@mui/material";
+import { Grid, Container, Typography, Box, Button } from "@mui/material";
 import PasswordModel from "../../components/dashboardCompoents/passwordModel";
 import Profile from "../../components/dashboardCompoents/Profile";
 import "./Myplans.css";
@@ -22,7 +22,7 @@ const Myplans = () => {
       />
       <Grid container mt={1.5} spacing={2} >
         <Grid item lg={8.5} md={8} sm={7} xs={6}>
-          <Grid container alignItems={'center'}> 
+          <Grid container alignItems={'center'}>
             <Grid item lg={8.8}>
               <Box >
                 <Typography

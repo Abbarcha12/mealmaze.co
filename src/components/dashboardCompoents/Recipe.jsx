@@ -271,7 +271,7 @@ const Recipe = () => {
                 fontWeight: "400",
                 marginLeft: "15px",
               }}>
-              200g steamed vegetables, 
+              200g steamed vegetables,
             </Typography>
           </Box>
           <Box
@@ -406,14 +406,20 @@ const Recipe = () => {
           <Box mt={10}>
             <Divider />
             <Box mt={4} display='flex' justifyContent={"space-between"}>
-              <Box className='MealBage1'width="80%" >348 Cal</Box>
-              <Box className='MealBage2' width="80%" ml={3}>28g Protein</Box>
-              
+              <Box className='MealBage1' width='80%'>
+                348 Cal
+              </Box>
+              <Box className='MealBage2' width='80%' ml={3}>
+                28g Protein
+              </Box>
             </Box>
             <Box mt={4} display='flex' justifyContent={"space-between"}>
-              
-              <Box className='MealBage3' width="80%">28g Protein</Box>
-              <Box className='MealBage4' width="80%" ml={3}>4g Fat</Box>
+              <Box className='MealBage3' width='80%'>
+                28g Protein
+              </Box>
+              <Box className='MealBage4' width='80%' ml={3}>
+                4g Fat
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -560,36 +566,35 @@ const Recipe = () => {
           </Box>
           <Box mt={16}>
             <Divider />
-            <Box mt={2} textAlign={"end"} >
-              <Box >
+            <Box mt={2} textAlign={"end"}>
+              <Box>
                 <Button
                   sx={{
-                    '&:hover':{background:"#F6F4F5"},
+                    "&:hover": { background: "#F6F4F5" },
                     borderRadius: "9px",
                     background: "#F6F4F5",
                     padding: "10px 32px",
-                    textTransform:"capitalize",
+                    textTransform: "capitalize",
                     color: "#888587",
                     fontSize: "20",
                     fontWeight: 500,
-                    marginRight:"18px"
+                    marginRight: "18px",
                   }}>
-                    copy
-                  </Button>
-                  <Button
+                  copy
+                </Button>
+                <Button
                   sx={{
-                    '&:hover':{background:"#F6F4F5"},
+                    "&:hover": { background: "#F6F4F5" },
                     borderRadius: "9px",
                     background: "#F6F4F5",
                     padding: "10px 32px",
                     color: "#888587",
-                    textTransform:"capitalize",
+                    textTransform: "capitalize",
                     fontSize: "20",
                     fontWeight: 500,
-
                   }}>
-                    share
-                  </Button>
+                  share
+                </Button>
               </Box>
             </Box>
           </Box>

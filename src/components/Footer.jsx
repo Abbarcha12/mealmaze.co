@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../assest/logo.png";
 import "./Header.css"; // Import your custom CSS file
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link  } from "react-scroll";
 const Footer = () => {
   return (
     <div className='footer'>

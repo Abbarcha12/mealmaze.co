@@ -1,14 +1,18 @@
 import React from "react";
-import { Grid, Box, Typography } from "@mui/material";
+import {  Box, Typography } from "@mui/material";
 import "../dashboardCompoents/overview.css";
 const DashboardMiniCard = ({ image, title, amount }) => {
   return (
-    <Box  display={'flex'} justifyContent={'space-between'} alignItems={'center'} >
+    <Box
+      display={"flex"}
+      justifyContent={"space-around"}
+      alignItems={"center"}
+      sx={{ borderRight: "1px solid #E6E8F0" }}>
       <div>{image}</div>
-      <div>
-        <Typography className="CardTitle">{title}</Typography>
-        <Typography className="CardAmount">{amount}</Typography>
-      </div>
+      <Box mr={1}>
+        <Typography className='CardTitle'>{title}</Typography>
+        <Typography className='CardAmount'>{amount}</Typography>
+      </Box>
     </Box>
   );
 };

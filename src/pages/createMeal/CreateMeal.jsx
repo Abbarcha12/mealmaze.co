@@ -6,12 +6,12 @@ import {
   InputLabel,
   MenuItem,
   Input,
-  Alert,
+  
   Button,
   Select,
 } from "@mui/material";
 import Logo from "../../assest/logo.png";
-import { Link } from "react-router-dom";
+
 const CreateMeal = () => {
   const options1 = ["Eat Healthy", "Lose Weight", "Build Muscle"];
   const options2 = ["3 times", "4 times", "5 times", "6 times", "7 times"];
@@ -193,7 +193,7 @@ const CreateMeal = () => {
                   }}
                 />
               </Grid>
-              <Grid item lg={3}  xs={12}>
+              <Grid item lg={3} xs={12}>
                 <InputLabel
                   sx={{
                     color: " #888587",
@@ -437,7 +437,7 @@ const CreateMeal = () => {
                   sx={{
                     color: " #888587",
 
-                    fontSize: {lg:"16px",xs:"13px"},
+                    fontSize: { lg: "16px", xs: "13px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -523,7 +523,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-                    fontSize: {lg:"16px",xs:"14px"},
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -606,14 +606,8 @@ const CreateMeal = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Grid
-              container
-              spacing={3}
-              mt={5}
-              justifyContent={"end"}
-              pb={3}>
-              <Button href="/meal" className="generate"
-                >
+            <Grid container spacing={3} mt={5} justifyContent={"end"} pb={3}>
+              <Button href='/meal' className='generate'>
                 Generate your meal plan
               </Button>
             </Grid>

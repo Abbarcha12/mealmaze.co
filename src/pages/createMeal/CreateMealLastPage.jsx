@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React  from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Logo from "../../assest/logo.png";
 import MealImg from "../../assest/meal.png";
 
 const Meal = () => {
   return (
-    <Box m={4} SX={{height:"100vh"}}>
+    <Box m={4} SX={{ height: "100vh" }}>
       <img src={Logo} alt={Logo} className='Logo' />
       <Grid container justifyContent={"center"} alignContent={"center"}>
         <Grid lg={10.7} xs={12}>
@@ -29,7 +29,7 @@ const Meal = () => {
               sx={{
                 color: "#16A34A",
                 fontFamily: "Inter",
-                fontSize:{lg: "40px",sm:"32p" ,xs:"24px"},
+                fontSize: { lg: "40px", sm: "32p", xs: "24px" },
                 marginTop: "10px",
                 fontWeight: 600,
 

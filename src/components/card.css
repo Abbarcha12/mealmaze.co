@@ -10,9 +10,9 @@
   font-family: Inter !important;
   font-size: 16px !important;
   font-style: normal !important;
-display: flex !important;
-justify-content: start !important;
-align-items: center;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center;
   font-weight: 400 !important;
   line-height: normal !important;
 }
@@ -73,7 +73,7 @@ align-items: center;
 
 .card:hover .selectBtn {
   background: #16a34a !important;
-  color: #ffffff !important
+  color: #ffffff !important;
 }
 .Homecard {
   padding: 48px 30.999px 25.87px 22.668px;
@@ -139,12 +139,12 @@ align-items: center;
   font-weight: 500 !important;
   line-height: 30px !important; /* 187.5% */
 }
-.DoneIcon{
-    color: black;
-    font-size: 16px !important;
+.DoneIcon {
+  color: black;
+  font-size: 16px !important;
 }
 
-.card:hover span .DoneIcon{
-    color: rgb(255, 255, 255) !important;
-    font-size: 16px !important;
+.card:hover span .DoneIcon {
+  color: rgb(255, 255, 255) !important;
+  font-size: 16px !important;
 }

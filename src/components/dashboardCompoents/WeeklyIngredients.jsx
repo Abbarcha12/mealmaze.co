@@ -39,8 +39,6 @@ const WeeklyIngredients = () => {
         {Id === 2 ? <Myplans /> : ""}
         {Id === 3 ? <MealPlan /> : ""}
         {Id === 4 ? <FoodMatch /> : ""}
-
-
       </Grid>
     </Grid>
   );

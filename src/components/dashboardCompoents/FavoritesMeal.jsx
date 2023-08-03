@@ -1,11 +1,10 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import "./overview.css"
+import "./overview.css";
 const FavoritesMeal = ({ Icon, heading, title, day, heart }) => {
   return (
-   
-      <Box   mt={2}>
+    <Box mt={2}>
       <Link className='Favlist'>
         <Box>{Icon}</Box>
         <Box>
@@ -45,9 +44,8 @@ const FavoritesMeal = ({ Icon, heading, title, day, heart }) => {
             {heart}
           </Box>
         </Box>
-        </Link>
-      </Box>
-   
+      </Link>
+    </Box>
   );
 };
 

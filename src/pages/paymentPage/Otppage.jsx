@@ -4,9 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import {
   Grid,
   Radio,
-  FormControlLabel,
-  TextField,
-  Checkbox,
   Box,
   Typography,
   Divider,
@@ -20,11 +17,7 @@ const OtpPage = () => {
   const handleRadio = (id) => {
     setRadio(id);
   };
-  const [checked, setChecked] = useState(false);
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
   return (
     <>
       <Box m={2.5}>
@@ -43,7 +36,7 @@ const OtpPage = () => {
                 sx={{ borderRight: "1px solid #D9D9D9 " }}>
                 {cardData.map((item) => {
                   return (
-                    item.id == id && (
+                    Number(item.id) === Number(id) && (
                       <Box mt={3}>
                         <Typography className='PricingDaysHeading'>
                           {item.days} meal plan
@@ -287,9 +280,9 @@ const OtpPage = () => {
                     </Box>
                   </Box>
                   <Box mt={2}>
-                   <Typography className="Otpheading">
-                   Enter your 4-digit card pin to confirm this payment
-                   </Typography>
+                    <Typography className='Otpheading'>
+                      Enter your 4-digit card pin to confirm this payment
+                    </Typography>
                   </Box>
                   <Box mt={3} display={"flex"} justifyContent={"center"}>
                     <div class='otp-field'>
@@ -300,7 +293,9 @@ const OtpPage = () => {
                     </div>
                   </Box>
                   <Box mt={10}>
-                    <Link to="/processing"><Button className='PayButton'>Confirm Payment</Button></Link>
+                    <Link to='/processing'>
+                      <Button className='PayButton'>Confirm Payment</Button>
+                    </Link>
                     <Typography className='reading'>
                       Your personal data will be used to process your order,
                       support your experience throughout this website, and for

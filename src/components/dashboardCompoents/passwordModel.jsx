@@ -28,7 +28,7 @@ const style = {
   px: 4,
   pb: 3,
 };
-const PasswordModel = ({  handleClose, openModel,setOpenModel }) => {
+const PasswordModel = ({ handleClose, openModel, setOpenModel }) => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showPassword1, setShowPassword1] = React.useState(false);
   const [showPassword2, setShowPassword2] = React.useState(false);
@@ -39,19 +39,17 @@ const PasswordModel = ({  handleClose, openModel,setOpenModel }) => {
   const [DeleteModel, setDeleteModel] = React.useState(false);
   const handleDelete = () => {
     setDeleteModel(true);
-    setOpenModel(false)
-  
+    setOpenModel(false);
   };
   const handleDeleteClose = () => {
     setDeleteModel(false);
   };
   return (
     <React.Fragment>
-        <DeleteAccount
+      <DeleteAccount
         DeleteModel={DeleteModel}
-        
         handleDeleteClose={handleDeleteClose}
-        />
+      />
       <Modal
         open={openModel}
         onClose={handleClose}
@@ -110,7 +108,9 @@ const PasswordModel = ({  handleClose, openModel,setOpenModel }) => {
                 </div>
               </Box>
               <Box>
-                <Button className='DeleteBtn' onClick={handleDelete}>Delete account</Button>
+                <Button className='DeleteBtn' onClick={handleDelete}>
+                  Delete account
+                </Button>
               </Box>
             </Box>
           </Box>
