@@ -3,6 +3,9 @@ import Modal from "@mui/material/Modal";
 import { Box, Divider, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
+import { useDispatch,useSelector } from "react-redux";
+import { handleClosePopUp } from "../../Redux/actions/CreateMealAction";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -16,11 +19,14 @@ const style = {
   px: 4,
   pb: 3,
 };
-const PurchaseFoodmatchpopUp = ({ handleClosePop, popUp }) => {
+const PurchaseFoodmatchpopUp = () => {
+  const initialState=useSelector((state)=>state.rootReducer.hanldeCreateMealPopUp)
+ 
+  const dispatch=useDispatch()
   return (
     <Modal
-      open={popUp}
-      onClose={handleClosePop}
+      open={initialState}
+      onClose={handleClosePopUp}
       aria-labelledby='child-modal-title'
       aria-describedby='child-modal-description'>
       <Box sx={{ ...style, width: 600 }}>
@@ -29,7 +35,7 @@ const PurchaseFoodmatchpopUp = ({ handleClosePop, popUp }) => {
             sx={{ color: "#4C4448", fontSize: "30px", fontWeight: "600" }}>
             Purchase Foodmatch to add
           </Typography>
-          <Box onClick={handleClosePop}>
+          <Box onClick={()=>dispatch(handleClosePopUp())}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='49'

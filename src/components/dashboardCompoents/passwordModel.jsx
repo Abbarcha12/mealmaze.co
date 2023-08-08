@@ -1,6 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import {useSelector ,useDispatch } from "react-redux";
 import {
   InputLabel,
   FormControl,
@@ -15,6 +16,7 @@ import profileImg from "../../assest/profile.png";
 import Visibility from "@mui/icons-material/Visibility";
 import "./overview.css";
 import DeleteAccount from "./DeleteAccount";
+import { profileClose } from "../../Redux/actions/CreateMealAction";
 const style = {
   position: "absolute",
   top: "50%",
@@ -28,7 +30,10 @@ const style = {
   px: 4,
   pb: 3,
 };
-const PasswordModel = ({ handleClose, openModel, setOpenModel }) => {
+const PasswordModel = ({ setOpenModel }) => {
+  const dispatch = useDispatch();
+  const initialState=useSelector((state)=>state.rootReducer.handleProfilePopUp)
+ 
   const [showPassword, setShowPassword] = React.useState(false);
   const [showPassword1, setShowPassword1] = React.useState(false);
   const [showPassword2, setShowPassword2] = React.useState(false);
@@ -51,8 +56,8 @@ const PasswordModel = ({ handleClose, openModel, setOpenModel }) => {
         handleDeleteClose={handleDeleteClose}
       />
       <Modal
-        open={openModel}
-        onClose={handleClose}
+        open={initialState}
+        onClose={()=>dispatch(profileClose())}
         aria-labelledby='child-modal-title'
         aria-describedby='child-modal-description'>
         <Box sx={{ ...style, width: 700 }}>
@@ -61,7 +66,7 @@ const PasswordModel = ({ handleClose, openModel, setOpenModel }) => {
               sx={{ color: "#4C4448", fontSize: "30px", fontWeight: "600" }}>
               Settings
             </Typography>
-            <Box onClick={handleClose}>
+            <Box onClick={()=>dispatch(profileClose())}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='39'

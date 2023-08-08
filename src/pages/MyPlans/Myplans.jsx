@@ -1,10 +1,17 @@
 import React from "react";
-import { Grid, Container, Typography, Box, Button } from "@mui/material";
+import { Grid,  Typography, Box, Button } from "@mui/material";
 import PasswordModel from "../../components/dashboardCompoents/passwordModel";
 import Profile from "../../components/dashboardCompoents/Profile";
 import "./Myplans.css";
+import {
+
+  handleOpenPopUp,
+} from "../../Redux/actions/CreateMealAction";
+import {  useDispatch } from "react-redux";
+import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
 const Myplans = () => {
   const [openModel, setOpenModel] = React.useState(false);
+  const dispatch = useDispatch();
 
   const handleOpen = () => {
     setOpenModel(true);
@@ -13,13 +20,13 @@ const Myplans = () => {
     setOpenModel(false);
   };
   return (
-    <Container lg>
+    <>
       <PasswordModel
-        handleClose={handleClose}
-        handleOpen={handleOpen}
+        
         openModel={openModel}
         setOpenModel={setOpenModel}
       />
+      <PurchaseFoodmatchpopUp/>
       <Grid container mt={1.5} spacing={2} >
         <Grid item lg={8.5} md={8} sm={7} xs={6}>
           <Grid container alignItems={'center'}>
@@ -36,7 +43,7 @@ const Myplans = () => {
               </Box>
             </Grid>
             <Grid item lg={3.2}>
-              <Button className='createNewPlan'>Create New Plan</Button>
+              <Button className='createNewPlan' onClick={() => dispatch(handleOpenPopUp())}>Create New Plan</Button>
             </Grid>
           </Grid>
         </Grid>
@@ -406,7 +413,7 @@ const Myplans = () => {
           </Grid>
         </Grid>
       </Grid>
-    </Container>
+    </>
   );
 };
 

@@ -15,7 +15,12 @@ import { Link } from "react-router-dom";
 
 const Overview = () => {
   const [count, setCount] = React.useState(1);
+  const [Id, setID] = useState(0);
 
+  const handleSwitch = () => {
+    setID(1);
+    console.log("heello", Id);
+  };
   const handleIncrement = () => {
     setCount(count + 1);
   };
@@ -26,7 +31,7 @@ const Overview = () => {
 
   return (
     <>
-      <Container lg>
+      <>
         <DashboradHeader title='Overview' />
 
         <Grid container spacing={2} mt={3}>
@@ -354,266 +359,864 @@ const Overview = () => {
           </Grid>
           <Grid item lg={3.2} mt={7}>
             <Box className='weekBox' mt={3}>
-              <Box display={"flex"} justifyContent={"space-between"}>
+              <Box
+                display={"flex"}
+                justifyContent={"space-between"}
+                alignItems={"center"}>
                 <Box width={"70%"}>
                   <Typography className='weekBoxHeading'>
-                    Day fo the weak
+                    {Id === 1 ? "Currently viewing" : " Day fo the weak"}
                   </Typography>
                 </Box>
-                <Box
-                  width={"30%"}
-                  display={"flex"}
-                  justifyContent={"space-around"}
-                  alignContent={"center"}>
-                  <Box className='arrows' onClick={handleDecrement}>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='12'
-                      height='12'
-                      viewBox='0 0 12 12'
-                      fill='none'>
-                      <path
-                        fill-rule='evenodd'
-                        clip-rule='evenodd'
-                        d='M8.5 9.06L5.40958 6L8.5 2.94L7.54858 2L3.5 6L7.54858 10L8.5 9.06Z'
-                        fill='#232931'
-                      />
-                    </svg>
+                {Id === 1 ? (
+                  <Box
+                    width={"30%"}
+                    display={"flex"}
+                    justifyContent={"space-around"}
+                    alignContent={"center"}
+                    alignItems={"center"}
+                    sx={{
+                      borderRadius: "4px",
+                      padding: "2px",
+                      backgroundColor: "#fff",
+                      boxShadow: " 0px 2px 19px 2px rgba(0, 122, 41, 0.08)",
+                    }}>
+                    <Box sx={{ fontSize: "13px", fontWeight: 600 }}>Week 1</Box>
+                    <Box className='WeekNumber'>
+                      <svg
+                        width='12'
+                        height='7'
+                        viewBox='0 0 12 7'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                          d='M1.04851 0.5C1.31502 0.5 1.58153 0.583541 1.79193 0.762556L6 4.34286L10.2081 0.762555C10.6148 0.416459 11.2881 0.416459 11.6949 0.762555C12.1017 1.10865 12.1017 1.6815 11.6949 2.0276L6.74342 6.24043C6.33665 6.58652 5.66335 6.58652 5.25658 6.24043L0.305085 2.0276C-0.101695 1.6815 -0.101695 1.10865 0.305085 0.762556C0.515488 0.583541 0.781998 0.5 1.04851 0.5Z'
+                          fill='#1E2029'
+                        />
+                      </svg>
+                    </Box>
                   </Box>
-                  <Box className='WeekNumber'>{count}</Box>
-                  <Box className='arrows' onClick={handleIncrement}>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='12'
-                      height='12'
-                      viewBox='0 0 12 12'
-                      fill='none'>
-                      <path
-                        fill-rule='evenodd'
-                        clip-rule='evenodd'
-                        d='M3.5 9.06L6.59042 6L3.5 2.94L4.45142 2L8.5 6L4.45142 10L3.5 9.06Z'
-                        fill='#232931'
-                      />
-                    </svg>
+                ) : (
+                  <Box
+                    width={"30%"}
+                    display={"flex"}
+                    justifyContent={"space-around"}
+                    alignContent={"center"}>
+                    <Box className='arrows' onClick={handleDecrement}>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='12'
+                        height='12'
+                        viewBox='0 0 12 12'
+                        fill='none'>
+                        <path
+                          fill-rule='evenodd'
+                          clip-rule='evenodd'
+                          d='M8.5 9.06L5.40958 6L8.5 2.94L7.54858 2L3.5 6L7.54858 10L8.5 9.06Z'
+                          fill='#232931'
+                        />
+                      </svg>
+                    </Box>
+                    <Box className='WeekNumber'>{count}</Box>
+                    <Box className='arrows' onClick={handleIncrement}>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='12'
+                        height='12'
+                        viewBox='0 0 12 12'
+                        fill='none'>
+                        <path
+                          fill-rule='evenodd'
+                          clip-rule='evenodd'
+                          d='M3.5 9.06L6.59042 6L3.5 2.94L4.45142 2L8.5 6L4.45142 10L3.5 9.06Z'
+                          fill='#232931'
+                        />
+                      </svg>
+                    </Box>
                   </Box>
-                </Box>
+                )}
               </Box>
               <Divider sx={{ marginTop: "20px" }} />
+              {Id === 1 ? (
+                <Box mt={2}>
+                  <Typography
+                    sx={{
+                      fontSize: "24px",
+                      color: "#62585D",
+                      fontWeight: 500,
+                    }}>
+                    Weekly Ingredients
+                  </Typography>
+                  <Box
+                    mt={1.5}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>
+                  <Box
+                    mt={2}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>
+                  <Box
+                    mt={2}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>{" "}
+                  <Box
+                    mt={2}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>{" "}
+                  <Box
+                    mt={2}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>{" "}
+                  <Box
+                    mt={2}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>{" "}
+                  <Box
+                    mt={2}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>{" "}
+                  <Box
+                    mt={2}
+                    sx={{
+                      display: "flex",
+                      alignContent: "center",
+                      alignItems: "center",
+                    }}>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='7'
+                      height='17'
+                      viewBox='0 0 7 17'
+                      fill='none'>
+                      <rect
+                        y='5.96973'
+                        width='6.76471'
+                        height='6.76471'
+                        rx='3.38235'
+                        fill='url(#paint0_linear_9958_572)'
+                      />
+                      <defs>
+                        <linearGradient
+                          id='paint0_linear_9958_572'
+                          x1='9.67455'
+                          y1='5.29578'
+                          x2='-1.41777'
+                          y2='2.53973'
+                          gradientUnits='userSpaceOnUse'>
+                          <stop stop-color='#8F95B2' />
+                          <stop offset='1' stop-color='#CDF4FF' />
+                        </linearGradient>
+                      </defs>
+                    </svg>{" "}
+                    <Typography
+                      sx={{
+                        color: "#62585D",
+                        fontSize: "18px",
+                        fontWeight: "400",
+                        marginLeft: "15px",
+                      }}>
+                      200g grilled chicken
+                    </Typography>
+                  </Box>
+                  <Box
+            mt={2}
+            sx={{
+              display: "flex",
+              alignContent: "center",
+              alignItems: "center",
+            }}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='7'
+              height='17'
+              viewBox='0 0 7 17'
+              fill='none'>
+              <rect
+                y='5.96973'
+                width='6.76471'
+                height='6.76471'
+                rx='3.38235'
+                fill='url(#paint0_linear_9958_572)'
+              />
+              <defs>
+                <linearGradient
+                  id='paint0_linear_9958_572'
+                  x1='9.67455'
+                  y1='5.29578'
+                  x2='-1.41777'
+                  y2='2.53973'
+                  gradientUnits='userSpaceOnUse'>
+                  <stop stop-color='#8F95B2' />
+                  <stop offset='1' stop-color='#CDF4FF' />
+                </linearGradient>
+              </defs>
+            </svg>{" "}
+            <Typography
+              sx={{
+                color: "#62585D",
+                fontSize: "18px",
+                fontWeight: "400",
+                marginLeft: "15px",
+              }}>
+              200g grilled chicken
+            </Typography>
+          </Box>
+                     <Box
+            mt={2}
+            sx={{
+              display: "flex",
+              alignContent: "center",
+              alignItems: "center",
+            }}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='7'
+              height='17'
+              viewBox='0 0 7 17'
+              fill='none'>
+              <rect
+                y='5.96973'
+                width='6.76471'
+                height='6.76471'
+                rx='3.38235'
+                fill='url(#paint0_linear_9958_572)'
+              />
+              <defs>
+                <linearGradient
+                  id='paint0_linear_9958_572'
+                  x1='9.67455'
+                  y1='5.29578'
+                  x2='-1.41777'
+                  y2='2.53973'
+                  gradientUnits='userSpaceOnUse'>
+                  <stop stop-color='#8F95B2' />
+                  <stop offset='1' stop-color='#CDF4FF' />
+                </linearGradient>
+              </defs>
+            </svg>{" "}
+            <Typography
+              sx={{
+                color: "#62585D",
+                fontSize: "18px",
+                fontWeight: "400",
+                marginLeft: "15px",
+              }}>
+              200g grilled chicken
+            </Typography>
+          </Box>
+
+                     <Box
+            mt={2}
+            sx={{
+              display: "flex",
+              alignContent: "center",
+              alignItems: "center",
+            }}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='7'
+              height='17'
+              viewBox='0 0 7 17'
+              fill='none'>
+              <rect
+                y='5.96973'
+                width='6.76471'
+                height='6.76471'
+                rx='3.38235'
+                fill='url(#paint0_linear_9958_572)'
+              />
+              <defs>
+                <linearGradient
+                  id='paint0_linear_9958_572'
+                  x1='9.67455'
+                  y1='5.29578'
+                  x2='-1.41777'
+                  y2='2.53973'
+                  gradientUnits='userSpaceOnUse'>
+                  <stop stop-color='#8F95B2' />
+                  <stop offset='1' stop-color='#CDF4FF' />
+                </linearGradient>
+              </defs>
+            </svg>{" "}
+            <Typography
+              sx={{
+                color: "#62585D",
+                fontSize: "18px",
+                fontWeight: "400",
+                marginLeft: "15px",
+              }}>
+              200g grilled chicken
+            </Typography>
+          </Box>
+          <Box
+            mt={2}
+            sx={{
+              display: "flex",
+              alignContent: "center",
+              alignItems: "center",
+            }}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='7'
+              height='17'
+              viewBox='0 0 7 17'
+              fill='none'>
+              <rect
+                y='5.96973'
+                width='6.76471'
+                height='6.76471'
+                rx='3.38235'
+                fill='url(#paint0_linear_9958_572)'
+              />
+              <defs>
+                <linearGradient
+                  id='paint0_linear_9958_572'
+                  x1='9.67455'
+                  y1='5.29578'
+                  x2='-1.41777'
+                  y2='2.53973'
+                  gradientUnits='userSpaceOnUse'>
+                  <stop stop-color='#8F95B2' />
+                  <stop offset='1' stop-color='#CDF4FF' />
+                </linearGradient>
+              </defs>
+            </svg>{" "}
+            <Typography
+              sx={{
+                color: "#62585D",
+                fontSize: "18px",
+                fontWeight: "400",
+                marginLeft: "15px",
+              }}>
+              200g grilled chicken
+            </Typography>
+          </Box>
+          <Box mt={10}>
+            <Divider />
+            <Box mt={2} textAlign={"end"}>
               <Box>
-                <Link className='WeekDays'>
-                  <div className='DayCirlcle'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'>
-                      <g clip-path='url(#clip0_9924_2711)'>
-                        <path
-                          d='M14.3515 0.610199H13.8023C13.816 0.564764 13.8307 0.519329 13.8307 0.469008C13.8307 0.34449 13.7812 0.225072 13.6932 0.137024C13.6051 0.0489766 13.4857 -0.000488013 13.3612 -0.000488013C13.2367 -0.000488013 13.1172 0.0489766 13.0292 0.137024C12.9411 0.225072 12.8917 0.34449 12.8917 0.469008C12.8917 0.519329 12.9054 0.564764 12.9205 0.610199H11.1226C11.1368 0.564764 11.151 0.519329 11.151 0.469008C11.151 0.34436 11.1015 0.224818 11.0133 0.136679C10.9252 0.0485395 10.8056 -0.000976562 10.681 -0.000976562C10.5563 -0.000976562 10.4368 0.0485395 10.3487 0.136679C10.2605 0.224818 10.211 0.34436 10.211 0.469008C10.213 0.517305 10.2228 0.564968 10.2398 0.610199H8.44197C8.45614 0.564764 8.47031 0.519329 8.47031 0.469008C8.47031 0.344425 8.42082 0.224945 8.33272 0.136852C8.24463 0.0487581 8.12515 -0.000732288 8.00056 -0.000732288C7.87598 -0.000732288 7.7565 0.0487581 7.66841 0.136852C7.58031 0.224945 7.53082 0.344425 7.53082 0.469008C7.53082 0.519329 7.54499 0.564764 7.55916 0.610199H5.7613C5.77547 0.564764 5.78963 0.519329 5.78963 0.469008C5.7857 0.347047 5.73449 0.231398 5.64682 0.146516C5.55916 0.0616335 5.44192 0.0141744 5.31989 0.0141744C5.19787 0.0141744 5.08063 0.0616335 4.99296 0.146516C4.9053 0.231398 4.85409 0.347047 4.85015 0.469008C4.85015 0.519329 4.86383 0.564764 4.87849 0.610199H3.08063C3.09752 0.564943 3.10709 0.51728 3.10896 0.469008C3.10896 0.34449 3.0595 0.225072 2.97145 0.137024C2.8834 0.0489766 2.76398 -0.000488013 2.63947 -0.000488013C2.51495 -0.000488013 2.39553 0.0489766 2.30748 0.137024C2.21943 0.225072 2.16997 0.34449 2.16997 0.469008C2.16997 0.519329 2.18414 0.564764 2.19831 0.610199H1.64918C1.29293 0.610458 0.951356 0.752089 0.699455 1.00399C0.447554 1.25589 0.305923 1.59747 0.305664 1.95371V14.656C0.305923 15.0122 0.447554 15.3538 0.699455 15.6057C0.951356 15.8576 1.29293 15.9993 1.64918 15.9995H12.8345L15.695 13.1391V1.95371C15.6947 1.59747 15.5531 1.25589 15.3012 1.00399C15.0493 0.752089 14.7077 0.610458 14.3515 0.610199ZM14.9622 12.8352L14.8102 12.9871H13.6592C13.1213 12.9871 12.6821 13.4268 12.6821 13.9642V15.1147L12.5306 15.2667H1.64918C1.31256 15.2667 1.03849 14.9926 1.03849 14.656V4.39646H14.9622V12.8352Z'
-                          fill='#16A34A'
-                        />
-                        <path
-                          d='M2.71791 10.3213L2.69104 9.71988L2.6373 9.14974H2.64805L3.35205 11.633H4.23339L4.93739 9.14974H4.94814L4.88414 9.84886L4.86753 10.4512V11.633H6.00732V7.76324H4.47522L3.79272 10.1767L3.11022 7.76324H1.57812V11.633H2.71791V10.3213ZM8.29568 11.7351C9.44084 11.7351 10.328 10.993 10.328 9.67689C10.328 8.65533 9.6773 7.66113 8.29568 7.66113C7.09238 7.66113 6.27016 8.45161 6.27016 9.66614C6.26967 10.9823 7.08164 11.7351 8.29568 11.7351ZM8.28542 8.60696C8.84481 8.59084 9.05929 9.14925 9.05929 9.67591C9.05929 10.3159 8.84481 10.7883 8.29617 10.7883C7.6889 10.7883 7.53892 10.1698 7.53892 9.67591C7.53843 9.18785 7.7104 8.60696 8.28542 8.60696ZM11.8543 10.4082L11.8054 9.52642L13.1866 11.633H14.3742V7.76324H13.1597V8.9939L13.208 9.87524L11.8269 7.76324H10.6383V11.633H11.8543V10.4082Z'
-                          fill='#16A34A'
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id='clip0_9924_2711'>
-                          <rect width='16' height='16' fill='white' />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div>
-                    <Typography className='Day1'>Monday</Typography>
-                  </div>
-                </Link>
-                <Link className='WeekDays'>
-                  <div className='DayCirlcle'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'>
-                      <g clip-path='url(#clip0_9924_2720)'>
-                        <path
-                          d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
-                          fill='#16A34A'
-                        />
-                        <path
-                          d='M3.45717 11.6335H4.72593V8.77937H5.86523V7.76367H2.31738V8.77937H3.45717V11.6335ZM8.00361 11.7356C9.28801 11.7356 9.86352 11.1928 9.86352 9.9514V7.76367H8.59524V10.0799C8.59524 10.4991 8.46089 10.7897 8.00361 10.7897C7.48282 10.7897 7.40709 10.4619 7.40709 10.0799V7.76367H6.13833V9.94553C6.13833 11.2788 6.8052 11.7356 8.00361 11.7356ZM13.6092 10.7306H11.6477V10.1234H13.2438V9.22004H11.6477V8.66651H13.534V7.76367H10.3785V11.6335H13.6092V10.7306Z'
-                          fill='#16A34A'
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id='clip0_9924_2720'>
-                          <rect width='16' height='16' fill='white' />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div>
-                    <Typography className='Day1'>Tuesday</Typography>
-                  </div>
-                </Link>
-                <Link className='WeekDays'>
-                  <div className='DayCirlcle'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'>
-                      <g clip-path='url(#clip0_9924_2728)'>
-                        <path
-                          d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
-                          fill='#16A34A'
-                        />
-                        <path
-                          d='M3.78735 11.6335L4.22802 9.38663H4.23877L4.6853 11.6335H5.93208L6.89403 7.76367H5.66875L5.23296 10.1556H5.22222L4.76005 7.76367H3.71211L3.24994 10.1556H3.23919L2.80341 7.76367H1.57812L2.54008 11.6335H3.78735ZM10.2958 10.7306H8.33428V10.1234H9.93037V9.22004H8.33428V8.66651H10.2206V7.76367H7.06503V11.6335H10.2958V10.7306ZM14.3371 9.61869C14.3371 8.34505 13.5632 7.76465 12.316 7.76465H10.6173V11.634H12.2832C13.5251 11.6335 14.3371 11.0746 14.3371 9.61869ZM11.8855 10.7306V8.66651H12.1279C12.805 8.66651 13.0683 8.88147 13.0683 9.68758C13.0683 10.4185 12.7459 10.7301 12.1547 10.7301L11.8855 10.7306Z'
-                          fill='#16A34A'
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id='clip0_9924_2728'>
-                          <rect width='16' height='16' fill='white' />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div>
-                    <Typography className='Day1'>Wednesday</Typography>
-                  </div>
-                </Link>
-                <Link className='WeekDays'>
-                  <div className='DayCirlcle'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'>
-                      <g clip-path='url(#clip0_9924_2736)'>
-                        <path
-                          d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
-                          fill='#16A34A'
-                        />
-                        <path
-                          d='M3.15834 11.6335H4.42662V8.77937H5.56591V7.76367H2.01855V8.77937H3.15834V11.6335ZM7.1024 10.1341H8.3013V11.6335H9.56958V7.76367H8.3013V9.06956H7.1024V7.76367H5.83364V11.6335H7.1024V10.1341ZM11.9127 11.7356C13.1975 11.7356 13.7721 11.1928 13.7721 9.9514V7.76367H12.5038V10.0799C12.5038 10.4991 12.3695 10.7897 11.9127 10.7897C11.3914 10.7897 11.3157 10.4619 11.3157 10.0799V7.76367H10.0474V9.94553C10.0474 11.2788 10.7138 11.7356 11.9127 11.7356Z'
-                          fill='#16A34A'
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id='clip0_9924_2736'>
-                          <rect width='16' height='16' fill='white' />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div>
-                    <Typography className='Day1'>Thursday</Typography>
-                  </div>
-                </Link>
-                <Link className='WeekDays'>
-                  <div className='DayCirlcle'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'>
-                      <g clip-path='url(#clip0_9924_2744)'>
-                        <path
-                          d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
-                          fill='#16A34A'
-                        />
-                        <path
-                          d='M5.00656 10.2734H6.39355V9.37002H5.00656V8.66602H6.74824V7.76318H3.73828V11.633H5.00656V10.2734ZM8.25297 10.2841H8.64039C9.23104 10.2841 9.31703 10.4512 9.31703 10.9559C9.31703 11.2998 9.34927 11.547 9.38249 11.6335H10.6669V11.5148C10.5154 11.5148 10.533 11.3423 10.533 10.8371C10.533 10.0579 10.2853 9.96117 9.87691 9.8107C10.3288 9.68709 10.5277 9.3114 10.5277 8.86437C10.5277 8.11152 10.1036 7.7627 8.81285 7.7627H6.98518V11.6325H8.25443V10.2831H8.25297V10.2841ZM8.25297 8.66602H8.8446C9.13969 8.66602 9.35514 8.795 9.35514 9.06908C9.35514 9.33778 9.14506 9.43451 8.75373 9.43451H8.25443V8.66602H8.25297ZM10.9771 7.76318H12.2464V11.633H10.9771V7.76318Z'
-                          fill='#16A34A'
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id='clip0_9924_2744'>
-                          <rect width='16' height='16' fill='white' />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div>
-                    <Typography className='Day1'>Friday</Typography>
-                  </div>
-                </Link>
-                <Link className='WeekDays'>
-                  <div className='DayCirlcle'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'>
-                      <g clip-path='url(#clip0_9924_2752)'>
-                        <path
-                          d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
-                          fill='#16A34A'
-                        />
-                        <path
-                          d='M4.50782 10.8435C4.38421 10.8435 4.24986 10.8113 4.14776 10.7468C4.09266 10.714 4.04538 10.6697 4.00918 10.6168C3.97298 10.5639 3.94875 10.5037 3.93817 10.4405H2.72363C2.7505 11.1391 3.41688 11.7356 4.43795 11.7356C5.5025 11.7356 6.2495 11.2998 6.2495 10.4024C6.2495 8.99438 4.02415 9.35396 4.02415 8.77405C4.02415 8.63432 4.14775 8.55371 4.42721 8.55371C4.55081 8.55371 4.66366 8.57521 4.75502 8.62357C4.8048 8.64929 4.84749 8.68685 4.87935 8.73293C4.91122 8.77902 4.93126 8.83223 4.93774 8.88788H6.14201C6.05017 8.21075 5.56162 7.66211 4.48632 7.66211C3.51899 7.66211 2.80913 8.07591 2.80913 8.89863C2.80913 10.3765 5.03447 9.97344 5.03447 10.5587C5.03447 10.7414 4.82488 10.8435 4.50782 10.8435ZM7.45768 11.6335L7.60278 11.123H8.86568L9.01713 11.6335H10.2795L8.89304 7.76373H7.60278L6.21627 11.6335H7.45768ZM8.23691 8.92941L8.64534 10.3164H7.84461L8.23691 8.92941ZM10.8809 11.6335H12.1492V8.77942H13.2885V7.76373H9.74116V8.77942H10.8809V11.6335Z'
-                          fill='#16A34A'
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id='clip0_9924_2752'>
-                          <rect width='16' height='16' fill='white' />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div>
-                    <Typography className='Day1'>Saturday</Typography>
-                  </div>
-                </Link>
-                <Link className='WeekDays'>
-                  <div className='DayCirlcle'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'>
-                      <g clip-path='url(#clip0_9924_2760)'>
-                        <path
-                          d='M14.3515 0.610199H13.8023C13.816 0.564764 13.8307 0.519329 13.8307 0.469008C13.8307 0.34449 13.7812 0.225072 13.6932 0.137024C13.6051 0.0489766 13.4857 -0.000488013 13.3612 -0.000488013C13.2367 -0.000488013 13.1172 0.0489766 13.0292 0.137024C12.9411 0.225072 12.8917 0.34449 12.8917 0.469008C12.8917 0.519329 12.9054 0.564764 12.9205 0.610199H11.1226C11.1368 0.564764 11.151 0.519329 11.151 0.469008C11.151 0.34436 11.1015 0.224818 11.0133 0.136679C10.9252 0.0485395 10.8056 -0.000976562 10.681 -0.000976562C10.5563 -0.000976562 10.4368 0.0485395 10.3487 0.136679C10.2605 0.224818 10.211 0.34436 10.211 0.469008C10.213 0.517305 10.2228 0.564968 10.2398 0.610199H8.44197C8.45614 0.564764 8.47031 0.519329 8.47031 0.469008C8.47031 0.344425 8.42082 0.224945 8.33272 0.136852C8.24463 0.0487581 8.12515 -0.000732288 8.00056 -0.000732288C7.87598 -0.000732288 7.7565 0.0487581 7.66841 0.136852C7.58031 0.224945 7.53082 0.344425 7.53082 0.469008C7.53082 0.519329 7.54499 0.564764 7.55916 0.610199H5.7613C5.77547 0.564764 5.78963 0.519329 5.78963 0.469008C5.7857 0.347047 5.73449 0.231398 5.64682 0.146516C5.55916 0.0616335 5.44192 0.0141744 5.31989 0.0141744C5.19787 0.0141744 5.08063 0.0616335 4.99296 0.146516C4.9053 0.231398 4.85409 0.347047 4.85015 0.469008C4.85015 0.519329 4.86383 0.564764 4.87849 0.610199H3.08063C3.09752 0.564943 3.10709 0.51728 3.10896 0.469008C3.10896 0.34449 3.0595 0.225072 2.97145 0.137024C2.8834 0.0489766 2.76398 -0.000488013 2.63947 -0.000488013C2.51495 -0.000488013 2.39553 0.0489766 2.30748 0.137024C2.21943 0.225072 2.16997 0.34449 2.16997 0.469008C2.16997 0.519329 2.18414 0.564764 2.19831 0.610199H1.64918C1.29293 0.610458 0.951356 0.752089 0.699455 1.00399C0.447554 1.25589 0.305923 1.59747 0.305664 1.95371V14.656C0.305923 15.0122 0.447554 15.3538 0.699455 15.6057C0.951356 15.8576 1.29293 15.9993 1.64918 15.9995H12.8345L15.695 13.1391V1.95371C15.6947 1.59747 15.5531 1.25589 15.3012 1.00399C15.0493 0.752089 14.7077 0.610458 14.3515 0.610199ZM14.9622 12.8352L14.8102 12.9871H13.6592C13.1213 12.9871 12.6821 13.4268 12.6821 13.9642V15.1147L12.5306 15.2667H1.64918C1.31256 15.2667 1.03849 14.9926 1.03849 14.656V4.39646H14.9622V12.8352Z'
-                          fill='#16A34A'
-                        />
-                        <path
-                          d='M3.81446 10.8426C3.69085 10.8426 3.5565 10.8103 3.4544 10.7458C3.3993 10.7131 3.35202 10.6687 3.31582 10.6158C3.27962 10.5629 3.25539 10.5027 3.24481 10.4395H2.03027C2.05714 11.1381 2.72353 11.7347 3.74459 11.7347C4.80865 11.7347 5.55614 11.2989 5.55614 10.4014C5.55614 8.99341 3.33079 9.35298 3.33079 8.77307C3.33079 8.63335 3.4544 8.55274 3.73385 8.55274C3.85745 8.55274 3.9703 8.57423 4.06166 8.6226C4.11144 8.64832 4.15413 8.68587 4.186 8.73196C4.21786 8.77804 4.23791 8.83125 4.24438 8.8869H5.44817C5.35681 8.20977 4.86777 7.66113 3.79296 7.66113C2.82563 7.66113 2.11577 8.07493 2.11577 8.89765C2.11577 10.3755 4.34111 9.97246 4.34111 10.5577C4.34111 10.7405 4.13153 10.8426 3.81446 10.8426ZM7.70527 11.7347C8.98966 11.7347 9.56468 11.1919 9.56468 9.95048V7.76275H8.29592V10.079C8.29592 10.4981 8.16206 10.7888 7.70527 10.7888C7.18398 10.7888 7.10875 10.461 7.10875 10.079V7.76275H5.83998V9.94461C5.83998 11.2779 6.50636 11.7347 7.70527 11.7347ZM11.2575 10.4078L11.2082 9.52593L12.5903 11.6326H13.7779V7.76275H12.5634V8.99341L12.6118 9.87475L11.2302 7.76275H10.0425V11.6326H11.2575V10.4078Z'
-                          fill='#16A34A'
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id='clip0_9924_2760'>
-                          <rect width='16' height='16' fill='white' />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div>
-                    <Typography className='Day1'>Sunday</Typography>
-                  </div>
-                </Link>
-                <Divider sx={{ marginTop: "40px" }} />
                 <Button
-                  className='  ShowWeeklyIngredientsButton'
-                  href='/weekly'>
-                  Show Weekly Ingredients
+                  sx={{
+                    "&:hover": { background: "#F6F4F5" },
+                    borderRadius: "9px",
+                    background: "#F6F4F5",
+                    padding: "6px 20px",
+                    textTransform: "capitalize",
+                    color: "#888587",
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    marginRight: "18px",
+                  }}>
+                  copy
+                </Button>
+                <Button
+                  sx={{
+                    "&:hover": { background: "#F6F4F5" },
+                    borderRadius: "9px",
+                    background: "#F6F4F5",
+                    padding: "6px 20px",
+                    color: "#888587",
+                    textTransform: "capitalize",
+                    fontSize: "16px",
+                    fontWeight: 500,
+                  }}>
+                  share
                 </Button>
               </Box>
             </Box>
+          </Box>
+
+                </Box>
+              ) : (
+                <Box>
+                  <Link className='WeekDays'>
+                    <div className='DayCirlcle'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 16 16'
+                        fill='none'>
+                        <g clip-path='url(#clip0_9924_2711)'>
+                          <path
+                            d='M14.3515 0.610199H13.8023C13.816 0.564764 13.8307 0.519329 13.8307 0.469008C13.8307 0.34449 13.7812 0.225072 13.6932 0.137024C13.6051 0.0489766 13.4857 -0.000488013 13.3612 -0.000488013C13.2367 -0.000488013 13.1172 0.0489766 13.0292 0.137024C12.9411 0.225072 12.8917 0.34449 12.8917 0.469008C12.8917 0.519329 12.9054 0.564764 12.9205 0.610199H11.1226C11.1368 0.564764 11.151 0.519329 11.151 0.469008C11.151 0.34436 11.1015 0.224818 11.0133 0.136679C10.9252 0.0485395 10.8056 -0.000976562 10.681 -0.000976562C10.5563 -0.000976562 10.4368 0.0485395 10.3487 0.136679C10.2605 0.224818 10.211 0.34436 10.211 0.469008C10.213 0.517305 10.2228 0.564968 10.2398 0.610199H8.44197C8.45614 0.564764 8.47031 0.519329 8.47031 0.469008C8.47031 0.344425 8.42082 0.224945 8.33272 0.136852C8.24463 0.0487581 8.12515 -0.000732288 8.00056 -0.000732288C7.87598 -0.000732288 7.7565 0.0487581 7.66841 0.136852C7.58031 0.224945 7.53082 0.344425 7.53082 0.469008C7.53082 0.519329 7.54499 0.564764 7.55916 0.610199H5.7613C5.77547 0.564764 5.78963 0.519329 5.78963 0.469008C5.7857 0.347047 5.73449 0.231398 5.64682 0.146516C5.55916 0.0616335 5.44192 0.0141744 5.31989 0.0141744C5.19787 0.0141744 5.08063 0.0616335 4.99296 0.146516C4.9053 0.231398 4.85409 0.347047 4.85015 0.469008C4.85015 0.519329 4.86383 0.564764 4.87849 0.610199H3.08063C3.09752 0.564943 3.10709 0.51728 3.10896 0.469008C3.10896 0.34449 3.0595 0.225072 2.97145 0.137024C2.8834 0.0489766 2.76398 -0.000488013 2.63947 -0.000488013C2.51495 -0.000488013 2.39553 0.0489766 2.30748 0.137024C2.21943 0.225072 2.16997 0.34449 2.16997 0.469008C2.16997 0.519329 2.18414 0.564764 2.19831 0.610199H1.64918C1.29293 0.610458 0.951356 0.752089 0.699455 1.00399C0.447554 1.25589 0.305923 1.59747 0.305664 1.95371V14.656C0.305923 15.0122 0.447554 15.3538 0.699455 15.6057C0.951356 15.8576 1.29293 15.9993 1.64918 15.9995H12.8345L15.695 13.1391V1.95371C15.6947 1.59747 15.5531 1.25589 15.3012 1.00399C15.0493 0.752089 14.7077 0.610458 14.3515 0.610199ZM14.9622 12.8352L14.8102 12.9871H13.6592C13.1213 12.9871 12.6821 13.4268 12.6821 13.9642V15.1147L12.5306 15.2667H1.64918C1.31256 15.2667 1.03849 14.9926 1.03849 14.656V4.39646H14.9622V12.8352Z'
+                            fill='#16A34A'
+                          />
+                          <path
+                            d='M2.71791 10.3213L2.69104 9.71988L2.6373 9.14974H2.64805L3.35205 11.633H4.23339L4.93739 9.14974H4.94814L4.88414 9.84886L4.86753 10.4512V11.633H6.00732V7.76324H4.47522L3.79272 10.1767L3.11022 7.76324H1.57812V11.633H2.71791V10.3213ZM8.29568 11.7351C9.44084 11.7351 10.328 10.993 10.328 9.67689C10.328 8.65533 9.6773 7.66113 8.29568 7.66113C7.09238 7.66113 6.27016 8.45161 6.27016 9.66614C6.26967 10.9823 7.08164 11.7351 8.29568 11.7351ZM8.28542 8.60696C8.84481 8.59084 9.05929 9.14925 9.05929 9.67591C9.05929 10.3159 8.84481 10.7883 8.29617 10.7883C7.6889 10.7883 7.53892 10.1698 7.53892 9.67591C7.53843 9.18785 7.7104 8.60696 8.28542 8.60696ZM11.8543 10.4082L11.8054 9.52642L13.1866 11.633H14.3742V7.76324H13.1597V8.9939L13.208 9.87524L11.8269 7.76324H10.6383V11.633H11.8543V10.4082Z'
+                            fill='#16A34A'
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id='clip0_9924_2711'>
+                            <rect width='16' height='16' fill='white' />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div>
+                      <Typography className='Day1'>Monday</Typography>
+                    </div>
+                  </Link>
+                  <Link className='WeekDays'>
+                    <div className='DayCirlcle'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 16 16'
+                        fill='none'>
+                        <g clip-path='url(#clip0_9924_2720)'>
+                          <path
+                            d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
+                            fill='#16A34A'
+                          />
+                          <path
+                            d='M3.45717 11.6335H4.72593V8.77937H5.86523V7.76367H2.31738V8.77937H3.45717V11.6335ZM8.00361 11.7356C9.28801 11.7356 9.86352 11.1928 9.86352 9.9514V7.76367H8.59524V10.0799C8.59524 10.4991 8.46089 10.7897 8.00361 10.7897C7.48282 10.7897 7.40709 10.4619 7.40709 10.0799V7.76367H6.13833V9.94553C6.13833 11.2788 6.8052 11.7356 8.00361 11.7356ZM13.6092 10.7306H11.6477V10.1234H13.2438V9.22004H11.6477V8.66651H13.534V7.76367H10.3785V11.6335H13.6092V10.7306Z'
+                            fill='#16A34A'
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id='clip0_9924_2720'>
+                            <rect width='16' height='16' fill='white' />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div>
+                      <Typography className='Day1'>Tuesday</Typography>
+                    </div>
+                  </Link>
+                  <Link className='WeekDays'>
+                    <div className='DayCirlcle'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 16 16'
+                        fill='none'>
+                        <g clip-path='url(#clip0_9924_2728)'>
+                          <path
+                            d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
+                            fill='#16A34A'
+                          />
+                          <path
+                            d='M3.78735 11.6335L4.22802 9.38663H4.23877L4.6853 11.6335H5.93208L6.89403 7.76367H5.66875L5.23296 10.1556H5.22222L4.76005 7.76367H3.71211L3.24994 10.1556H3.23919L2.80341 7.76367H1.57812L2.54008 11.6335H3.78735ZM10.2958 10.7306H8.33428V10.1234H9.93037V9.22004H8.33428V8.66651H10.2206V7.76367H7.06503V11.6335H10.2958V10.7306ZM14.3371 9.61869C14.3371 8.34505 13.5632 7.76465 12.316 7.76465H10.6173V11.634H12.2832C13.5251 11.6335 14.3371 11.0746 14.3371 9.61869ZM11.8855 10.7306V8.66651H12.1279C12.805 8.66651 13.0683 8.88147 13.0683 9.68758C13.0683 10.4185 12.7459 10.7301 12.1547 10.7301L11.8855 10.7306Z'
+                            fill='#16A34A'
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id='clip0_9924_2728'>
+                            <rect width='16' height='16' fill='white' />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div>
+                      <Typography className='Day1'>Wednesday</Typography>
+                    </div>
+                  </Link>
+                  <Link className='WeekDays'>
+                    <div className='DayCirlcle'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 16 16'
+                        fill='none'>
+                        <g clip-path='url(#clip0_9924_2736)'>
+                          <path
+                            d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
+                            fill='#16A34A'
+                          />
+                          <path
+                            d='M3.15834 11.6335H4.42662V8.77937H5.56591V7.76367H2.01855V8.77937H3.15834V11.6335ZM7.1024 10.1341H8.3013V11.6335H9.56958V7.76367H8.3013V9.06956H7.1024V7.76367H5.83364V11.6335H7.1024V10.1341ZM11.9127 11.7356C13.1975 11.7356 13.7721 11.1928 13.7721 9.9514V7.76367H12.5038V10.0799C12.5038 10.4991 12.3695 10.7897 11.9127 10.7897C11.3914 10.7897 11.3157 10.4619 11.3157 10.0799V7.76367H10.0474V9.94553C10.0474 11.2788 10.7138 11.7356 11.9127 11.7356Z'
+                            fill='#16A34A'
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id='clip0_9924_2736'>
+                            <rect width='16' height='16' fill='white' />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div>
+                      <Typography className='Day1'>Thursday</Typography>
+                    </div>
+                  </Link>
+                  <Link className='WeekDays'>
+                    <div className='DayCirlcle'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 16 16'
+                        fill='none'>
+                        <g clip-path='url(#clip0_9924_2744)'>
+                          <path
+                            d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
+                            fill='#16A34A'
+                          />
+                          <path
+                            d='M5.00656 10.2734H6.39355V9.37002H5.00656V8.66602H6.74824V7.76318H3.73828V11.633H5.00656V10.2734ZM8.25297 10.2841H8.64039C9.23104 10.2841 9.31703 10.4512 9.31703 10.9559C9.31703 11.2998 9.34927 11.547 9.38249 11.6335H10.6669V11.5148C10.5154 11.5148 10.533 11.3423 10.533 10.8371C10.533 10.0579 10.2853 9.96117 9.87691 9.8107C10.3288 9.68709 10.5277 9.3114 10.5277 8.86437C10.5277 8.11152 10.1036 7.7627 8.81285 7.7627H6.98518V11.6325H8.25443V10.2831H8.25297V10.2841ZM8.25297 8.66602H8.8446C9.13969 8.66602 9.35514 8.795 9.35514 9.06908C9.35514 9.33778 9.14506 9.43451 8.75373 9.43451H8.25443V8.66602H8.25297ZM10.9771 7.76318H12.2464V11.633H10.9771V7.76318Z'
+                            fill='#16A34A'
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id='clip0_9924_2744'>
+                            <rect width='16' height='16' fill='white' />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div>
+                      <Typography className='Day1'>Friday</Typography>
+                    </div>
+                  </Link>
+                  <Link className='WeekDays'>
+                    <div className='DayCirlcle'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 16 16'
+                        fill='none'>
+                        <g clip-path='url(#clip0_9924_2752)'>
+                          <path
+                            d='M14.3515 0.610443H13.8028C13.817 0.565008 13.8316 0.519573 13.8316 0.469252C13.8261 0.348312 13.7742 0.234153 13.6867 0.150519C13.5991 0.0668847 13.4827 0.0202142 13.3617 0.0202142C13.2406 0.0202142 13.1242 0.0668847 13.0367 0.150519C12.9491 0.234153 12.8972 0.348312 12.8917 0.469252C12.8917 0.519573 12.9054 0.565008 12.9205 0.610443H11.1226C11.1368 0.565008 11.1515 0.519573 11.1515 0.469252C11.1515 0.34454 11.1019 0.224935 11.0137 0.13675C10.9256 0.0485653 10.8059 -0.000976562 10.6812 -0.000976562C10.5565 -0.000976562 10.4369 0.0485653 10.3487 0.13675C10.2605 0.224935 10.211 0.34454 10.211 0.469252C10.213 0.51755 10.2228 0.565213 10.2398 0.610443H8.44099C8.45516 0.565008 8.46982 0.519573 8.46982 0.469252C8.46982 0.344734 8.42035 0.225316 8.3323 0.137269C8.24426 0.0492209 8.12484 -0.000243738 8.00032 -0.000243738C7.8758 -0.000243738 7.75638 0.0492209 7.66834 0.137269C7.58029 0.225316 7.53082 0.344734 7.53082 0.469252C7.53082 0.519573 7.5445 0.565008 7.55916 0.610443H5.76081C5.77498 0.565008 5.78963 0.519573 5.78963 0.469252C5.7857 0.347292 5.73449 0.231642 5.64682 0.14676C5.55916 0.0618778 5.44192 0.0144187 5.31989 0.0144187C5.19787 0.0144187 5.08063 0.0618778 4.99296 0.14676C4.9053 0.231642 4.85409 0.347292 4.85015 0.469252C4.85015 0.519573 4.86383 0.565008 4.87849 0.610443H3.08063C3.09768 0.565213 3.10741 0.51755 3.10945 0.469252C3.10945 0.34467 3.05996 0.225189 2.97187 0.137096C2.88377 0.0490024 2.76429 -0.000488013 2.63971 -0.000488013C2.51513 -0.000488013 2.39565 0.0490024 2.30755 0.137096C2.21946 0.225189 2.16997 0.34467 2.16997 0.469252C2.16997 0.519573 2.18365 0.565008 2.19831 0.610443H1.64918C1.29293 0.610702 0.951356 0.752333 0.699455 1.00423C0.447554 1.25614 0.305923 1.59771 0.305664 1.95395V14.6562C0.305794 15.0125 0.447383 15.3542 0.699312 15.6061C0.951242 15.858 1.29289 15.9996 1.64918 15.9998H12.8345L15.695 13.1393V1.95395C15.6947 1.59771 15.5531 1.25614 15.3012 1.00423C15.0493 0.752333 14.7077 0.610702 14.3515 0.610443ZM14.9622 12.8354L14.8102 12.9874H13.6597C13.1213 12.9874 12.6826 13.4271 12.6826 13.9645V15.115L12.5306 15.2669H1.64918C1.31256 15.2669 1.03849 14.9929 1.03849 14.6562V4.3967H14.9622V12.8354Z'
+                            fill='#16A34A'
+                          />
+                          <path
+                            d='M4.50782 10.8435C4.38421 10.8435 4.24986 10.8113 4.14776 10.7468C4.09266 10.714 4.04538 10.6697 4.00918 10.6168C3.97298 10.5639 3.94875 10.5037 3.93817 10.4405H2.72363C2.7505 11.1391 3.41688 11.7356 4.43795 11.7356C5.5025 11.7356 6.2495 11.2998 6.2495 10.4024C6.2495 8.99438 4.02415 9.35396 4.02415 8.77405C4.02415 8.63432 4.14775 8.55371 4.42721 8.55371C4.55081 8.55371 4.66366 8.57521 4.75502 8.62357C4.8048 8.64929 4.84749 8.68685 4.87935 8.73293C4.91122 8.77902 4.93126 8.83223 4.93774 8.88788H6.14201C6.05017 8.21075 5.56162 7.66211 4.48632 7.66211C3.51899 7.66211 2.80913 8.07591 2.80913 8.89863C2.80913 10.3765 5.03447 9.97344 5.03447 10.5587C5.03447 10.7414 4.82488 10.8435 4.50782 10.8435ZM7.45768 11.6335L7.60278 11.123H8.86568L9.01713 11.6335H10.2795L8.89304 7.76373H7.60278L6.21627 11.6335H7.45768ZM8.23691 8.92941L8.64534 10.3164H7.84461L8.23691 8.92941ZM10.8809 11.6335H12.1492V8.77942H13.2885V7.76373H9.74116V8.77942H10.8809V11.6335Z'
+                            fill='#16A34A'
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id='clip0_9924_2752'>
+                            <rect width='16' height='16' fill='white' />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div>
+                      <Typography className='Day1'>Saturday</Typography>
+                    </div>
+                  </Link>
+                  <Link className='WeekDays'>
+                    <div className='DayCirlcle'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 16 16'
+                        fill='none'>
+                        <g clip-path='url(#clip0_9924_2760)'>
+                          <path
+                            d='M14.3515 0.610199H13.8023C13.816 0.564764 13.8307 0.519329 13.8307 0.469008C13.8307 0.34449 13.7812 0.225072 13.6932 0.137024C13.6051 0.0489766 13.4857 -0.000488013 13.3612 -0.000488013C13.2367 -0.000488013 13.1172 0.0489766 13.0292 0.137024C12.9411 0.225072 12.8917 0.34449 12.8917 0.469008C12.8917 0.519329 12.9054 0.564764 12.9205 0.610199H11.1226C11.1368 0.564764 11.151 0.519329 11.151 0.469008C11.151 0.34436 11.1015 0.224818 11.0133 0.136679C10.9252 0.0485395 10.8056 -0.000976562 10.681 -0.000976562C10.5563 -0.000976562 10.4368 0.0485395 10.3487 0.136679C10.2605 0.224818 10.211 0.34436 10.211 0.469008C10.213 0.517305 10.2228 0.564968 10.2398 0.610199H8.44197C8.45614 0.564764 8.47031 0.519329 8.47031 0.469008C8.47031 0.344425 8.42082 0.224945 8.33272 0.136852C8.24463 0.0487581 8.12515 -0.000732288 8.00056 -0.000732288C7.87598 -0.000732288 7.7565 0.0487581 7.66841 0.136852C7.58031 0.224945 7.53082 0.344425 7.53082 0.469008C7.53082 0.519329 7.54499 0.564764 7.55916 0.610199H5.7613C5.77547 0.564764 5.78963 0.519329 5.78963 0.469008C5.7857 0.347047 5.73449 0.231398 5.64682 0.146516C5.55916 0.0616335 5.44192 0.0141744 5.31989 0.0141744C5.19787 0.0141744 5.08063 0.0616335 4.99296 0.146516C4.9053 0.231398 4.85409 0.347047 4.85015 0.469008C4.85015 0.519329 4.86383 0.564764 4.87849 0.610199H3.08063C3.09752 0.564943 3.10709 0.51728 3.10896 0.469008C3.10896 0.34449 3.0595 0.225072 2.97145 0.137024C2.8834 0.0489766 2.76398 -0.000488013 2.63947 -0.000488013C2.51495 -0.000488013 2.39553 0.0489766 2.30748 0.137024C2.21943 0.225072 2.16997 0.34449 2.16997 0.469008C2.16997 0.519329 2.18414 0.564764 2.19831 0.610199H1.64918C1.29293 0.610458 0.951356 0.752089 0.699455 1.00399C0.447554 1.25589 0.305923 1.59747 0.305664 1.95371V14.656C0.305923 15.0122 0.447554 15.3538 0.699455 15.6057C0.951356 15.8576 1.29293 15.9993 1.64918 15.9995H12.8345L15.695 13.1391V1.95371C15.6947 1.59747 15.5531 1.25589 15.3012 1.00399C15.0493 0.752089 14.7077 0.610458 14.3515 0.610199ZM14.9622 12.8352L14.8102 12.9871H13.6592C13.1213 12.9871 12.6821 13.4268 12.6821 13.9642V15.1147L12.5306 15.2667H1.64918C1.31256 15.2667 1.03849 14.9926 1.03849 14.656V4.39646H14.9622V12.8352Z'
+                            fill='#16A34A'
+                          />
+                          <path
+                            d='M3.81446 10.8426C3.69085 10.8426 3.5565 10.8103 3.4544 10.7458C3.3993 10.7131 3.35202 10.6687 3.31582 10.6158C3.27962 10.5629 3.25539 10.5027 3.24481 10.4395H2.03027C2.05714 11.1381 2.72353 11.7347 3.74459 11.7347C4.80865 11.7347 5.55614 11.2989 5.55614 10.4014C5.55614 8.99341 3.33079 9.35298 3.33079 8.77307C3.33079 8.63335 3.4544 8.55274 3.73385 8.55274C3.85745 8.55274 3.9703 8.57423 4.06166 8.6226C4.11144 8.64832 4.15413 8.68587 4.186 8.73196C4.21786 8.77804 4.23791 8.83125 4.24438 8.8869H5.44817C5.35681 8.20977 4.86777 7.66113 3.79296 7.66113C2.82563 7.66113 2.11577 8.07493 2.11577 8.89765C2.11577 10.3755 4.34111 9.97246 4.34111 10.5577C4.34111 10.7405 4.13153 10.8426 3.81446 10.8426ZM7.70527 11.7347C8.98966 11.7347 9.56468 11.1919 9.56468 9.95048V7.76275H8.29592V10.079C8.29592 10.4981 8.16206 10.7888 7.70527 10.7888C7.18398 10.7888 7.10875 10.461 7.10875 10.079V7.76275H5.83998V9.94461C5.83998 11.2779 6.50636 11.7347 7.70527 11.7347ZM11.2575 10.4078L11.2082 9.52593L12.5903 11.6326H13.7779V7.76275H12.5634V8.99341L12.6118 9.87475L11.2302 7.76275H10.0425V11.6326H11.2575V10.4078Z'
+                            fill='#16A34A'
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id='clip0_9924_2760'>
+                            <rect width='16' height='16' fill='white' />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div>
+                      <Typography className='Day1'>Sunday</Typography>
+                    </div>
+                  </Link>
+                  <Divider sx={{ marginTop: "40px" }} />
+                  <Button
+                    className='  ShowWeeklyIngredientsButton'
+                    onClick={() => handleSwitch(1)}>
+                    Show Weekly Ingredients
+                  </Button>
+                </Box>
+              )}
+            </Box>
           </Grid>
         </Grid>
-      </Container>
+      </>
     </>
   );
 };

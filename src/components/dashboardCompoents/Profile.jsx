@@ -4,8 +4,10 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import React from "react";
 import {  Typography, Box,  Divider } from "@mui/material";
-
-const Profile = ({ handleOpen }) => {
+import { profileOpen } from "../../Redux/actions/CreateMealAction";
+import { useDispatch } from "react-redux";
+const Profile = () => {
+  const dispatch =useDispatch()
   const [open, setOpen] = React.useState(false);
   const handleToggle = () => {
     setOpen(!open);
@@ -55,7 +57,7 @@ const Profile = ({ handleOpen }) => {
               </Box>
               <Divider sx={{ paddingTop: "10px" }} />
 
-              <Link className='Setting' onClick={handleOpen}>
+              <Link className='Setting' onClick={()=>dispatch(profileOpen())}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'

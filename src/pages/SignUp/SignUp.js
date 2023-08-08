@@ -179,7 +179,7 @@ const SignUp = () => {
               </Grid>
 
               <Grid item xs={12} lg={12} mt={1}>
-                <Link className='Button' to={"/"}>
+                <Link className='Button' to="/pricing">
                   Create Account
                 </Link>
               </Grid>

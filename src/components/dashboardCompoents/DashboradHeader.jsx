@@ -2,24 +2,25 @@ import React from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
 import PasswordModel from "./passwordModel";
 import Profile from "./Profile";
+import { handleOpenPopUp } from "../../Redux/actions/CreateMealAction";
+import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
+
+import { useDispatch } from "react-redux";
 const DashboradHeader = () => {
   const [openModel, setOpenModel] = React.useState(false);
-
+  const dispatch = useDispatch();
   const handleOpen = () => {
     setOpenModel(true);
   };
-  const handleClose = () => {
-    setOpenModel(false);
-  };
+
 
   return (
     <>
       <PasswordModel
-        handleCloses={handleClose}
-        handleOpen={handleOpen}
-        openModel={openModel}
+        
         setOpenModel={setOpenModel}
       />
+      <PurchaseFoodmatchpopUp/>
       <Grid container mt={1} spacing={2}>
         <Grid item lg={9} md={8} sm={8} xs={6}>
           <Grid container>
@@ -49,7 +50,11 @@ const DashboradHeader = () => {
               </Box>
             </Grid>
             <Grid item lg={3}>
-              <Button className='createNewPlan'>Create New Plan</Button>
+              <Button
+                className='createNewPlan'
+                onClick={() => dispatch(handleOpenPopUp())}>
+                Create New Plan
+              </Button>
             </Grid>
           </Grid>
         </Grid>

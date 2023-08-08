@@ -4,7 +4,7 @@ import DashboradHeader from "./DashboradHeader";
 import Recipe from "./Recipe";
 const Weeklyplan = () => {
   return (
-    <div>
+    <>
       <DashboradHeader />
       <Box
         sx={{ display: "flex", justifyContent: "space-between" }}
@@ -56,7 +56,7 @@ const Weeklyplan = () => {
         mt={3}>
         <Recipe />
       </Box>
-    </div>
+    </>
   );
 };
 

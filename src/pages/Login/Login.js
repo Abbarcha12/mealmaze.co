@@ -187,7 +187,7 @@ const Login = () => {
                 <Link className='Password'>Forgot Password?</Link>
               </Grid>
               <Grid item xs={12} lg={12} mt={1}>
-                <Link className='Button' to='/'>
+                <Link className='Button' to='/pricing'>
                   LOG IN
                 </Link>
               </Grid>

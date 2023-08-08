@@ -3,7 +3,6 @@ import {
   Input,
   InputLabel,
   Grid,
-  Container,
   Typography,
   Box,
   Button,
@@ -13,10 +12,11 @@ import PasswordModel from "../../components/dashboardCompoents/passwordModel";
 import Profile from "../../components/dashboardCompoents/Profile";
 import Recipe from "../../components/dashboardCompoents/Recipe";
 import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
-
+import {  useDispatch } from "react-redux";
+import { handleOpenPopUp } from "../../Redux/actions/CreateMealAction";
 const FoodMatch = () => {
   const [openModel, setOpenModel] = useState(false);
-  const [popUp, setpopUp] = useState(false);
+  const dispatch = useDispatch();
 
   const [Btn, setBtn] = useState(1);
 
@@ -29,14 +29,6 @@ const FoodMatch = () => {
   };
   const handleClose = () => {
     setOpenModel(false);
-  };
-
-  const handleOpenPop = () => {
-    setpopUp(true);
-    console.log("dd");
-  };
-  const handleClosePop = () => {
-    setpopUp(false);
   };
 
   const [metaData, setMetaData] = useState("");
@@ -101,18 +93,14 @@ const FoodMatch = () => {
     setData3((prevData) => prevData.filter((item) => item !== itemToRemove));
   };
   return (
-    <Container lg>
+    <>
       <PasswordModel
         handleClose={handleClose}
         handleOpen={handleOpen}
         openModel={openModel}
         setOpenModel={setOpenModel}
       />
-      <PurchaseFoodmatchpopUp
-        handleClosePop={handleClosePop}
-        handleOpenPop={handleOpenPop}
-        popUp={popUp}
-      />
+      <PurchaseFoodmatchpopUp />
       <Grid container mt={1} spacing={2}>
         <Grid item lg={8.5} md={8} sm={7} xs={6}>
           <Grid
@@ -122,7 +110,6 @@ const FoodMatch = () => {
             <Grid item lg={6}>
               <Box>
                 <Typography
-                  onClick={handleOpenPop}
                   sx={{
                     fontSize: "27px",
                     fontWeight: 700,
@@ -145,9 +132,15 @@ const FoodMatch = () => {
               </Box>
             </Grid>
             <Grid item lg={6} display='flex' justifyContent={"space-between"}>
-              <Button className='createNewPlan1'>10 Searches left</Button>
+              <Button className='createNewPlan1' onClick={() => HandleBtnId(2)}>
+                10 Searches left
+              </Button>
 
-              <Button className='createNewPlan'>Create New Plan</Button>
+              <Button
+                className='createNewPlan'
+                onClick={() => dispatch(handleOpenPopUp())}>
+                Create New Plan
+              </Button>
             </Grid>
           </Grid>
         </Grid>
@@ -679,7 +672,7 @@ const FoodMatch = () => {
           </Grid>
         </Grid>
       </Grid>
-    </Container>
+    </>
   );
 };
 

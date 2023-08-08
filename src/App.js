@@ -8,7 +8,7 @@ import OtpPage from "./pages/paymentPage/Otppage";
 import Processing from "./pages/paymentPage/Processing";
 import Homepage from "./pages/Homepage/Homepage";
 import CreateMeal from "./pages/createMeal/CreateMeal";
-import Meal from "./pages/createMeal/CreateMealLastPage";
+import CreateMealHangUp from "./pages/createMeal/CreateMealHangUp";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Faq from "./components/Faq";
 import WeeklyIngredients from "./components/dashboardCompoents/WeeklyIngredients";
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Homepage />} />
-      <Route path='/meal' element={<Meal />} />
+      <Route path='/meal' element={<CreateMealHangUp />} />
       <Route path='/weekly' element={<WeeklyIngredients />} />
       <Route path='/faq' element={<Faq />} />
       <Route path='/dashboard' element={<Dashboard />} />

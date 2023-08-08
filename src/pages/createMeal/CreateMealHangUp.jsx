@@ -1,9 +1,14 @@
-import React  from "react";
+import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Logo from "../../assest/logo.png";
 import MealImg from "../../assest/meal.png";
+import { useNavigate } from "react-router-dom";
+const CreateMealHangUp = () => {
+  const Navigate = useNavigate();
 
-const Meal = () => {
+  useEffect(() => {
+    setTimeout(() => Navigate("/dashboard"), 3 * 1000);
+  });
   return (
     <Box m={4} SX={{ height: "100vh" }}>
       <img src={Logo} alt={Logo} className='Logo' />
@@ -44,4 +49,4 @@ const Meal = () => {
   );
 };
 
-export default Meal;
+export default CreateMealHangUp;

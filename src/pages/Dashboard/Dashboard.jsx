@@ -43,7 +43,7 @@ const Dashboard = () => {
       sx={{
         background: "#FAFAFA",
       }}
-      spacing={1.5}>
+      spacing={10}>
       <Grid
         item
         lg={open ? 1.5 : 2.2}
