@@ -170,6 +170,7 @@ Link {
   border: 1.5px solid #b5b3b4 !important;
   background: #f8f8f8 !important;
   padding: 16px !important;
+  min-height: 70px !important;
 }
 .generate {
   color: #FFff !important;
@@ -315,4 +316,7 @@ button{
 .redheart{
   color: #EF4444 !important;
   font-size: 18px !important;
+}
+.miniSidebarText > div{
+  cursor: pointer !important;
 }

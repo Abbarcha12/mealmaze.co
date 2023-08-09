@@ -52,7 +52,8 @@ const DashboradHeader = () => {
             <Grid item lg={3}>
               <Button
                 className='createNewPlan'
-                onClick={() => dispatch(handleOpenPopUp())}>
+                hrefLang="/createMeal"
+                >
                 Create New Plan
               </Button>
             </Grid>

@@ -13,7 +13,7 @@
 .createNewPlan {
   border-radius: 11.602px !important;
   background: #dcfce7 !important;
-  padding: 18px 24px !important;
+  padding: 13px 26px !important;
   color: #22c55e !important;
   font-size: 14.504px !important;
   font-weight: 600 !important;
@@ -22,7 +22,7 @@
 .createNewPlan1 {
   border-radius: 11.602px !important;
   text-transform: capitalize !important;
-  padding: 18px 24px !important;
+  padding: 13px 26px !important;
   color: #b5b3b4 !important;
   font-size: 14.504px !important;
   font-weight: 600 !important;
@@ -338,4 +338,10 @@
   .subHeadingSpan {
     font-size: 18px !important;
   }
+}
+.HeartIcon{
+color:#62585D !important;
+}
+.HeartIcon:focus{
+  color: red !important;
 }

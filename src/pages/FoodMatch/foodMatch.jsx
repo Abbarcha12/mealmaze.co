@@ -131,15 +131,15 @@ const FoodMatch = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item lg={6} display='flex' justifyContent={"space-between"}>
+            <Grid item lg={6} display='flex' justifyContent={"space-evenly"}>
               <Button className='createNewPlan1' onClick={() => HandleBtnId(2)}>
                 10 Searches left
               </Button>
 
               <Button
                 className='createNewPlan'
-                onClick={() => dispatch(handleOpenPopUp())}>
-                Create New Plan
+               >
+              Add FoodMatch
               </Button>
             </Grid>
           </Grid>

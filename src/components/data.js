@@ -249,6 +249,7 @@ const accordionData = [
 
 const MealData = [
   {
+    id:1,
     Name: "Breakfast",
     heartIcon: (
       <svg
@@ -306,6 +307,7 @@ const MealData = [
     ),
   },
   {
+    id:2,
     Name: "Breakfast",
     heartIcon: (
       <svg
@@ -363,6 +365,7 @@ const MealData = [
     ),
   },
   {
+    id:3,
     Name: "Breakfast",
     heartIcon: (
       <svg
@@ -419,7 +422,7 @@ const MealData = [
       </svg>
     ),
   },
-  {
+  {id:4,
     Name: "Breakfast",
     heartIcon: (
       <svg
