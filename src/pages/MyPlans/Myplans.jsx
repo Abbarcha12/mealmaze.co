@@ -43,7 +43,7 @@ const Myplans = () => {
               </Box>
             </Grid>
             <Grid item lg={3.2}>
-              <Button className='createNewPlan' hrefLang="/createMeal">Create New Plan</Button>
+              <Button className='createNewPlan' href="/createMeal">Create New Plan</Button>
             </Grid>
           </Grid>
         </Grid>

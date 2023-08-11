@@ -43,7 +43,7 @@ const MealPlan = () => {
             <Grid item lg={3.2}>
               <Button
                 className='createNewPlan'
-                hrefLang="/createMeal">
+                href="/createMeal">
                 Create New Plan
               </Button>
             </Grid>

@@ -28,15 +28,23 @@ const Processing = () => {
             <Grid item xs={10} lg={9.1} md={10} sm={10}>
               <Box>
                 <Box
-                  className='paymentCard'
+                  className='paymentCard1'
                   display={"flex"}
                   container
                   justifyContent={"center"}
-                  height={"80vh"}
+                
                   alignContent={"center"}
                   alignItems={"center"}
                   flexDirection={"column"}>
-                  <CircularProgress sx={{ color: "#02A63A" }} size={70} />
+                  <CircularProgress
+                    size={70}
+                    className="progress"
+                    sx={{
+                      color: "#02A63A",
+                      
+                    }}
+                  />
+
                   <p className='processing'>Processing</p>
                 </Box>
               </Box>

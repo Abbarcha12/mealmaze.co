@@ -18,7 +18,7 @@ import IngredientsPopUp from "./IngredientsPopUp";
 
 const Overview = () => {
   const [redHeart, setNormalHeart] = useState(1);
-  const [Open, SetOpen] = useState(true);
+  const [Open, SetOpen] = useState(false);
 
   const handleHeart = (id) => {
     setNormalHeart(id);
@@ -39,7 +39,7 @@ SetOpen(false)
         <DashboradHeader title='Overview' />
 
         <Grid container spacing={2} mt={3}>
-          <Grid item lg={8.8}>
+          <Grid item lg={8.8} md={9} sm={8} xs={12}>
             <Typography className='subHeading'>
               Let's see what's on the menu for Monday
               <span className='subHeadingSpan'>(Week 1)</span>
@@ -300,7 +300,7 @@ SetOpen(false)
               <Grid container spacing={2}>
                 {MealData.map((item, index) => {
                   return (
-                    <Grid item lg={6}>
+                    <Grid item lg={6} xs={12}>
                       <Box className='MealBox'>
                         <Box
                           display={"flex"}
@@ -366,7 +366,7 @@ SetOpen(false)
               </Grid>
             </Box>
           </Grid>
-          <Grid item lg={3.2} mt={7}>
+          <Grid item lg={3.2} mt={7} md={3} sm={4} xs={12}>
             <Box className='weekBox' mt={3}>
               <Box
                 display={"flex"}

@@ -52,7 +52,7 @@ const DashboradHeader = () => {
             <Grid item lg={3}>
               <Button
                 className='createNewPlan'
-                hrefLang="/createMeal"
+                href="/createMeal"
                 >
                 Create New Plan
               </Button>

@@ -24,26 +24,28 @@ const SignUp = () => {
     <Grid container className='MainClass'>
       <Grid item xs={12} lg={6} md={6} className='rightSide'>
         <Grid container>
-          <Grid item xs={12} m={2}>
+          <Grid item xs={12} m={2} sx={{marginTop:{lg:"5px",xs:"25px"}}}>
             <img src={Logo} alt='logo' className='Logo' />
           </Grid>
-          <Grid item xs={12}>
+          
+        </Grid>
+       <Box className="smallScreenBox">
+       <Grid container mt={2} alignItems={"center"} justifyContent={"center"}>
+        <Grid item xs={12}>
             <Grid container mt={6} direction='column' alignItems='center'>
               <Grid item xs={12}>
-                <Typography variant='h1' className='MainHeading'>
+                <Typography variant='h1' className='MainHeading' >
                   Sign Up
                 </Typography>
               </Grid>
               <Grid item xs={12} mt={1.8}>
-                <Typography variant='normal' className='MainSubHeading'>
+                <Typography variant='normal' className='MainSubHeading' sx={{display:{lg:"block",xs:"none"}}}>
                   Unlock all Features!
                 </Typography>
               </Grid>
               <Grid xs={12} item></Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid container mt={2} alignItems={"center"} justifyContent={"center"}>
           <Grid lg={8} xs={10}>
             <FormControl fullWidth sx={{ m: 1 }} variant='standard'>
               <InputLabel htmlFor='standard-adornment-amount' className='Label'>
@@ -194,6 +196,7 @@ const SignUp = () => {
             </Link>
           </Typography>
         </Box>
+       </Box>
       </Grid>
       <Grid item xs={12} lg={6} md={6} className='leftSide'>
         <Grid

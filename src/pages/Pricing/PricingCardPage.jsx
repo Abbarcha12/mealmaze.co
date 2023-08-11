@@ -21,14 +21,15 @@ const PricingCard = () => {
         mt={2}
         p={1}>
         <Typography variant='h1' className='cardPageMainHeading'>
-          Choose the Right Plan for your meals
+        Choose a Plan
+That’s Right For You
         </Typography>
         <Typography variant='h3' className='cardSubPageMainHeading' mt={0.8}>
           Simple and transparent pricing
         </Typography>
       </Grid>
       <Grid container justifyContent={"center"} alignItems={"center"}>
-        <Grid lg={10} md={11} sm={12} xs={12}>
+        <Grid lg={10} md={11} sm={12} xs={12} mt={3}>
           <Box
             sx={{
               display: "flex",

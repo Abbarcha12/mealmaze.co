@@ -126,8 +126,8 @@ body {
 }
 @media screen and (max-width: 414px) {
   .otp-field input {
-    width: 35px !important;
-    height: 34px !important;
+    width: 20px !important;
+    height: 27px !important;
   }
   .card {
     height: auto !important;
@@ -243,6 +243,54 @@ line-height: 32px !important; /* 185% */
   .homeSectionTwoHeading1{
   font-size: 28px !important;
   }
+  .leftSide{
+    display: none;
+  }
+  .Logo{
+ margin-top: 30px !important;
+    height: 24px !important;
+
+  }
+  
+ .smallScreenBox{
+ 
+border-radius: 16px !important;
+width: 90% !important;
+padding: 0px 0px 60px 0px !important;
+margin: 0px auto !important;
+background: #FFF !important;
+box-shadow: 0px 3.6213507652282715px 44.361541748046875px 0px rgba(74, 207, 119, 0.13) !important;
+  }
+  .MainHeading{
+    font-size: 30px !important;
+  }
+  .MainSubHeading{
+    font-size: 16px !important;
+    
+  }
+  .css-ahj2mt-MuiTypography-root{
+    font-size: 12px !important;
+  }
+  .Password{
+    font-size: 14px !important;
+  }
+  .Label{
+    font-size: 12px !important;
+  }
+  body{
+    background-color: #FAFAFA;
+    
+  }
+  .cardPageMainHeading{
+    font-size: 24px !important;
+    max-width: 300px !important;
+  }
+  .cardSubPageMainHeading{
+    font-size: 18px !important;
+  }
+  .card{
+    width: 70% !important;
+  }
  
 }
 
@@ -319,4 +367,14 @@ button{
 }
 .miniSidebarText > div{
   cursor: pointer !important;
+}
+@media screen and (max-width:414px) {
+  .card{
+    width: 87% !important;
+  }
+  .PayButton{
+    font-size: 16px !important;
+    
+  }
+  
 }

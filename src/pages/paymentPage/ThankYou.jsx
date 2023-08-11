@@ -14,10 +14,10 @@ const Thankyou = () => {
         <Grid item xs={10} lg={9.1} md={10} sm={10}>
           <Box>
             <Box
-              className='paymentCard'
+              className='paymentCard1'
               textAlign={"center"}
               container
-              height={"80vh"}
+          
               flexDirection={"column"}>
               <Box p={2}>
                 {" "}
@@ -28,8 +28,8 @@ const Thankyou = () => {
                 <img
                   src={ThankYoulogo}
                   alt='ThankYoulogo'
-                  height={"200px"}
-                />{" "}
+                className="ThankYoulogo"
+                />
               </Box>
               <Box>
                 {" "}

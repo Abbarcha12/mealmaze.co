@@ -5,6 +5,13 @@
   box-shadow: 0px 3.6213507652282715px 44.361541748046875px 0px
     rgba(74, 207, 119, 0.13) !important;
 }
+.paymentCard1{
+  border-radius: 18.107px !important;
+  background: #fff !important;
+height: 530px;
+  box-shadow: 0px 3.6213507652282715px 44.361541748046875px 0px
+    rgba(74, 207, 119, 0.13) !important;
+}
 /* Keyframes for the scaleUp animation */
 .PricingDaysHeading {
   color: #0a0d13 !important;
@@ -25,6 +32,9 @@
 }
 .span {
   margin-left: 10px;
+}
+.ThankYoulogo{
+  height: 200px;
 }
 .amount {
   opacity: 0.9599999785423279 !important;
@@ -137,4 +147,94 @@ font-size: 26px;
 font-style: normal;
 font-weight: 500;
  /* 93.333% */
+}
+@media screen and (max-width:600px)  {
+  .paymentCard{
+    background:none  !important;
+
+    box-shadow: none !important;
+  }
+  body{
+background-color: #FAFAFA !important;
+  }
+  .smallpriceBox{
+    border-radius: 8px !important;
+border: 0.472px solid var(--blue-grey-300, #F0EDEE) !important;
+background: #FFF !important; 
+box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.10) !important;
+padding: 10px 16px !important;
+display: flex !important;
+justify-content: space-between !important;
+  }
+  .paymentBox{
+    border-radius: 8px !important;
+    border: 0.472px solid var(--blue-grey-300, #F0EDEE) !important;
+    background: #FFF !important; 
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.10) !important;
+    padding: 10px 16px !important;
+  }
+  .amount{
+    font-size: 20px !important;
+    font-weight: bolder !important;
+  }
+  .doller{
+    font-size: 20px !important;
+    font-weight: bolder !important;
+  }
+  .PricingDaysHeading{
+    font-size: 16px !important;
+  }
+  .viewDetailBtn{
+    padding: 12px 13.016px !important; 
+    border-radius: 6.292px !important;
+background: var(--colors-green-100, #DCFCE7) !important;
+color: #22C55E !important;
+font-size: 12px !important;
+font-weight: 700 !important;
+  }
+  .PricingDaysHeading{
+    font-size: 20px !important;
+  }
+  .payWith{
+    font-size: 16px !important;
+  }
+  .radio1{
+    font-size: 14px !important;
+  }
+  .paymentinput{
+    width: 90% !important;
+  }
+  .reading{
+font-size: 13px !important;
+  }
+  .Otpheading{
+    font-size: 13px !important;
+    text-align: center !important;
+  }
+  .processing{
+    font-size: 24px !important;
+    height: 370px !important;
+  }
+  .progress{
+    height: 40px !important;
+    width: 40px !important;
+
+  }
+.paymentCard1{
+  margin-top: 50px;
+  height: auto !important;
+  padding: 50px 0px 30px 0px !important;
+}
+
+.ThankYoulogo{
+  height: 120px !important;
+}
+.order{
+  font-size: 16px !important;
+}
+.PayButton{
+  font-size: 13px !important;
+  width: 70% !important;
+  padding: 13.269px 14.649px !important;
+}
 }
