@@ -6,7 +6,6 @@ import {
   InputLabel,
   MenuItem,
   Input,
-  
   Button,
   Select,
 } from "@mui/material";
@@ -107,7 +106,7 @@ const CreateMeal = () => {
               sx={{
                 color: "#09090B",
                 fontFamily: "Inter",
-                fontSize: "32px",
+                fontSize: { lg: "32px", xs: "22px" },
                 marginTop: "10px",
                 fontWeight: 600,
                 lineHeight: "31.728px",
@@ -117,11 +116,12 @@ const CreateMeal = () => {
             <Typography
               sx={{
                 color: "#71717A",
+
                 fontFamily: "Inter",
-                fontSize: "18px",
-                marginTop: "30px",
+                fontSize: { lg: "18px", xs: "14px" },
+                marginTop: { lg: "30px", xs: "15px" },
                 fontWeight: 500,
-                lineHeight: "30px",
+                lineHeight: { lg: "30px", xs: "22px" },
               }}>
               Tell us a bit about yourself, your goals, diet and any allergies
               we should know and let mealmaze take care of <br /> the rest. Oh,
@@ -132,8 +132,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -154,7 +153,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -176,7 +175,7 @@ const CreateMeal = () => {
                   sx={{
                     color: " #888587",
 
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -197,8 +196,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -221,8 +219,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -252,7 +249,7 @@ const CreateMeal = () => {
                   sx={{
                     color: " #888587",
 
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -281,8 +278,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -311,7 +307,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -324,7 +320,7 @@ const CreateMeal = () => {
                   sx={{
                     borderRadius: "9px",
                     width: "100%",
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     borderBottom: "none",
                     border: "1.5px solid #B5B3B4",
                     backgroundColor: "#F8F8F8",
@@ -344,8 +340,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-
-                    fontSize: "16px",
+                    fontSize: { lg: "16px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -606,7 +601,7 @@ const CreateMeal = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Grid container spacing={3} mt={5} justifyContent={"end"} pb={3}>
+            <Grid container spacing={1} mt={5}  pb={3} sx={{justifyContent:{lg:"end",xs:"center"}}}>
               <Button href='/meal' className='generate'>
                 Generate your meal plan
               </Button>

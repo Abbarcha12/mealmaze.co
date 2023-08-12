@@ -7,7 +7,7 @@ const CreateMealHangUp = () => {
   const Navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => Navigate("/dashboard"), 3 * 1000);
+    setTimeout(() => Navigate("/dashboard"), 3 * 1000000);
   });
   return (
     <Box m={4} SX={{ height: "100vh" }}>
@@ -16,11 +16,12 @@ const CreateMealHangUp = () => {
         <Grid lg={10.7} xs={12}>
           <Box
             mt={4}
-            p={3}
+         
             sx={{
               borderRadius: "18px",
               backgroundColor: "#fff",
               textAlign: "center",
+              padding:{lg:"40px",xs:"10px"},
               boxShadow:
                 "0px 3.6213507652282715px 44.361541748046875px 0px rgba(74, 207, 119, 0.13)",
             }}>
@@ -34,13 +35,13 @@ const CreateMealHangUp = () => {
               sx={{
                 color: "#16A34A",
                 fontFamily: "Inter",
-                fontSize: { lg: "40px", sm: "32p", xs: "24px" },
+                fontSize: { lg: "40px", sm: "32p", xs: "22px" },
                 marginTop: "10px",
                 fontWeight: 600,
 
-                lineHeight: "45.728px",
+                lineHeight: {lg:"45.728px",xs:"30px"}
               }}>
-              Hang in there. We're cooking up <br />a storm in the AI kitchen.
+              Hang in there. We're cooking up a storm in the AI kitchen.
             </Typography>
           </Box>
         </Grid>

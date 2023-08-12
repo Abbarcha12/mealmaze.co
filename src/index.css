@@ -247,7 +247,7 @@ line-height: 32px !important; /* 185% */
     display: none;
   }
   .Logo{
- margin-top: 30px !important;
+ margin-top: 20px !important;
     height: 24px !important;
 
   }
@@ -291,12 +291,16 @@ box-shadow: 0px 3.6213507652282715px 44.361541748046875px 0px rgba(74, 207, 119,
   .card{
     width: 70% !important;
   }
+  .css-18eutzv-MuiGrid-root>.MuiGrid-item {
+padding-left: 14px !important;
  
+}
+
 }
 
 @media screen and (max-width: 630px) {
   .generate{
-    font-size: 20px !important;
+    font-size: 14px !important;
     padding: 8px 15px !important;
   }
   .homebannerimg2 {
