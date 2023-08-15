@@ -3,6 +3,7 @@
   justify-content: space-between !important;
   align-items: center !important;
   padding-top: 30px;
+  position: relative;
 }
 .footer {
   display: flex;
@@ -16,28 +17,6 @@
   display: none !important;
 }
 /* Responsive layout for even smaller screens (max-width: 600px) */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-  }
-  .footer {
-    flex-direction: column;
-    align-items: start;
-    margin-top: 30px;
-  }
-  .Link1 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .link {
-    margin-top: 15px;
-  }
-  .Homebtn {
-    margin-top: 18px !important;
-  }
-}
 
 /* Links container styles */
 
@@ -69,6 +48,9 @@
 .logoPage {
   height: 27.115px;
 }
+.toggleHeader {
+  display: none;
+}
 .Homebtn {
   color: #888587 !important;
   font-family: Inter;
@@ -88,4 +70,68 @@
 .css-hip9hq-MuiPaper-root-MuiAppBar-root {
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+.MobileHeader{
+display: none !important;
+}
+.mobileMenu a{
+  margin-top: 20px !important;
+}
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .Link1 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center !important;
+    margin-top: 19px !important;
+  }
+  .link {
+    margin-top: 15px;
+    font-size: 13px !important;
+  }
+  .Homebtn {
+    margin-top: 18px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .Link1 {
+    margin-top: 25px !important;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 899px) {
+  .toggleHeader {
+    
+    width: 44px;
+    border-radius: 50%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    background-color: #fff;
+  }
+  .MobileHeader{
+    position: absolute ;
+    width: 319px;
+    display: block !important;
+  height: 394px;
+  border-radius: 18px 0px 0px 18px;
+  background: #FFF;
+  top: 20px;
+  right: 0px;
+  
+  }
 }

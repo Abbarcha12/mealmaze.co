@@ -7,7 +7,7 @@ const CreateMealHangUp = () => {
   const Navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => Navigate("/dashboard"), 3 * 1000000);
+    setTimeout(() => Navigate("/dashboard"), 3 * 1000);
   });
   return (
     <Box m={4} SX={{ height: "100vh" }}>

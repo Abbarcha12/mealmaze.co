@@ -33,7 +33,7 @@
   border-radius: 7.689px !important;
   background: #fff !important;
   position: absolute;
-  width: 90% !important;
+  width: 83% !important;
   box-shadow: 0px 7.688852787017822px 16.659181594848633px 0px
     rgba(34, 197, 94, 0.1) !important;
 }
@@ -73,7 +73,7 @@
 .dashboardCardBox {
   border-radius: 16px !important;
   background: #fff !important;
-  padding: 23.056px 32px 22.056px 32px;
+  padding: 23.056px 20px 22.056px 20px;
   box-shadow: 0px 7.927051544189453px 15.854103088378906px 0px
     rgba(143, 149, 178, 0.15) !important;
 }
@@ -329,9 +329,7 @@
   .email {
     font-size: 10px !important;
   }
-  .profileBox {
-    width: auto !important;
-  }
+  
   .subHeading {
     font-size: 18px !important;
   }

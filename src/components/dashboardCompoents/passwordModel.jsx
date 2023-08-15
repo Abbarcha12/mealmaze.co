@@ -30,7 +30,7 @@ const style = {
   px: 4,
   pb: 3,
 };
-const PasswordModel = ({ setOpenModel }) => {
+const PasswordModel = () => {
   const dispatch = useDispatch();
   const initialState=useSelector((state)=>state.rootReducer.handleProfilePopUp)
  
@@ -44,7 +44,7 @@ const PasswordModel = ({ setOpenModel }) => {
   const [DeleteModel, setDeleteModel] = React.useState(false);
   const handleDelete = () => {
     setDeleteModel(true);
-    setOpenModel(false);
+   
   };
   const handleDeleteClose = () => {
     setDeleteModel(false);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Grid} from "@mui/material";
+import { Grid,Box} from "@mui/material";
 import "./Dashboard.css";
 
 import Overview from "../../components/dashboardCompoents/Overview";
@@ -13,7 +13,7 @@ const Dashboard = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 912px)"); // Define your media query here
+    const mediaQuery = window.matchMedia("(max-width: 1100px)"); // Define your media query here
 
     // Update state based on media query match
     const updateMediaMatch = (e) => {
@@ -40,15 +40,18 @@ const Dashboard = () => {
   return (
     <Grid
       container
+      className="MobileScreenDashboard"
       sx={{
         background: "#FAFAFA",
       }}
-      spacing={10}>
+      spacing={4}>
       <Grid
+        sx={{display:{lg:"block",md:"block",sm:"block",xs:"none"}}}
+       className="SibeBar"
         item
         lg={open ? 1.5 : 2.2}
         md={open ? 1.5 : 2.2}
-        sm={1.5}
+        sm={1}
         xs={open ? 1.5 : 2.2}>
         <DashboardSidebar
           handleOpen={handleOpen}
@@ -61,13 +64,16 @@ const Dashboard = () => {
         item
         lg={open ? 10.5 : 9.7}
         md={open ? 10.5 : 9.7}
-        sm={10.5}
-        xs={10}>
-        {Id === 1 ? <Overview /> : ""}
+        sm={11}
+        xs={11}>
+       <Box>
+       {Id === 1 ? <Overview /> : ""}
         {Id === 2 ? <Myplans /> : ""}
         {Id === 3 ? <MealPlan /> : ""}
         {Id === 4 ? <FoodMatch /> : ""}
+        </Box>
       </Grid>
+       
     </Grid>
   );
 };

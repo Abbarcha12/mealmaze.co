@@ -1,11 +1,53 @@
 import React from "react";
-import { Button, Box, Typography } from "@mui/material";
-import DashboradHeader from "./DashboradHeader";
+import { Button, Box, Typography, Grid } from "@mui/material";
+import PasswordModel from "./passwordModel";
+import Profile from "./Profile";
 import Recipe from "./Recipe";
 const Weeklyplan = () => {
   return (
     <>
-      <DashboradHeader />
+      <Box>
+        <PasswordModel />
+        <Grid container mt={1} spacing={2}>
+          <Grid item lg={9} md={8} sm={8} xs={12}>
+            <Grid container>
+              <Grid item lg={9} xs={12}>
+                <Box>
+                  <Typography
+                    sx={{
+                      fontSize: { lg: "27px", sm: "20px" },
+                      fontWeight: 700,
+                      lineHeight: "37px",
+                    }}>
+                    Overview
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: { lg: "14px", sm: "12px", xs: "12px" },
+                      fontWeight: "700",
+                      lineHeight: "24px",
+                      color: "#738391",
+                      maxWidth: "431px",
+                    }}>
+                    7 day meal plan to build muscle with an anything diet and
+                    allergy to <span className='spanOrange'>shrimp</span>.{" "}
+                    <span className='spanGreen'>Likes beef and shrimp</span> and
+                    dislikes <span className='yellowSpan'>tofu</span>
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item lg={3} xs={12}>
+                <Button className='createNewPlan' href='/createMeal'>
+                  Create New Plan
+                </Button>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item lg={3} md={4} sm={4} xs={12}>
+            <Profile />
+          </Grid>
+        </Grid>
+      </Box>
       <Box
         sx={{ display: "flex", justifyContent: "space-between" }}
         p={1}

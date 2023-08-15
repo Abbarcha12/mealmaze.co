@@ -67,11 +67,34 @@
   width: 21px !important;
   height: 84px !important;
 }
-@media screen and (max-width: 912px) {
+@media screen and (max-width:1200px) {
+  .DashboradSideBar{
+    padding: 5px !important;
+  }
+  .DashboardLink1{
+    padding: 10px 5px !important;
+    border-radius: 8px !important;
+
+    justify-content: space-around !important;
+  }
+  
+}
+
+@media screen and (max-width: 1024px) {
   .DashboardLink1 {
     justify-content: center !important;
     align-items: center !important;
     padding: 10px 10px !important;
+  }
+.ToggleBtn {
+  display: none !important;
+}
+  .miniSidebar {
+ 
+    height: 100vh !important;
+  }
+  .minilogo {
+    width: 35px !important;
   }
   .logo1 {
     display: none;
@@ -87,14 +110,21 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .miniSidebar {
-    padding: 5px 5px 30px 5px !important;
-    height: 100vh !important;
-  }
-  .minilogo {
-    width: 35px !important;
-  }
+
   .css-tfsn2y {
     left: 5px !important;
   }
+  .SibeBar{
+    display: none !important;
+  }
+    
+.MobileScreenDashboard{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.css-13iutju{
+  padding: 0px !important;
+}
+
 }

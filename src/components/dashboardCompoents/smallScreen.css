@@ -1,0 +1,83 @@
+
+.mobileHeader{
+   
+    display: none !important;
+ 
+}
+.mobileScreenBtn{
+    border-radius: 5.905px !important;
+    padding: 9px !important;
+    font-size: 11px !important;
+    color: #22C55E  !important;
+    font-weight: 600 !important;
+    text-transform: capitalize !important;
+background:  #DCFCE7 !important;
+}
+.mySwiper{
+    display: none !important;
+}
+@media screen and (max-width:768px) {
+    .createNewPlan{
+        display: none !important;
+    }
+    .profileBox{
+        display: none !important;
+    }
+    .mobileHeader{
+        display: flex !important;
+        
+        justify-content: space-between !important;
+        align-items: center !important  ;
+    }
+    .weekBoxHeading {
+        font-size: 18px !important  ;
+    }
+    .weekBox{
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border-bottom:none !important;
+        padding: 0px !important;
+
+    }
+    .LargerScreenDays{
+        display: none;
+    }
+.mySwiper{
+    display: block !important;
+}
+
+.WeekDays {
+padding: 10px 16px !important;
+border-radius: 8px !important;
+background:  #DCFCE7 !important;
+  }
+  .Day1{
+    font-size: 16px !important;
+    font-weight: 600;
+    color: #62585D;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-left: 0px !important;
+  }
+  .WeekDays:focus{
+    background-color: #22C55E !important;
+
+  }
+  .WeekDays:focus .Day1{
+    color: #fff !important;
+  }
+  .subHeading{
+    display: none !important;
+  }
+
+}
+@media screen and (max-width:1200px) {
+    .createNewPlan{
+        padding: 12px 16px !important;
+    }
+    .profileBox{
+        width: 78% !important;
+    }
+   
+}

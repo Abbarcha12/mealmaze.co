@@ -8,6 +8,8 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
   return (
     <>
       <Box className='ToggleAction'>
+        {/* SiderBar for for larger screen from 768px */}
+        <Box className="DesktopSIderbar">
         <Box>
           {open ? (
             <Box className='miniSidebar '>
@@ -35,7 +37,7 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
                     />
                   </svg>
                 </Box>
-                <Box sx={{ position: "absolute", left: "15px", top: "25px" }}>
+                <Box sx={{ position: "absolute", left: "5px", top: "25px" }}>
                   {Id === 1 ? (
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -109,7 +111,7 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
                     />
                   </svg>
                 </Box>
-                <Box sx={{ position: "absolute", left: "15px", top: "25px" }}>
+                <Box sx={{ position: "absolute", left: "5px", top: "25px" }}>
                   {Id === 2 ? (
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -163,7 +165,7 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
                     />
                   </svg>
                 </Box>
-                <Box sx={{ position: "absolute", left: "15px", top: "25px" }}>
+                <Box sx={{ position: "absolute", left: "5px", top: "25px" }}>
                   {Id === 3 ? (
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -194,7 +196,7 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
                     </svg>
                   )}
                 </Box>
-                <Box sx={{ position: "absolute", left: "15px", top: "25px" }}>
+                <Box sx={{ position: "absolute", left: "5px", top: "25px" }}>
                   {Id === 3 ? (
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -245,7 +247,7 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
                   </svg>
                 </Box>
 
-                <Box sx={{ position: "absolute", left: "15px", top: "25px" }}>
+                <Box sx={{ position: "absolute", left: "5px", top: "25px" }}>
                   {Id === 4 ? (
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -421,7 +423,7 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
                       className='DashboardText'
                       sx={{
                         color: Id === 2 ? "#fff" : "#7D8DA7",
-                        marginRight: "15px",
+                        marginRight: "5px",
                       }}>
                       My Plans
                     </Typography>
@@ -665,6 +667,8 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
               </defs>
             </svg>
           )}
+        </Box>
+        
         </Box>
       </Box>
     </>

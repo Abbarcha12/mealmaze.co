@@ -87,16 +87,17 @@ const Homepage = () => {
         <Container maxWidth='lg'>
           <Box
             display={"flex"}
-            sx={{ justifyContent: { lg: "center", xs: "start" } }}>
-            <Typography className='homeSectionTwoHeading' mt={15}>
+            sx={{ justifyContent: { lg: "center", xs: "center" } }}
+            pt={8}>
+            <Typography className='homeSectionTwoHeading'>
               How it works
             </Typography>
           </Box>
           <Grid
             container
-            mt={3}
+            mt={5}
             justifyContent={"space-between"}
-            sx={{ flexDirection: { xs: "column-reverse", lg: "row" } }}>
+            className='mobileScreenCards'>
             <Grid item xs={12} lg={5} className='homebanner'>
               <img
                 src={HomeBannerImgtwo}
@@ -123,7 +124,12 @@ const Homepage = () => {
           </Grid>
         </Container>
         <Container maxWidth='lg'>
-          <Grid mt={4} container justifyContent={"space-around"}>
+          <Grid
+            mt={4}
+            sx={{ flexDirection: { xs: "column-reverse", lg: "row" } }}
+            container
+            justifyContent={"space-around"}
+            className='mobileScreenCards'>
             <Grid
               item
               xs={12}
@@ -147,10 +153,10 @@ const Homepage = () => {
         </Container>
         <Container maxWidth='lg'>
           <Grid
+            className='mobileScreenCards'
             container
             mt={4}
-            justifyContent={"space-around"}
-            sx={{ flexDirection: { xs: "column-reverse", lg: "row" } }}>
+            justifyContent={"space-around"}>
             <Grid item xs={12} lg={6} className='homebanner'>
               <img
                 src={HomeBannerImgFive}
@@ -224,8 +230,9 @@ const Homepage = () => {
                     sx={{
                       color: "#15803D",
                       fontFamily: "Inter",
-                      fontSize: "26px",
+                      fontSize: { lg: "26px", xs: "18px" },
                       fontWeight: 500,
+                      textAlign: { lg: "start", xs: "center" },
                       lineHeight: "22.141px",
                     }}>
                     Contact us
@@ -234,7 +241,8 @@ const Homepage = () => {
                     sx={{
                       color: "#191A15",
                       fontFamily: "Inter",
-                      fontSize: "30px",
+                      fontSize: { lg: "30px", xs: "24px" },
+                      textAlign: { lg: "start", xs: "center" },
                       fontWeight: 700,
                       marginTop: "15px",
                     }}>
@@ -244,7 +252,8 @@ const Homepage = () => {
                     sx={{
                       color: "#191A15",
                       fontFamily: "Inter",
-                      fontSize: "24px",
+                      fontSize: { lg: "24px", xs: "16px" },
+                      textAlign: { lg: "start", xs: "center" },
                       fontWeight: 400,
                       marginTop: "15px",
                     }}>
@@ -254,7 +263,9 @@ const Homepage = () => {
                     sx={{
                       color: "#494BF3",
                       fontFamily: "Inter",
-                      fontSize: { lg: "32px", xs: "28px" },
+                      fontSize: { lg: "32px", xs: "22px" },
+                      textAlign: { lg: "start", xs: "center" },
+
                       fontWeight: 700,
                       marginTop: "20px",
                     }}>
@@ -264,11 +275,19 @@ const Homepage = () => {
                 <Grid
                   lg={6}
                   md={12}
-                  sx={{ marginTop: { sm: "10px", xs: "20px" } }}>
+                  sx={{
+                    marginTop: { sm: "10px", xs: "20px" },
+                    marginLeft:{lg:"",xs:"auto"},
+                    marginRight:{lg:"",xs:"auto"},
+
+
+                    
+                  }}>
                   <img
                     src={contactImg}
                     alt={contactImg}
                     height={"260px"}
+                    textAlign="center"
                     className='homebannerimg2'
                   />
                 </Grid>
@@ -279,7 +298,7 @@ const Homepage = () => {
       </Box>
       <Box className='HomeSectionsix' id='section6'>
         <Container maxWidth='lg'>
-          <Grid container pt={5}>
+          <Grid container pt={5}   sx={{ flexDirection: { xs: "column-reverse", lg: "row" } }} >
             <Grid lg={6} md={12} display='flex ' justifyContent={"start"}>
               {/* <SpeakerImg  className="Announce" />
                */}
@@ -301,7 +320,7 @@ const Homepage = () => {
                 sx={{
                   color: "#15803D",
                   fontFamily: "Inter",
-                  fontSize: { lg: "26px", xs: "18px" },
+                  fontSize: { lg: "26px", xs: "16px" },
                   fontWeight: 500,
                   lineHeight: "22.141px",
                 }}>
@@ -311,7 +330,7 @@ const Homepage = () => {
                 sx={{
                   color: "#191A15",
                   fontFamily: "Inter",
-                  fontSize: { lg: "50px", xs: "32px" },
+                  fontSize: { lg: "50px", xs: "28px" },
                   fontWeight: 700,
                   marginTop: "15px",
                 }}>
@@ -321,9 +340,9 @@ const Homepage = () => {
                 sx={{
                   color: "#888587",
                   fontFamily: "Inter",
-                  fontSize: { lg: "24px", xs: "20px" },
+                  fontSize: { lg: "24px", xs: "15px" },
                   fontWeight: 400,
-                  marginTop: "15px",
+                  marginTop: {lg:"15px",xs:"5px"},
                 }}>
                 Discover a rewarding opportunity to earn by joining our
                 affiliate program. Start monetizing your online influence and
