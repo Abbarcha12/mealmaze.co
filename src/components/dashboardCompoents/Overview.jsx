@@ -97,9 +97,10 @@ const Overview = () => {
             Let's see what's on the menu for Monday
             <span className='subHeadingSpan'>(Week 1)</span>
           </Typography>
-          <Box className='dashboardCardBox' mt={{lg:7,xs:5}}>
-            <Grid container>
-              <Grid item lg={3} md={4} sm={12} xs={6}>
+          <Box className='dashboardCardBox' mt={{lg:7,xs:2}}>
+            
+            <Grid container className="smallScreenBox1">
+              <Grid item lg={6} md={6} sm={6} xs={6}>
                 <DashboardMiniCard
                   image={
                     <svg
@@ -158,7 +159,7 @@ const Overview = () => {
                   amount='2500cal'
                 />
               </Grid>
-              <Grid item lg={3} md={4} sm={12} xs={6}>
+              <Grid item lg={6} md={6} sm={6} xs={6}>
                 <DashboardMiniCard
                   image={
                     <svg
@@ -215,7 +216,11 @@ const Overview = () => {
                   amount='220g'
                 />
               </Grid>
-              <Grid item lg={3} md={4} sm={6} xs={6}>
+              
+            </Grid>
+            <Grid container className="smallScreenBox1">
+           
+              <Grid item lg={6} md={6} sm={6} xs={6} >
                 <DashboardMiniCard
                   image={
                     <svg
@@ -280,7 +285,7 @@ const Overview = () => {
                   amount='2500cal'
                 />
               </Grid>
-              <Grid item lg={3} md={4} sm={6} xs={6}>
+              <Grid item lg={6} md={6} sm={6} xs={6}>
                 <DashboardMiniCard
                   image={
                     <svg
@@ -348,6 +353,7 @@ const Overview = () => {
                 />
               </Grid>
             </Grid>
+           
           </Box>
           <Box className='dashboradCardBoxTwo' mt={5}>
             <Grid container spacing={2}>
@@ -413,8 +419,17 @@ const Overview = () => {
                   </Grid>
                 );
               })}
+               
             </Grid>
+            <Box sx={{display:{lg:"none",md:"none",sm:"block",xs:"block"},width:"100%"}}>
+         <Button
+                className='  ShowWeeklyIngredientsButton'
+                onClick={handleOpen}>
+                Show Weekly Ingredients
+              </Button>
+         </Box>
           </Box>
+        
         </Grid>
         <Grid item lg={3.2} mt={{ lg: 7 }} md={3} sm={12} xs={12}>
           <Box className='weekBox' mt={{ lg: 4 }}>
@@ -723,6 +738,7 @@ const Overview = () => {
               </Swiper>
             </Box>
           </Box>
+          
         </Grid>
       </Grid>
     </>

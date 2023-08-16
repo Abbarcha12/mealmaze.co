@@ -7,7 +7,7 @@ const DashboardMiniCard = ({ image, title, amount }) => {
       display={"flex"}
       justifyContent={"space-evenly"}
       alignItems={"center"}
-      sx={{ borderRight: "1px solid #E6E8F0" }}>
+      sx={{ borderRight: {lg:"1px solid #E6E8F0",md:"none",sm:"none",xs:"none"} }}>
       <div>{image}</div>
       <Box ml={1.5}>
         <Typography className='CardTitle'>{title}</Typography>

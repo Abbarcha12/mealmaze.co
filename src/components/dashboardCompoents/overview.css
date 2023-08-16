@@ -76,6 +76,9 @@
   padding: 23.056px 20px 22.056px 20px;
   box-shadow: 0px 7.927051544189453px 15.854103088378906px 0px
     rgba(143, 149, 178, 0.15) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 .CardTitle {
   color: #8f95b2 !important;

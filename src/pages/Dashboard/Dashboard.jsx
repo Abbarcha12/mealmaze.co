@@ -7,6 +7,7 @@ import DashboardSidebar from "../../components/dashboardCompoents/DashboardSideb
 import Myplans from "../MyPlans/Myplans";
 import MealPlan from "../myMealPlan/MealPlan";
 import FoodMatch from "../FoodMatch/foodMatch";
+import SmallScreenNavigation from "../../components/dashboardCompoents/SmallScreenNavigation";
 
 const Dashboard = () => {
   const [Id, setId] = useState(1);
@@ -40,6 +41,7 @@ const Dashboard = () => {
   return (
     <Grid
       container
+      position={'relative'}
       className="MobileScreenDashboard"
       sx={{
         background: "#FAFAFA",
@@ -66,14 +68,20 @@ const Dashboard = () => {
         md={open ? 10.5 : 9.7}
         sm={11}
         xs={11}>
-       <Box>
+       <Box pb={{xs:10}}>
        {Id === 1 ? <Overview /> : ""}
         {Id === 2 ? <Myplans /> : ""}
         {Id === 3 ? <MealPlan /> : ""}
         {Id === 4 ? <FoodMatch /> : ""}
+        
         </Box>
       </Grid>
-       
+      <Box className="SmallScreenNavigation">
+          <SmallScreenNavigation 
+          Id={Id}
+          handelClick={handelClick}
+          />
+        </Box>
     </Grid>
   );
 };

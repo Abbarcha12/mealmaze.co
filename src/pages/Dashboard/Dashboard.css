@@ -79,6 +79,19 @@
   }
   
 }
+.SmallScreenNavigation{
+  position: fixed !important;
+  bottom: 0px !important;
+  border-radius: 10px 10px 0px 0px !important;
+  border: 2px solid #FFF !important;
+  background: #FFF !important;
+  width: 100%;
+  display: none !important;
+  height: 50px !important;
+  padding: 5px !important;
+  left: 0px !important;
+  box-shadow: -6px 0px 20px 0px rgba(0, 0, 0, 0.10) !important;
+}
 
 @media screen and (max-width: 1024px) {
   .DashboardLink1 {
