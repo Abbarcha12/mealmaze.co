@@ -9,6 +9,7 @@ import {
 } from "../../Redux/actions/CreateMealAction";
 import {  useDispatch } from "react-redux";
 import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
+import DashboradMobileTopNavBar from "../../components/dashboardCompoents/DashboradMobileTopNavBar";
 const Myplans = () => {
   const [openModel, setOpenModel] = React.useState(false);
   const dispatch = useDispatch();
@@ -27,14 +28,18 @@ const Myplans = () => {
         setOpenModel={setOpenModel}
       />
       <PurchaseFoodmatchpopUp/>
+      <Box>
+        <DashboradMobileTopNavBar/>
+      </Box>
       <Grid container mt={1.5} spacing={2} >
-        <Grid item lg={8.5} md={8} sm={7} xs={6}>
+
+        <Grid item lg={8.5} md={8} sm={12} xs={12}>
           <Grid container alignItems={'center'}>
             <Grid item lg={8.8}>
               <Box >
                 <Typography
                   sx={{
-                    fontSize: "27px",
+                    fontSize: {lg:"27px",md:"27px",sm:"27px",xs:"18p"},
                     fontWeight: 700,
                     lineHeight: "37px",
                   }}>
@@ -50,7 +55,9 @@ const Myplans = () => {
         <Grid item lg={3.5} md={4} sm={5} xs={6}>
           <Profile handleOpen={handleOpen} />
         </Grid>
-        <Grid container mt={5} spacing={3} p={1}>
+        
+      </Grid>
+      <Grid container mt={{lg:5,md:5,sm:2,xs:.5}} spacing={3} p={{lg:1,md:1}}>
           <Grid item lg={4}>
             <Box className='MyplansBox'>
               <Box className='MyPlansHeader'>
@@ -412,7 +419,6 @@ const Myplans = () => {
             </Box>
           </Grid>
         </Grid>
-      </Grid>
     </>
   );
 };

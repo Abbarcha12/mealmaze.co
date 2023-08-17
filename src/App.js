@@ -12,11 +12,13 @@ import CreateMealHangUp from "./pages/createMeal/CreateMealHangUp";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Faq from "./components/Faq";
 import WeeklyIngredients from "./components/dashboardCompoents/WeeklyIngredients";
+import PasswordModelSmallScreen from "./components/dashboardCompoents/ProfileSettingforSmallScreen";
 const App = () => {
   const inputRef = useRef(null);
   return (
     <Routes>
       <Route path='/' element={<Homepage />} />
+      <Route path="/profile" element={<PasswordModelSmallScreen/> }/>
       <Route path='/meal' element={<CreateMealHangUp />} />
       <Route path='/weekly' element={<WeeklyIngredients />} />
       <Route path='/faq' element={<Faq />} />

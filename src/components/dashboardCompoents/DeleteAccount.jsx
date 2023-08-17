@@ -16,6 +16,7 @@ const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
+  borderRadius:"12px",
   transform: "translate(-50%, -50%)",
   bgcolor: "#fff",
   boxShadow:
@@ -34,8 +35,8 @@ const DeleteAccount = ({ DeleteModel, handleDeleteClose }) => {
           onClose={handleDeleteClose}
           aria-labelledby='child-modal-title'
           aria-describedby='child-modal-description'>
-          <Box sx={{ ...style, width: 400 }}>
-            <Box sx={{ background: "#16A34A" }} p={2}>
+          <Box sx={{ ...style, width: {lg:400,md:400, sm:370,xs:320} }}>
+            <Box sx={{ background: "#16A34A",borderRadius:"10px 10px 0px 0px" }} p={2}>
               <Typography
                 sx={{
                   fontSize: "20px",
@@ -54,7 +55,7 @@ const DeleteAccount = ({ DeleteModel, handleDeleteClose }) => {
                 }}>
                 <span
                   style={{
-                    fontSize: "20",
+                    fontSize: {lg:"20",xs:"16px"},
                     fontWight: "600 !important",
                     color: "#EF4444",
                   }}>
@@ -78,6 +79,7 @@ const DeleteAccount = ({ DeleteModel, handleDeleteClose }) => {
                     startAdornment={
                       <InputAdornment position='start'>
                         <svg
+                         className="lock"
                           xmlns='http://www.w3.org/2000/svg'
                           width='26'
                           height='27'
@@ -107,8 +109,9 @@ const DeleteAccount = ({ DeleteModel, handleDeleteClose }) => {
                         <IconButton
                           aria-label='toggle password visibility'
                           onClick={handleClickShowPassword}>
-                          {showPassword ? (
+                          {!showPassword ? (
                             <svg
+                             className="eye"
                               xmlns='http://www.w3.org/2000/svg'
                               width='28'
                               height='28'
@@ -136,7 +139,7 @@ const DeleteAccount = ({ DeleteModel, handleDeleteClose }) => {
                               />
                             </svg>
                           ) : (
-                            <Visibility />
+                            <Visibility className="eye" />
                           )}
                         </IconButton>{" "}
                       </InputAdornment>
@@ -148,11 +151,10 @@ const DeleteAccount = ({ DeleteModel, handleDeleteClose }) => {
                 <Button
                   sx={{
                     borderRadius: "10px",
-
                     color: "#7D8DA7",
-                    fontSize: "18px",
+                    fontSize: {lg:"18px",sm:"14px"},
                     fontWeight: "500",
-                    padding: "8px 50px",
+                    padding:{lg: "8px 50px",sm:"8px 40px",xs:"8px 40px"},
                     border: " 1px solid #7D8DA7",
                   }}
                   onClick={handleDeleteClose}>
@@ -166,9 +168,10 @@ const DeleteAccount = ({ DeleteModel, handleDeleteClose }) => {
                     borderRadius: "10px",
                     background: "#EF4444",
                     color: "#fff",
-                    fontSize: "18px",
+                    fontSize: {lg:"18px",sm:"14px"},
                     fontWeight: "500",
-                    padding: "8px 50px",
+                    padding:{lg: "8px 50px",sm:"8px 40px",xs:"8px 40px"},
+
                   }}>
                   Delete
                 </Button>

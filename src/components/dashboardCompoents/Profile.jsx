@@ -45,7 +45,7 @@ const Profile = () => {
           </Box>
           {open ? (
             <>
-              <Box sx={{ display: { lg: "none", md: "none", sm: "block" } }}>
+              <Box sx={{ display: { lg: "none", md: "block", sm: "block" } }}>
                 <div>
                   <Typography className='Name' sx={{ paddingLeft: "10px" }}>
                     Khalid Hosen

@@ -8,6 +8,7 @@ import Myplans from "../MyPlans/Myplans";
 import MealPlan from "../myMealPlan/MealPlan";
 import FoodMatch from "../FoodMatch/foodMatch";
 import SmallScreenNavigation from "../../components/dashboardCompoents/SmallScreenNavigation";
+import PasswordModelSmallScreen from "../../components/dashboardCompoents/ProfileSettingforSmallScreen";
 
 const Dashboard = () => {
   const [Id, setId] = useState(1);
@@ -73,6 +74,8 @@ const Dashboard = () => {
         {Id === 2 ? <Myplans /> : ""}
         {Id === 3 ? <MealPlan /> : ""}
         {Id === 4 ? <FoodMatch /> : ""}
+        {Id === 5 ? <PasswordModelSmallScreen /> : ""}
+
         
         </Box>
       </Grid>

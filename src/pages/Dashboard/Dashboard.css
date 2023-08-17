@@ -89,7 +89,7 @@
   display: none !important;
   height: 50px !important;
   padding: 5px !important;
-  left: 0px !important;
+  left: -12px !important;
   box-shadow: -6px 0px 20px 0px rgba(0, 0, 0, 0.10) !important;
 }
 
@@ -103,7 +103,7 @@
   display: none !important;
 }
   .miniSidebar {
- 
+    padding: 26px 9px 621px 18px !important;
     height: 100vh !important;
   }
   .minilogo {

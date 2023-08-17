@@ -344,7 +344,27 @@ letter-spacing: -0.14px;
 .ToggleBtn {
   display: none!important;
 }
-
+.Label{
+  font-size: 14px !important;
+}
+.InputPassword{
+  padding: 7px 10px !important;
+}
+.Label1{
+  font-size: 12px !important;
+  margin-left: 10px !important;
+}
+.lock{
+height: 14px !important;
+width: 14px !important;
+}
+.css-1x51dt5-MuiInputBase-input-MuiInput-input{
+  font-size: 12px !important;
+}
+.eye{
+  height: 18px !important;
+  width: 18px !important;
+}
 }
 .Money{
   display: flex;

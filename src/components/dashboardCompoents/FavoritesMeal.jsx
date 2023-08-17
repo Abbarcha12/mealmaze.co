@@ -16,13 +16,13 @@ const FavoritesMeal = ({ Icon, heading, title, day, heart }) => {
               justifyContent: "space-between",
             }}>
             <Typography
-              sx={{ color: "#232627", fontSize: "16px", fontWeight: "600" }}>
+              sx={{ color: "#232627", fontSize: "15px", fontWeight: "600" }}>
               {heading}
             </Typography>
             <Typography
               sx={{
                 color: "rgba(108, 114, 117, 0.50)",
-                fontSize: "14px",
+                fontSize: "13px",
                 fontWeight: "500",
               }}>
               {day}
@@ -37,7 +37,7 @@ const FavoritesMeal = ({ Icon, heading, title, day, heart }) => {
               justifyContent: "space-between",
             }}>
             <Typography
-              sx={{ color: "#6C7275", fontSize: "14px", fontWeight: "500" }}>
+              sx={{ color: "#6C7275", fontSize: "13.5px", fontWeight: "500" }}>
               {title}
             </Typography>
 
