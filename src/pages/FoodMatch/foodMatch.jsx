@@ -62,24 +62,36 @@ const FoodMatch = () => {
   };
 
   const handleSubmit = () => {
-    setData((prevData) => [...prevData, metaData]);
+    if(metaData.trim()!==""){
+      setData((prevData) => [...prevData, metaData]);
     Data.push(Data);
+    }
+    setMetaData(" ")
+    
   };
   const handleSubmit1 = () => {
-    setData1((prevData) => [...prevData, metaData1]);
-
+    if(metaData1.trim()!==""){
+      setData1((prevData) => [...prevData, metaData1]);
     Data1.push(Data1);
+    }
+    setMetaData1("")
+
   };
   const handleSubmit2 = () => {
-    setData2((prevData) => [...prevData, metaData2]);
-    setMetaData2(" ");
-    Data2.push(Data2);
+    if(metaData2.trim()!==""){
+      setData2((prevData) => [...prevData, metaData2]);
+    Data2.push(metaData2);
+    }
+    setMetaData2("")
+
   };
 
   const handleSubmit3 = () => {
-    setData3((prevData) => [...prevData, metaData3]);
-    setMetaData3(" ");
-    Data2.push(Data3);
+    if(metaData3.trim()!==""){
+      setData3((prevData) => [...prevData, metaData3]);
+    Data3.push(metaData3);
+    }
+    setMetaData3("")
   };
 
   const handleClose1 = (itemToRemove) => {
@@ -170,6 +182,7 @@ const FoodMatch = () => {
                         <Box className='createMealBox'>
                           <Input
                             onChange={handleChangeData}
+                            value={metaData}
                             sx={{
                               borderRadius: "63px",
                               width: "100%",
@@ -260,6 +273,7 @@ const FoodMatch = () => {
                         <Box className='createMealBox'>
                           <Input
                             onChange={handleChangeData1}
+                            value={metaData1}
                             sx={{
                               borderRadius: "63px",
                               width: "100%",
@@ -350,6 +364,7 @@ const FoodMatch = () => {
                         <Box className='createMealBox'>
                           <Input
                             onChange={handleChangeData2}
+                            value={metaData2}
                             sx={{
                               borderRadius: "63px",
                               width: "100%",
@@ -440,6 +455,7 @@ const FoodMatch = () => {
                         <Box className='createMealBox'>
                           <Input
                             onChange={handleChangeData3}
+                            value={metaData3}
                             sx={{
                               borderRadius: "63px",
                               width: "100%",
