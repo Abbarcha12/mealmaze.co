@@ -52,19 +52,26 @@ const CreateMeal = () => {
   };
 
   const handleSubmit = () => {
-    setData((prevData) => [...prevData, metaData]);
+    if (metaData.trim() !== "") {
+      setData((prevData) => [...prevData, metaData]);
+      Data.push(metaData);
+    }
     setMetaData(" ");
-    Data.push(Data);
+    
   };
   const handleSubmit1 = () => {
-    setData1((prevData) => [...prevData, metaData1]);
+    if (metaData1.trim() !== "") {
+      setData((prevData) => [...prevData, metaData1]);
+      Data1.push(metaData1);
+    }
     setMetaData(" ");
-    Data1.push(Data1);
   };
   const handleSubmit2 = () => {
-    setData2((prevData) => [...prevData, metaData2]);
+    if (metaData2.trim() !== "") {
+      setData((prevData) => [...prevData, metaData2]);
+      Data2.push(metaData2);
+    }
     setMetaData2(" ");
-    Data2.push(Data2);
   };
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -116,7 +123,6 @@ const CreateMeal = () => {
             <Typography
               sx={{
                 color: "#71717A",
-
                 fontFamily: "Inter",
                 fontSize: { lg: "18px", xs: "14px" },
                 marginTop: { lg: "30px", xs: "15px" },
@@ -132,11 +138,11 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-                    fontSize: { lg: "16px", xs: "14px" },
+                    fontSize: { lg: "15.5px", xs: "14px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
-                  Email
+                  What should we name this Mealplan
                 </InputLabel>
                 <Input
                   sx={{
@@ -350,6 +356,7 @@ const CreateMeal = () => {
                   <Box className='createMealBox'>
                     <Input
                       onChange={handleChangeData}
+                      value={metaData}
                       sx={{
                         borderRadius: "63px",
                         width: "100%",
@@ -442,6 +449,7 @@ const CreateMeal = () => {
                   <Box className='createMealBox'>
                     <Input
                       onChange={handleChangeData1}
+                      value={metaData1}
                       sx={{
                         borderRadius: "63px",
                         width: "100%",
@@ -528,6 +536,7 @@ const CreateMeal = () => {
                   <Box className='createMealBox'>
                     <Input
                       onChange={handleChangeData2}
+                      value={metaData2}
                       sx={{
                         borderRadius: "63px",
                         width: "100%",
@@ -601,7 +610,12 @@ const CreateMeal = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Grid container spacing={1} mt={5}  pb={3} sx={{justifyContent:{lg:"end",xs:"center"}}}>
+            <Grid
+              container
+              spacing={1}
+              mt={5}
+              pb={3}
+              sx={{ justifyContent: { lg: "end", xs: "center" } }}>
               <Button href='/meal' className='generate'>
                 Generate your meal plan
               </Button>

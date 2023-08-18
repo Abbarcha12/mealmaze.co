@@ -1,6 +1,28 @@
+.card{
+  border-radius: 20px !important;
+  border: 1px solid  #B5B3B4 !important;
+  background-color: white;
+
+  /* height: 378px; */
+  }
+  
+  
+    .card:hover{
+     background-color: #166534 !important;
+    }
+    .card:hover .days{
+     color: rgb(255, 255, 255) !important;
+    }
+    @media screen and (max-width:768px) {
+      .card{
+        height: auto !important;
+      }
+      
+    }
+
 .days {
   font-family: Inter !important;
-  font-size: 24px !important;
+  font-size: 18px !important;
   font-style: normal !important;
   font-weight: 700 !important;
   line-height: normal !important;
@@ -8,7 +30,7 @@
 .p1 {
   color: #2c2126 !important;
   font-family: Inter !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   font-style: normal !important;
   display: flex !important;
   justify-content: flex-start !important;
@@ -30,7 +52,7 @@
   color: #000000;
   opacity: 0.9599999785423279;
   font-family: Inter;
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -64,12 +86,12 @@
   text-align: center !important;
   border: none !important;
   font-family: Inter !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   text-decoration: none !important;
   font-style: normal !important;
   font-weight: 700 !important;
   line-height: normal;
-  padding: 10px 47px !important;
+  padding: 10px 37px !important;
 }
 
 .card:hover .selectBtn {

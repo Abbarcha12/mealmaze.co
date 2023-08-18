@@ -76,9 +76,9 @@
   padding: 23.056px 20px 22.056px 20px;
   box-shadow: 0px 7.927051544189453px 15.854103088378906px 0px
     rgba(143, 149, 178, 0.15) !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 }
 .CardTitle {
   color: #8f95b2 !important;
@@ -137,7 +137,7 @@
 .MealList {
   color: #8f95b2 !important;
   font-family: Inter;
-  font-size: 12px !important;
+  font-size: 14px !important;
   font-style: normal;
   font-weight: 500 !important;
   line-height: 166.8% !important;
@@ -151,6 +151,8 @@
 }
 .dot {
   padding: 0px 10px 0px 0px !important;
+  font-size: 14px !important;
+  height: 30px !important;
 }
 .MealBage1 {
   border-radius: 4px !important;
@@ -238,7 +240,7 @@
 }
 .WeekDays {
   display: flex !important;
-  justify-content:flex-start ;
+  justify-content: flex-start;
   margin-top: 20px;
   border-radius: 8px;
   padding: 9px 12px;
@@ -317,7 +319,7 @@
 .Favlist {
   text-decoration: none !important;
   display: flex !important;
-  justify-content: space-between !important;
+  justify-content: space-around !important;
   align-items: center !important;
   padding: 10px 16px 13px 12px;
   border-radius: 8px !important;
@@ -332,7 +334,7 @@
   .email {
     font-size: 10px !important;
   }
-  
+
   .subHeading {
     font-size: 18px !important;
   }
@@ -340,9 +342,9 @@
     font-size: 18px !important;
   }
 }
-.HeartIcon{
-color:#62585D !important;
+.HeartIcon {
+  color: #62585d !important;
 }
-.HeartIcon:focus{
+.HeartIcon:focus {
   color: red !important;
 }

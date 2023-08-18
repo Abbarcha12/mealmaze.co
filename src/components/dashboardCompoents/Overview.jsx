@@ -69,7 +69,7 @@ const Overview = () => {
                 </Box>
               </Grid>
               <Grid item lg={3} md={3} sm={12} xs={12}>
-                <Button className='createNewPlan' href='/createMeal'>
+                <Button className='createNewPlan' href='/pricing'>
                   Create New Plan
                 </Button>
               </Grid>
@@ -83,7 +83,7 @@ const Overview = () => {
       <Grid
         container
         spacing={2}
-        mt={{ lg: 3,md:4,sm:3 }}
+        mt={{ lg: 3, md: 4, sm: 3 }}
         sx={{
           flexDirection: {
             lg: "row",
@@ -97,9 +97,8 @@ const Overview = () => {
             Let's see what's on the menu for Monday
             <span className='subHeadingSpan'>(Week 1)</span>
           </Typography>
-          <Box className='dashboardCardBox' mt={{lg:7,xs:2}}>
-            
-            <Grid container className="smallScreenBox1">
+          <Box className='dashboardCardBox' mt={{ lg: 7, xs: 2 }}>
+            <Grid container className='smallScreenBox1'>
               <Grid item lg={6} md={6} sm={6} xs={6}>
                 <DashboardMiniCard
                   image={
@@ -216,11 +215,9 @@ const Overview = () => {
                   amount='220g'
                 />
               </Grid>
-              
             </Grid>
-            <Grid container className="smallScreenBox1">
-           
-              <Grid item lg={6} md={6} sm={6} xs={6} >
+            <Grid container className='smallScreenBox1'>
+              <Grid item lg={6} md={6} sm={6} xs={6}>
                 <DashboardMiniCard
                   image={
                     <svg
@@ -353,7 +350,6 @@ const Overview = () => {
                 />
               </Grid>
             </Grid>
-           
           </Box>
           <Box className='dashboradCardBoxTwo' mt={5}>
             <Grid container spacing={2}>
@@ -396,7 +392,7 @@ const Overview = () => {
                       </Box>
                       <Box mt={1}>
                         <Typography className='MealList'>
-                          {" "}
+                         
                           <span className='dot'>{item.dot} </span> {item.point1}
                         </Typography>
                         <Typography className='MealList'>
@@ -419,17 +415,19 @@ const Overview = () => {
                   </Grid>
                 );
               })}
-               
             </Grid>
-            <Box sx={{display:{lg:"none",md:"none",sm:"block",xs:"block"},width:"100%"}}>
-         <Button
+            <Box
+              sx={{
+                display: { lg: "none", md: "none", sm: "block", xs: "block" },
+                width: "100%",
+              }}>
+              <Button
                 className='  ShowWeeklyIngredientsButton'
                 onClick={handleOpen}>
                 Show Weekly Ingredients
               </Button>
-         </Box>
+            </Box>
           </Box>
-        
         </Grid>
         <Grid item lg={3.2} mt={{ lg: 7 }} md={3} sm={12} xs={12}>
           <Box className='weekBox' mt={{ lg: 4 }}>
@@ -677,11 +675,14 @@ const Overview = () => {
                 </div>
               </Link>
               <Divider sx={{ marginTop: "40px" }} />
-              <Button
+            <Box textAlign={"center"} width="100%">
+            <Button
+              
                 className='  ShowWeeklyIngredientsButton'
                 onClick={handleOpen}>
                 Show Weekly Ingredients
               </Button>
+            </Box>
             </Box>
             <Box>
               <Swiper
@@ -708,7 +709,7 @@ const Overview = () => {
                 <SwiperSlide>
                   {" "}
                   <Link className='WeekDays'>
-                    <Typography className='Day1' >Wednesday</Typography>
+                    <Typography className='Day1'>Wednesday</Typography>
                   </Link>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -738,7 +739,6 @@ const Overview = () => {
               </Swiper>
             </Box>
           </Box>
-          
         </Grid>
       </Grid>
     </>

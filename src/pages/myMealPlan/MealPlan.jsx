@@ -1,16 +1,16 @@
 import React from "react";
-import { Grid, Typography, Box, Button, Divider } from "@mui/material";
+import { Grid, Typography, Box, Button } from "@mui/material";
 import PasswordModel from "../../components/dashboardCompoents/passwordModel";
 import Profile from "../../components/dashboardCompoents/Profile";
 import Recipe from "../../components/dashboardCompoents/Recipe";
 import FavoritesMeal from "../../components/dashboardCompoents/FavoritesMeal";
-import { handleOpenPopUp } from "../../Redux/actions/CreateMealAction";
+
 import Ingredients from "../../components/dashboardCompoents/Ingredients";
-import { useDispatch } from "react-redux";
+
 import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
 const MealPlan = () => {
   const [openModel, setOpenModel] = React.useState(false);
-  const dispatch = useDispatch();
+
   const handleOpen = () => {
     setOpenModel(true);
   };
@@ -42,7 +42,7 @@ const MealPlan = () => {
               </Box>
             </Grid>
             <Grid item lg={3.2}>
-              <Button className='createNewPlan' href='/createMeal'>
+              <Button className='createNewPlan'href='/pricing'>
                 Create New Plan
               </Button>
             </Grid>
@@ -437,23 +437,21 @@ const MealPlan = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid
-            item
-            lg={8}
-          >
-            <Grid container
-            spacing={1.5}
-            pb={3}
-            mt={0.1}
-               sx={{
-              borderRadius: "20px",
-              background: "#FEFEFE",
-              border: "1px solid  #E8ECEF",
-            }}>
-              <Grid item lg={6}>
+          <Grid item lg={8}>
+            <Grid
+              container
+              spacing={1.5}
+              pb={3}
+              mt={0.1}
+              sx={{
+                borderRadius: "20px",
+                background: "#FEFEFE",
+                border: "1px solid  #E8ECEF",
+              }}>
+              <Grid item lg={6} >
                 <Ingredients />
               </Grid>
-              <Grid item lg={6}>
+              <Grid item lg={6} >
                 <Recipe />
               </Grid>
             </Grid>

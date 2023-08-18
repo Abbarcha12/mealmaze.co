@@ -1,8 +1,6 @@
 import React from "react";
 import Modal from "@mui/material/Modal";
 import { Box, Divider, Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
-import TaskAltIcon from "@mui/icons-material/TaskAlt";
 
 const style = {
   position: "absolute",
@@ -24,7 +22,7 @@ const IngredientsPopUp = ({ Open, handleClose }) => {
       onClose={handleClose}
       aria-labelledby='child-modal-title'
       aria-describedby='child-modal-description'>
-      <Box sx={{ ...style,  width: {lg:400,md:400, sm:370,xs:290}  }}>
+      <Box sx={{ ...style, width: { lg: 400, md: 400, sm: 370, xs: 290 } }}>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography
             sx={{ color: "#4C4448", fontSize: "28px", fontWeight: "600" }}>

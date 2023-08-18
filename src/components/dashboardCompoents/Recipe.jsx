@@ -6,6 +6,8 @@ const Recipe = () => {
     <>
       
         <Box
+           className="IngRec"
+          
           sx={{
             padding: "32px",
             borderRadius: "16px",

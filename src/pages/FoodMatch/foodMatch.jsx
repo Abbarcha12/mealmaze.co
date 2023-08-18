@@ -14,6 +14,7 @@ import Recipe from "../../components/dashboardCompoents/Recipe";
 import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
 import {  useDispatch } from "react-redux";
 import { handleOpenPopUp } from "../../Redux/actions/CreateMealAction";
+import Ingredients from "../../components/dashboardCompoents/Ingredients";
 const FoodMatch = () => {
   const [openModel, setOpenModel] = useState(false);
   const dispatch = useDispatch();
@@ -662,15 +663,23 @@ const FoodMatch = () => {
             </Grid>
           )}
           <Grid item lg={8}>
-            <Box
+          <Grid
+              container
+              spacing={1.5}
+              pb={3}
+              mt={0.1}
               sx={{
                 borderRadius: "20px",
                 background: "#FEFEFE",
                 border: "1px solid  #E8ECEF",
-                padding: "32px   ",
               }}>
-              <Recipe />
-            </Box>
+              <Grid item lg={6} >
+                <Ingredients />
+              </Grid>
+              <Grid item lg={6} >
+                <Recipe />
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

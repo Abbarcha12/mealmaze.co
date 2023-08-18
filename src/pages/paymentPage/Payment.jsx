@@ -240,7 +240,7 @@ const Payment = () => {
                             <span className='span'>{item.p5}</span>
                           </Typography>
                           <Typography className='amount' mt={4}>
-                            <span className='doller'> $</span>
+                            <span className='doller'> {item.$}</span>
                             {item.amount}
                           </Typography>
                         </Box>

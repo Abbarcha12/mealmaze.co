@@ -12,7 +12,7 @@ import { cardData } from "../../components/data";
 import HomeCard from "../../components/HomeCard";
 import Card from "../../components/Cards";
 import contactImg from "../../assest/contact.png";
-import { ReactComponent as SpeakerImg } from "../../assest/speaker.svg";
+
 import Footer from "../../components/Footer";
 import AnouncementImg from "../../assest/aff (2).png";
 import Faq from "../../components/Faq";
@@ -180,14 +180,14 @@ const Homepage = () => {
         </Container>
       </Box>
       <Box className='HomeSectionFour' id='section3'>
-        <Container maxWidth='lg'>
+        <Box >
           <Box textAlign={"center"} display={"flex"} justifyContent={"center"}>
             <Typography className='homeSectionTwoHeading' mt={15}>
               Choose a Plan That’s Right For You
             </Typography>
           </Box>
           <Grid container justifyContent={"center"} alignItems={"center"}>
-            <Grid lg={12} md={12} sm={12} xs={12}>
+            <Grid lg={11} md={12} sm={12} xs={12}>
               <Box
                 sx={{
                   display: "flex",
@@ -208,7 +208,7 @@ const Homepage = () => {
               </Box>
             </Grid>
           </Grid>
-        </Container>
+        </Box>
       </Box>
       <Box className='HomeSectionseven' id='section7'>
         <Faq />

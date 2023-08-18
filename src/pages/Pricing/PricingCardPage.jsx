@@ -29,7 +29,7 @@ That’s Right For You
         </Typography>
       </Grid>
       <Grid container justifyContent={"center"} alignItems={"center"}>
-        <Grid lg={10} md={11} sm={12} xs={12} mt={3}>
+        <Grid lg={11} md={11} sm={12} xs={12} mt={3}>
           <Box
             sx={{
               display: "flex",

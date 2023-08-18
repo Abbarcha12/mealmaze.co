@@ -4,10 +4,10 @@ import "./card.css";
 import DoneIcon from "@mui/icons-material/Done";
 import { Link } from "react-router-dom";
 const Card = ({ item }) => {
-  const { id, amount, p1, p2, p3, p5, p6, days } = item;
+  const { id, amount, p1, p2, p3, p5, p6, days,$ } = item;
 
   return (
-    <Box m={3}>
+    <Box m={3} >
       <Typography variant='h4' className='days'>
         {days}
       </Typography>
@@ -44,7 +44,7 @@ const Card = ({ item }) => {
       </Box>
       <Box mt={2}>
         <Typography variant='normal' className='p1'>
-          $<span className='Amount1'>{amount}</span>
+          {$}<span className='Amount1'>{amount}</span>
         </Typography>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={2}>

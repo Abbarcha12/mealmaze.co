@@ -4,6 +4,7 @@ import { Divider, Button, Box, Typography, Grid } from "@mui/material"
 const Ingredients = () => {
   return (
     <Box
+    className="IngRec"
     sx={{
       padding: "32px",
       borderRadius: "16px",

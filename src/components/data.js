@@ -1,6 +1,17 @@
 const cardData = [
   {
     id: 1,
+    days: " Get Started for Free",
+    p1: "2 Day of Meals",
+    p2: "Personalised Recipes",
+    p3: "Shopping List",
+    p4: "Macros per meal",
+    p5: "Calories per meal",
+    p6: "1 Foodmatch searches",
+    amount: "Free",
+  },
+  {
+    id: 2,
     days: " 7 days",
     p1: "7 Days of Meal Plans",
     p2: "Personalised Recipes",
@@ -9,9 +20,10 @@ const cardData = [
     p5: "Calories per meal",
     p6: "5 Foodmatch searches",
     amount: "5",
+    $: "$",
   },
   {
-    id: 2,
+    id: 3,
     days: " 14 days",
     p1: "14 Days of Meal Plans",
     p2: "Personalised Recipes",
@@ -20,9 +32,10 @@ const cardData = [
     p5: "Calories per meal",
     p6: "10 Foodmatch searches",
     amount: "10",
+    $: "$",
   },
   {
-    id: 3,
+    id: 4,
     days: " 21 days",
     p1: "21 Days of Meal Plans",
     p2: "Personalised Recipes",
@@ -31,9 +44,10 @@ const cardData = [
     p5: "Calories per meal",
     p6: "20 Foodmatch searches",
     amount: "15",
+    $: "$",
   },
   {
-    id: 4,
+    id: 5,
     days: " 28 days",
     p1: "28 Days of Meal Plans",
     p2: "Personalised Recipes",
@@ -42,6 +56,7 @@ const cardData = [
     p5: "Calories per meal",
     p6: "30 Foodmatch searches",
     amount: "20",
+    $: "$",
   },
 ];
 
@@ -249,7 +264,7 @@ const accordionData = [
 
 const MealData = [
   {
-    id:1,
+    id: 1,
     Name: "Breakfast",
     heartIcon: (
       <svg
@@ -290,8 +305,8 @@ const MealData = [
     num4: "4g Fat",
     dot: (
       <svg
-        width='5'
-        height='6'
+        width='9'
+        height='9'
         viewBox='0 0 5 6'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'>
@@ -307,7 +322,7 @@ const MealData = [
     ),
   },
   {
-    id:2,
+    id: 2,
     Name: "Breakfast",
     heartIcon: (
       <svg
@@ -348,8 +363,8 @@ const MealData = [
     num4: "4g Fat",
     dot: (
       <svg
-        width='5'
-        height='6'
+        width='9'
+        height='9'
         viewBox='0 0 5 6'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'>
@@ -365,7 +380,7 @@ const MealData = [
     ),
   },
   {
-    id:3,
+    id: 3,
     Name: "Breakfast",
     heartIcon: (
       <svg
@@ -406,8 +421,8 @@ const MealData = [
     num4: "4g Fat",
     dot: (
       <svg
-        width='5'
-        height='6'
+        width='9'
+        height='9'
         viewBox='0 0 5 6'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'>
@@ -422,7 +437,8 @@ const MealData = [
       </svg>
     ),
   },
-  {id:4,
+  {
+    id: 4,
     Name: "Breakfast",
     heartIcon: (
       <svg
@@ -463,8 +479,8 @@ const MealData = [
     num4: "4g Fat",
     dot: (
       <svg
-        width='5'
-        height='6'
+        width='9'
+        height='9'
         viewBox='0 0 5 6'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'>
