@@ -4,9 +4,8 @@ import PasswordModel from "../../components/dashboardCompoents/passwordModel";
 import Profile from "../../components/dashboardCompoents/Profile";
 import Recipe from "../../components/dashboardCompoents/Recipe";
 import FavoritesMeal from "../../components/dashboardCompoents/FavoritesMeal";
-
+import DashboradMobileTopNavBar from "../../components/dashboardCompoents/DashboradMobileTopNavBar"
 import Ingredients from "../../components/dashboardCompoents/Ingredients";
-
 import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
 const MealPlan = () => {
   const [openModel, setOpenModel] = React.useState(false);
@@ -26,14 +25,18 @@ const MealPlan = () => {
         setOpenModel={setOpenModel}
       />
       <PurchaseFoodmatchpopUp />
+      <Box>
+        <DashboradMobileTopNavBar/>
+      </Box>
       <Grid container mt={1} spacing={2}>
-        <Grid item lg={8.5} md={8} sm={7} xs={6}>
+        
+        <Grid item lg={8.5} md={8} sm={12} xs={12}>
           <Grid container alignItems={"center"}>
             <Grid item lg={8.8}>
               <Box>
                 <Typography
                   sx={{
-                    fontSize: "27px",
+                    fontSize: {lg:"27px",xs:"24px"},
                     fontWeight: 700,
                     lineHeight: "37px",
                   }}>
@@ -51,8 +54,8 @@ const MealPlan = () => {
         <Grid item lg={3.5} md={4} sm={5} xs={6}>
           <Profile handleOpen={handleOpen} />
         </Grid>
-        <Grid container mt={5} spacing={3} p={1}>
-          <Grid item lg={4}>
+        <Grid container mt={{lg:5,md:5}} spacing={3}  p={1}>
+          <Grid item lg={4} md={4} xs={12}>
             <Box className='MyplansBox'>
               <Box>
                 <Typography
@@ -60,6 +63,7 @@ const MealPlan = () => {
                     color: "#252525",
                     fontSize: "24px",
                     fontWeight: "700",
+                    display:{lg:"block",md:"block",sm:"none",xs:"none"}
                   }}>
                   Favorites
                 </Typography>
@@ -437,7 +441,7 @@ const MealPlan = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item lg={8}>
+          <Grid item lg={8} md={8} sx={{display:{lg:"block",md:"block",sm:"none",xs:"none"}}}>
             <Grid
               container
               spacing={1.5}
@@ -448,10 +452,10 @@ const MealPlan = () => {
                 background: "#FEFEFE",
                 border: "1px solid  #E8ECEF",
               }}>
-              <Grid item lg={6} >
+              <Grid item lg={6} md={6} >
                 <Ingredients />
               </Grid>
-              <Grid item lg={6} >
+              <Grid item lg={6} md={6}>
                 <Recipe />
               </Grid>
             </Grid>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import {useSelector ,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   InputLabel,
   FormControl,
@@ -32,8 +32,10 @@ const style = {
 };
 const PasswordModel = () => {
   const dispatch = useDispatch();
-  const initialState=useSelector((state)=>state.rootReducer.handleProfilePopUp)
- 
+  const initialState = useSelector(
+    (state) => state.rootReducer.handleProfilePopUp
+  );
+
   const [showPassword, setShowPassword] = React.useState(false);
   const [showPassword1, setShowPassword1] = React.useState(false);
   const [showPassword2, setShowPassword2] = React.useState(false);
@@ -44,7 +46,6 @@ const PasswordModel = () => {
   const [DeleteModel, setDeleteModel] = React.useState(false);
   const handleDelete = () => {
     setDeleteModel(true);
-   
   };
   const handleDeleteClose = () => {
     setDeleteModel(false);
@@ -57,7 +58,7 @@ const PasswordModel = () => {
       />
       <Modal
         open={initialState}
-        onClose={()=>dispatch(profileClose())}
+        onClose={() => dispatch(profileClose())}
         aria-labelledby='child-modal-title'
         aria-describedby='child-modal-description'>
         <Box sx={{ ...style, width: 700 }}>
@@ -66,7 +67,9 @@ const PasswordModel = () => {
               sx={{ color: "#4C4448", fontSize: "30px", fontWeight: "600" }}>
               Settings
             </Typography>
-            <Box onClick={()=>dispatch(profileClose())}>
+            <Box
+              onClick={() => dispatch(profileClose())}
+              sx={{ cursor: "pointer" }}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='39'

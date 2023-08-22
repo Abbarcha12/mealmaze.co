@@ -25,3 +25,9 @@ font-weight: 400 !important;
 line-height: 24px; /* 171.429% */
 padding: 3px;
 }
+@media screen and (max-width:768px) {
+    .MyplansBox{
+        background-color: transparent !important;
+    }
+    
+}

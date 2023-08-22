@@ -3,7 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css";
 import {
-  Container,
+  MenuItem,
+  FormControl,
+  Select,
   Grid,
   Typography,
   Box,
@@ -24,6 +26,11 @@ import "./smallScreen.css";
 const Overview = () => {
   const [redHeart, setNormalHeart] = useState(1);
   const [Open, SetOpen] = useState(false);
+  const [week, setWeek] = React.useState("week 1");
+
+  const handleChange = (event) => {
+    setWeek(event.target.value);
+  };
 
   const handleHeart = (id) => {
     setNormalHeart(id);
@@ -370,14 +377,19 @@ const Overview = () => {
                           display={"flex"}
                           alignItems={"center"}
                           justifyContent={"space-between"}>
-                          <Box mr={3} onClick={() => handleHeart(item.id)}>
+                          <Box
+                            mr={3}
+                            onClick={() => handleHeart(item.id)}
+                            sx={{ cursor: "pointer" }}>
                             {redHeart === item.id ? (
                               <FavoriteIcon sx={{ color: "#DC2626" }} />
                             ) : (
                               <FavoriteBorderIcon sx={{ color: "#62585D" }} />
                             )}
                           </Box>
-                          <Box className='openBox'>open {item.openIcon}</Box>
+                          <Link className='openBox' to='/weekly'>
+                            open {item.openIcon}
+                          </Link>
                         </Box>
                       </Box>
                       <Box mt={2}>
@@ -392,7 +404,6 @@ const Overview = () => {
                       </Box>
                       <Box mt={1}>
                         <Typography className='MealList'>
-                         
                           <span className='dot'>{item.dot} </span> {item.point1}
                         </Typography>
                         <Typography className='MealList'>
@@ -435,14 +446,14 @@ const Overview = () => {
               display={"flex"}
               justifyContent={"space-between"}
               alignItems={"center"}>
-              <Box width={"70%"}>
+              <Box width={"60%"}>
                 <Typography className='weekBoxHeading'>
                   Currently viewing
                 </Typography>
               </Box>
 
               <Box
-                width={"30%"}
+                width={"40%"}
                 display={"flex"}
                 justifyContent={"space-around"}
                 alignContent={"center"}
@@ -453,20 +464,20 @@ const Overview = () => {
                   backgroundColor: "#fff",
                   boxShadow: " 0px 2px 19px 2px rgba(0, 122, 41, 0.08)",
                 }}>
-                <Box sx={{ fontSize: "13px", fontWeight: 600 }}>Week 1</Box>
-                <Box className='WeekNumber'>
-                  <svg
-                    width='12'
-                    height='7'
-                    viewBox='0 0 12 7'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                      d='M1.04851 0.5C1.31502 0.5 1.58153 0.583541 1.79193 0.762556L6 4.34286L10.2081 0.762555C10.6148 0.416459 11.2881 0.416459 11.6949 0.762555C12.1017 1.10865 12.1017 1.6815 11.6949 2.0276L6.74342 6.24043C6.33665 6.58652 5.66335 6.58652 5.25658 6.24043L0.305085 2.0276C-0.101695 1.6815 -0.101695 1.10865 0.305085 0.762556C0.515488 0.583541 0.781998 0.5 1.04851 0.5Z'
-                      fill='#1E2029'
-                    />
-                  </svg>
-                </Box>
+                <FormControl sx={{ minWidth: 95, cursor: "pointer" }}>
+                  <Select
+                    value={week}
+                    onChange={handleChange}
+                    displayEmpty
+                    inputProps={{ "aria-label": "Without label" }}
+                    className='custom-select' // Add a custom class name
+                  >
+                    <MenuItem value={"week 1"}>week 1</MenuItem>
+                    <MenuItem value={"week 2"}>week 2</MenuItem>
+                    <MenuItem value={"week 3"}>week 3</MenuItem>
+                    <MenuItem value={"week 4"}>week 4</MenuItem>
+                  </Select>
+                </FormControl>
               </Box>
             </Box>
             <Divider sx={{ marginTop: "20px" }} />
@@ -675,14 +686,13 @@ const Overview = () => {
                 </div>
               </Link>
               <Divider sx={{ marginTop: "40px" }} />
-            <Box textAlign={"center"} width="100%">
-            <Button
-              
-                className='  ShowWeeklyIngredientsButton'
-                onClick={handleOpen}>
-                Show Weekly Ingredients
-              </Button>
-            </Box>
+              <Box textAlign={"center"} width='100%'>
+                <Button
+                  className='  ShowWeeklyIngredientsButton'
+                  onClick={handleOpen}>
+                  Show Weekly Ingredients
+                </Button>
+              </Box>
             </Box>
             <Box>
               <Swiper

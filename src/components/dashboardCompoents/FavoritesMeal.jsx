@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./overview.css";
 const FavoritesMeal = ({ Icon, heading, title, day, heart }) => {
   return (
-    <Box mt={2}>
+    <Box mt={2} s>
       <Link className='Favlist'>
         <Box>{Icon}</Box>
         <Box>

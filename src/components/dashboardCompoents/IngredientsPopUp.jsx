@@ -28,7 +28,7 @@ const IngredientsPopUp = ({ Open, handleClose }) => {
             sx={{ color: "#4C4448", fontSize: "28px", fontWeight: "600" }}>
             Ingredients:
           </Typography>
-          <Box onClick={handleClose}>
+          <Box onClick={handleClose} sx={{ cursor: "pointer" }}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='34'

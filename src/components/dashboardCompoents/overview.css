@@ -146,7 +146,7 @@
 .openBox {
   border-radius: 7.436px !important;
   padding: 8px 16px !important;
-
+  color: #000;
   background: var(--colors-green-100, #dcfce7) !important;
 }
 .dot {
@@ -213,7 +213,7 @@
 .weekBoxHeading {
   color: var(--dark-color, #081735) !important;
   font-family: Inter !important;
-  font-size: 18px !important;
+  font-size: 14px !important;
   font-style: normal !important;
   font-weight: 700 !important;
   line-height: 23.781px !important; /* 132.118% */
@@ -271,6 +271,12 @@
   font-weight: 600 !important;
   line-height: 15.854px !important; /* 79.271% */
 }
+/* YourComponent.css */
+
+fieldset{
+  border: none !important;
+}
+
 .ShowWeeklyIngredientsButton {
   color: #fff !important;
   font-family: Inter;
@@ -328,6 +334,9 @@
   background-color: #f3f5f7 !important;
 }
 @media screen and (max-width: 768px) {
+  .Favlist{
+    background-color: #fff !important;
+  }
   .Name {
     font-size: 12px !important;
   }

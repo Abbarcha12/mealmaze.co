@@ -12,15 +12,7 @@ const AllFoodMatch = ({ Icon, heading, title, day }) => {
               sx={{ color: "#232627", fontSize: "16px", fontWeight: "600" }}>
               {heading}
             </Typography>
-            <Typography
-              sx={{
-                color: "rgba(108, 114, 117, 0.50)",
-                fontSize: "14px",
-                fontWeight: "500",
-                ml: "70px", // Add margin-left auto to push the second Typography to the right
-              }}>
-              {day}
-            </Typography>
+            
           </Box>
 
           <Typography

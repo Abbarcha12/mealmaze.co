@@ -61,14 +61,14 @@ const CreateMeal = () => {
   };
   const handleSubmit1 = () => {
     if (metaData1.trim() !== "") {
-      setData((prevData) => [...prevData, metaData1]);
+      setData1((prevData) => [...prevData, metaData1]);
       Data1.push(metaData1);
     }
     setMetaData(" ");
   };
   const handleSubmit2 = () => {
     if (metaData2.trim() !== "") {
-      setData((prevData) => [...prevData, metaData2]);
+      setData2((prevData) => [...prevData, metaData2]);
       Data2.push(metaData2);
     }
     setMetaData2(" ");

@@ -3,18 +3,20 @@ import profileImg from "../../assest/profile.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import React from "react";
-import {  Typography, Box,  Divider } from "@mui/material";
+import { Typography, Box, Divider } from "@mui/material";
 import { profileOpen } from "../../Redux/actions/CreateMealAction";
 import { useDispatch } from "react-redux";
 const Profile = () => {
-  const dispatch =useDispatch()
+  const dispatch = useDispatch();
   const [open, setOpen] = React.useState(false);
   const handleToggle = () => {
     setOpen(!open);
   };
   return (
     <>
-      <Box sx={{ position: "relative" }}>
+      <Box
+        sx={{ position: "relative", cursor: "pointer" }}
+        onClick={handleToggle}>
         <Box className='profileBox'>
           <Box display={"flex"} justifyContent={"space-between"}>
             <Box
@@ -39,7 +41,7 @@ const Profile = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box onClick={handleToggle} sx={{ marginLeft: { xs: "10px" } }}>
+            <Box sx={{ marginLeft: { xs: "10px" } }}>
               {open ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
             </Box>
           </Box>
@@ -57,7 +59,7 @@ const Profile = () => {
               </Box>
               <Divider sx={{ paddingTop: "10px" }} />
 
-              <Link className='Setting' onClick={()=>dispatch(profileOpen())}>
+              <Link className='Setting' onClick={() => dispatch(profileOpen())}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'

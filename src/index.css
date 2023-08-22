@@ -4,6 +4,13 @@ body {
 
   font-family: "Inter" !important;
 }
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  font-family: "Inter" !important;
+
+}
+.css-1csgy0g-MuiFormControl-root{
+  border: none !important;
+}
 .MainHeading {
   color: #09090b !important;
   font-family: Inter !important;

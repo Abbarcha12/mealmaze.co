@@ -117,7 +117,7 @@ const Login = () => {
                     <IconButton
                       aria-label='toggle password visibility'
                       onClick={handleClickShowPassword}>
-                      {showPassword ? (
+                      {!showPassword ? (
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='28'
