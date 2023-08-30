@@ -17,6 +17,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./overview.css";
 import DashboardMiniCard from "./DashboardMiniCard";
 import PasswordModel from "./passwordModel";
+import ContactModel from "./contactModel";
 import Profile from "./Profile";
 import { MealData } from "../data";
 import { Link } from "react-router-dom";
@@ -46,6 +47,7 @@ const Overview = () => {
       <IngredientsPopUp Open={Open} handleClose={handleClose} />
       <Box>
         <PasswordModel />
+        <ContactModel/>
         <DashboradMobileTopNavBar />
         <Grid container mt={1} spacing={2}>
           <Grid item lg={9} md={8} sm={8} xs={12}>

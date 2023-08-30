@@ -2,10 +2,13 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./overview.css";
-const AllFoodMatch = ({ Icon, heading, title, day }) => {
+import Frame from "../../assest/Frame.png"
+
+const AllFoodMatch = ({ heading, title }) => {
   return (
     <Box mt={2}>
       <Link className='Favlist'>
+        <Box> <img src={Frame} alt="icon" /> </Box>
         <Box>
           <Box sx={{ display: "flex" }}>
             <Typography

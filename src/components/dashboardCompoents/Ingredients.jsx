@@ -11,7 +11,7 @@ const Ingredients = () => {
         background: "#fff",
         border: "1px solid #E8E8ED",
       }}>
-      <Typography sx={{ color: "#62585D", fontSize: "26px", fontWeight: 700 }}>
+      <Typography sx={{ color: "#62585D", fontSize: {lg:"26px",sm:"20px"}, fontWeight: 700 }}>
         Ingredients:
       </Typography>
       <Box
@@ -50,7 +50,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -93,7 +93,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -136,7 +136,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -179,7 +179,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -222,7 +222,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -265,7 +265,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -308,7 +308,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -351,7 +351,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>
@@ -394,7 +394,7 @@ const Ingredients = () => {
         <Typography
           sx={{
             color: "#8F95B2",
-            fontSize: "18px",
+          fontSize:{lg:"18px",sm:"16px"},
             fontWeight: "400",
             marginLeft: "15px",
           }}>

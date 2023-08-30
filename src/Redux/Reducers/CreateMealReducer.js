@@ -1,41 +1,53 @@
+const initialState = false
 
-const initialState =false
-
- const hanldeCreateMealPopUp = (state=initialState,action)=>{
+const hanldeCreateMealPopUp = (state = initialState, action) => {
     switch (action.type) {
         case "OpenPopUp":
             return true
-            case "ClosePopUp":
+        case "ClosePopUp":
             return false
-    
+
         default:
-           return state;
+            return state;
     }
 }
-const handleProfilePopUp = (state=initialState,action)=>{
+const handleProfilePopUp = (state = initialState, action) => {
     switch (action.type) {
         case "profileOpen":
             return true
-            case "profileClose":
+        case "profileClose":
             return false
-    
+
         default:
-           return state;
+            return state;
     }
 }
 
-const handlepassword = (state=initialState,action)=>{
+const handlepassword = (state = initialState, action) => {
     switch (action.type) {
         case "passwordOpen":
             return true
-            case "passwordClose":
+        case "passwordClose":
             return false
-    
+
         default:
-           return state;
+            return state;
     }
 }
-export { handleProfilePopUp,
-  hanldeCreateMealPopUp,
-  handlepassword
+const contactModel =(state=initialState,action)=>{
+    switch (action.type) {
+        case "contactOpen":
+            return true
+        case "contactClose":
+            return false
+
+        default:
+            return state;
+    }
+}
+export {
+    handleProfilePopUp,
+    hanldeCreateMealPopUp,
+    handlepassword,
+    contactModel
 }

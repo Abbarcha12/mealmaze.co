@@ -31,10 +31,10 @@ const PurchaseFoodmatchpopUp = () => {
       onClose={handleClosePopUp}
       aria-labelledby='child-modal-title'
       aria-describedby='child-modal-description'>
-      <Box sx={{ ...style, width: 600 }}>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box sx={{ ...style, width: {lg:600,sm:430,xs:300} }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between" ,alignItems:"center" }}>
           <Typography
-            sx={{ color: "#4C4448", fontSize: "30px", fontWeight: "600" }}>
+            sx={{ color: "#4C4448", fontSize: {lg:"30px",sm:"20px",xs:"16px"}, fontWeight: "600" }}>
             Purchase Foodmatch to add
           </Typography>
           <Box
@@ -65,32 +65,32 @@ const PurchaseFoodmatchpopUp = () => {
           <Box
             mt={4}
             sx={{
-              padding: "15px 26px",
+              padding: {lg:"15px 26px",sm:"10px 16px",xs:"10px 16px"},
               display: "flex",
               justifyContent: "space-between",
+              alignItems:"center",
               borderRadius: "24px",
               border: "2px solid #F0EDEE",
             }}>
             <Box>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: "32px" }}>
+                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"32px",sm:"18px",xs:"18px"} }}>
                 $1.99
               </Typography>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: "18px" }}>
-                <TaskAltIcon /> 10 Foodmatch searches
+                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"18px",sm:"12px",xs:"12px"} }}>
+                <TaskAltIcon /> &nbsp;&nbsp; 10 Foodmatch searches
               </Typography>
             </Box>
             <Button
               sx={{
-                padding: "15px 20px !important",
                 borderRadius: "13px",
-                width: "40%",
+                width: {lg:"35%",sm:"30%",xs:"25%"},
                 color: "#22C55E",
                 backgroundColor: "#DCFCE7",
-                fontSize: "23px",
+                fontSize: {lg:"18px",sm:"12px",xs:"12px"},
                 fontWeight: 700,
               }}>
               Buy
@@ -101,7 +101,7 @@ const PurchaseFoodmatchpopUp = () => {
           <Box
             mt={4}
             sx={{
-              padding: "15px 26px",
+              padding: {lg:"15px 26px",sm:"10px 16px",xs:"10px 16px"},
               display: "flex",
               justifyContent: "space-between",
               borderRadius: "24px",
@@ -110,23 +110,23 @@ const PurchaseFoodmatchpopUp = () => {
             <Box>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: "32px" }}>
+                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"32px",sm:"18px",xs:"18px"}}}>
                 $2.99
               </Typography>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: "18px" }}>
-                <TaskAltIcon /> 20 Foodmatch searches
+                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"18px",sm:"12px",xs:"12px"}}}>
+                <TaskAltIcon /> &nbsp; &nbsp; 20 Foodmatch searches
               </Typography>
             </Box>
             <Button
               sx={{
-                padding: "15px 20px !important",
+               
                 borderRadius: "13px",
-                width: "40%",
+                width: {lg:"35%",sm:"30%",xs:"25%"},
                 color: "#22C55E",
                 backgroundColor: "#DCFCE7",
-                fontSize: "23px",
+                fontSize: {lg:"18px",sm:"12px",xs:"12px"},
                 fontWeight: 700,
               }}>
               Buy
@@ -146,23 +146,23 @@ const PurchaseFoodmatchpopUp = () => {
             <Box>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: "32px" }}>
+                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"32px",sm:"18px",xs:"18px" }}}>
                 $4.99
               </Typography>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: "18px" }}>
-                <TaskAltIcon /> 40 Foodmatch searches
+                sx={{ color: "#2C2126", fontWeight: 500,fontSize: {lg:"18px",sm:"12px",xs:"12px"}}}>
+                <TaskAltIcon /> &nbsp;&nbsp;40 Foodmatch searches
               </Typography>
             </Box>
             <Button
               sx={{
-                padding: "15px 20px !important",
+                
                 borderRadius: "13px",
-                width: "40%",
+                width: {lg:"35%",sm:"30%",xs:"25%"},
                 color: "#22C55E",
                 backgroundColor: "#DCFCE7",
-                fontSize: "23px",
+                fontSize: {lg:"20px",sm:"12px",xs:"12px"},
                 fontWeight: 700,
               }}>
               Buy

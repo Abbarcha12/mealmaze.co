@@ -3,6 +3,30 @@
 background: #FFF !important;
 padding: 12px;
 }
+.MyplansBox1{
+    border-radius: 10px !important;
+background: #FFF !important;
+padding: 12px;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    color: #0D973B !important;
+    /* border-bottom:5px solid #0D973B !important; */
+}
+.css-1aquho2-MuiTabs-indicator{
+    background-color: #0D973B !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
+    text-transform: capitalize !important;
+    color: #62585D !important;
+    font-size:20px !important ;
+    font-weight:700 !important ;
+}
+.css-13xfq8m-MuiTabPanel-root{
+    padding: 0px !important;
+}
+.css-heg063-MuiTabs-flexContainer{
+    justify-content: space-between !important;
+}
 .MyPlansHeader{
     display: flex;
     justify-content: space-between !important;
@@ -24,10 +48,4 @@ font-style: normal;
 font-weight: 400 !important;
 line-height: 24px; /* 171.429% */
 padding: 3px;
-}
-@media screen and (max-width:768px) {
-    .MyplansBox{
-        background-color: transparent !important;
-    }
-    
 }

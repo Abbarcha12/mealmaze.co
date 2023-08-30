@@ -1,10 +1,11 @@
-import {hanldeCreateMealPopUp,handleProfilePopUp,handlepassword} from "./CreateMealReducer";
+import {hanldeCreateMealPopUp,handleProfilePopUp,handlepassword,contactModel} from "./CreateMealReducer";
 import { combineReducers, } from "redux";
 
 const rootReducer =combineReducers({
     hanldeCreateMealPopUp,
     handleProfilePopUp,
-    handlepassword
+    handlepassword,
+    contactModel
 })
 
 export default rootReducer

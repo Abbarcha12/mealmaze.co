@@ -4,8 +4,9 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import React from "react";
 import { Typography, Box, Divider } from "@mui/material";
-import { profileOpen } from "../../Redux/actions/CreateMealAction";
+import { profileOpen,contactOpen } from "../../Redux/actions/CreateMealAction";
 import { useDispatch } from "react-redux";
+import MessageIcon from '@mui/icons-material/Message';
 const Profile = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = React.useState(false);
@@ -77,6 +78,10 @@ const Profile = () => {
                   />
                 </svg>
                 <Typography className='settingtitle'>Settings</Typography>{" "}
+              </Link>
+              <Link className='Setting' onClick={() => dispatch(contactOpen())}>
+                <MessageIcon sx={{color:"#8F95B2"}}/>
+                <Typography className='settingtitle'>Contact</Typography>{" "}
               </Link>
               <Link className='Setting'>
                 <svg

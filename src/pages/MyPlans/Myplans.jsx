@@ -3,16 +3,12 @@ import { Grid,  Typography, Box, Button } from "@mui/material";
 import PasswordModel from "../../components/dashboardCompoents/passwordModel";
 import Profile from "../../components/dashboardCompoents/Profile";
 import "./Myplans.css";
-import {
 
-  handleOpenPopUp,
-} from "../../Redux/actions/CreateMealAction";
-import {  useDispatch } from "react-redux";
 import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/PurchaseFoodmatchpopUp";
 import DashboradMobileTopNavBar from "../../components/dashboardCompoents/DashboradMobileTopNavBar";
 const Myplans = () => {
   const [openModel, setOpenModel] = React.useState(false);
-  const dispatch = useDispatch();
+
 
   const handleOpen = () => {
     setOpenModel(true);
@@ -59,7 +55,7 @@ const Myplans = () => {
       </Grid>
       <Grid container mt={{lg:5,md:5,sm:2,xs:.5}} spacing={3} p={{lg:1,md:1}}>
           <Grid item lg={4}>
-            <Box className='MyplansBox'>
+            <Box className='MyplansBox' >
               <Box className='MyPlansHeader'>
                 <Box
                   sx={{

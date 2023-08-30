@@ -50,7 +50,7 @@ body {
   background: rgba(128, 249, 168, 0.1) !important;
 }
 .InputPassword{
-  margin-top: 30px !important;
+  margin-top: 25px !important;
   padding: 5px 13px !important;
   gap: 10px !important;
   border-radius: 10px !important;
@@ -190,6 +190,9 @@ Link {
 background:  #22C55E !important;
 
   line-height: "21.728px" !important;
+}
+.FoodmatchSmallScreen{
+  display: none;
 }
 
 .Accordins{
@@ -353,7 +356,7 @@ font-weight: 500 !important;
 line-height: 24px; /* 171.429% */
 letter-spacing: -0.14px;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:912px) {
 .ToggleBtn {
   display: none!important;
 }
@@ -361,11 +364,18 @@ letter-spacing: -0.14px;
   font-size: 14px !important;
 }
 .InputPassword{
+  margin-top: 0px !important;
   padding: 7px 10px !important;
 }
 .Label1{
   font-size: 12px !important;
   margin-left: 10px !important;
+}
+.MyplansBox1 ,.FoodMatch {
+  display: none !important;
+}
+.FoodmatchSmallScreen{
+  display: block !important;
 }
 .lock{
 height: 14px !important;

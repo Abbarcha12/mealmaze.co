@@ -8,8 +8,8 @@ const DashboradMobileTopNavBar = () => {
       <Box>
         <img src={Logo} alt='Logo' height={"20px"} />
       </Box>
-      <Box hre="/createMeal">
-        <Button className='mobileScreenBtn'>Create New Plan</Button>
+      <Box href="/createMeal">
+        <Button className='mobileScreenBtn' href="/pricing">Create New Plan</Button>
       </Box>
     </Box>
   );

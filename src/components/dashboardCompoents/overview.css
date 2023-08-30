@@ -328,14 +328,16 @@ fieldset{
   justify-content: space-around !important;
   align-items: center !important;
   padding: 10px 16px 13px 12px;
+  background-color: #fff !important;
   border-radius: 8px !important;
 }
 .Favlist:focus {
   background-color: #f3f5f7 !important;
 }
-@media screen and (max-width: 768px) {
-  .Favlist{
-    background-color: #fff !important;
+@media screen and (max-width: 912px) {
+ 
+  .Favlist:focus {
+    background-color: #DCFCE7 !important;
   }
   .Name {
     font-size: 12px !important;

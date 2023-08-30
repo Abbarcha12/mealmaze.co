@@ -2,11 +2,14 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./overview.css";
-const FavoritesMeal = ({ Icon, heading, title, day, heart }) => {
+import Frame from "../../assest/Frame.png"
+const FavoritesMeal = ({  heading, title, day, heart }) => {
   return (
-    <Box mt={2} s>
+    <Box mt={2} >
       <Link className='Favlist'>
-        <Box>{Icon}</Box>
+        <Box>
+         <img src={Frame} alt="icon" />
+        </Box>
         <Box>
           <Box
             ml={2}

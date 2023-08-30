@@ -13,7 +13,7 @@
     .card:hover .days{
      color: rgb(255, 255, 255) !important;
     }
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:912px) {
       .card{
         height: auto !important;
       }

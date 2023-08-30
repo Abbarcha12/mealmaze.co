@@ -13,7 +13,7 @@
 .mySwiper {
   display: none !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 912px) {
   .createNewPlan {
     display: none !important;
   }

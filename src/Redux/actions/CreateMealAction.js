@@ -36,3 +36,14 @@ export const ClosePassword=() =>{
         type:"passwordClose"
     }
 }
+export const contactClose=() =>{
+    return{
+        type:"contactClose"
+    }
+}
+
+export const contactOpen=() =>{
+    return{
+        type:"contactOpen"
+    }
+}
