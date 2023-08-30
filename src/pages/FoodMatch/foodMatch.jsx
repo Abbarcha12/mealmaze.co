@@ -605,7 +605,7 @@ const FoodMatch = () => {
                         </Box>
                       </Box>
                     </Grid>
-                    <Grid item lg={12} mt={4}>
+                    <Grid item lg={12} mt={4} className="FoodMatch">
                       <Button
                         onClick={() => HandleBtnId(2)}
                         sx={{
@@ -619,11 +619,12 @@ const FoodMatch = () => {
                           padding: "11px 18px",
                           borderRadius: "10px",
                           width: "100%",
+                          textTransform:"capitalize"
                         }}>
                         View all Foodmatch
                       </Button>
                     </Grid>
-                    <Grid item lg={12} mt={4}>
+                    <Grid item lg={12} mt={4} className="FoodMatch">
                       <Button
                         sx={{
                           "&:hover": {
@@ -635,6 +636,8 @@ const FoodMatch = () => {
                           backgroundColor: "#16A34A",
                           padding: "11px 18px",
                           borderRadius: "10px",
+                          textTransform:"capitalize",
+
                           width: "100%",
                         }}>
                         Generate

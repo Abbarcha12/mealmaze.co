@@ -106,7 +106,7 @@ const ContactModel = () => {
             }}
           />
        </Box>
-          <Box textAlign={"end"} mt={2}>
+          <Box  mt={2} width="100%">
             <Button
               sx={{
                 "&:hover": {
@@ -117,6 +117,7 @@ const ContactModel = () => {
                 color: "#fff",
                 fontSize: "14px",
                 fontWeight: "700",
+                width:"100%",
                 padding: "12px 10px",
               }}>
               send

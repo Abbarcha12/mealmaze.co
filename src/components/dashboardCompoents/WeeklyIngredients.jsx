@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid } from "@mui/material";
+import { Grid,Box } from "@mui/material";
 import "../../pages/Dashboard/Dashboard.css";
 
 import DashboardSidebar from "../../components/dashboardCompoents/DashboardSidebar";
@@ -7,6 +7,8 @@ import Weeklyplan from "./Weeklyplan";
 import Myplans from "../../pages/MyPlans/Myplans";
 import MealPlan from "../../pages/myMealPlan/MealPlan";
 import FoodMatch from "../../pages/FoodMatch/foodMatch";
+import PasswordModelSmallScreen from "./ProfileSettingforSmallScreen";
+import SmallScreenNavigation from "./SmallScreenNavigation";
 const WeeklyIngredients = () => {
   const [Id, setId] = useState(1);
   const [open, setOpen] = useState(false);
@@ -22,11 +24,20 @@ const WeeklyIngredients = () => {
   return (
     <Grid
       container
+      position={"relative"}
+      className='MobileScreenDashboard'
       sx={{
         background: "#FAFAFA",
       }}
-      spacing={0.5}>
-      <Grid item lg={open ? 1 : 2.2} md={3.2} sm={2}>
+      spacing={4}>
+      <Grid
+        sx={{ display: { lg: "block", md: "block", sm: "block", xs: "none" } }}
+        className='SibeBar'
+        item
+        lg={open ? 1.5 : 2.2}
+        md={open ? 1.5 : 2.2}
+        sm={1}
+        xs={open ? 1.5 : 2.2}>
         <DashboardSidebar
           handleOpen={handleOpen}
           handelClick={handelClick}
@@ -34,12 +45,18 @@ const WeeklyIngredients = () => {
           open={open}
         />
       </Grid>
-      <Grid item lg={open ? 11 : 9.7} md={8.7} sm={9}>
-        {Id === 1 ? <Weeklyplan /> : ""}
-        {Id === 2 ? <Myplans /> : ""}
-        {Id === 3 ? <MealPlan /> : ""}
-        {Id === 4 ? <FoodMatch /> : ""}
+      <Grid item lg={open ? 10.5 : 9.7} md={open ? 10.5 : 9.7} sm={11} xs={11}>
+        <Box pb={{ xs: 10 }}>
+          {Id === 1 ? <Weeklyplan /> : ""}
+          {Id === 2 ? <Myplans /> : ""}
+          {Id === 3 ? <MealPlan /> : ""}
+          {Id === 4 ? <FoodMatch /> : ""}
+          {Id === 5 ? <PasswordModelSmallScreen /> : ""}
+        </Box>
       </Grid>
+      <Box className='SmallScreenNavigation'>
+        <SmallScreenNavigation Id={Id} handelClick={handelClick} />
+      </Box>
     </Grid>
   );
 };
