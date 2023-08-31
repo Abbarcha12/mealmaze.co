@@ -420,8 +420,8 @@ const Overview = () => {
                         display='flex'
                         justifyContent={"space-between"}>
                         <Box className='MealBage1'>{item.num1}</Box>
-                        <Box className='MealBage2'>{item.num2}</Box>
-                        <Box className='MealBage3'>{item.num3}</Box>
+                        <Box className='MealBage3'>{item.num2}</Box>
+                        <Box className='MealBage2'>{item.num3}</Box>
                         <Box className='MealBage4'>{item.num4}</Box>
                       </Box>
                     </Box>

@@ -320,6 +320,7 @@ const DashboardSidebar = ({ open, Id, handleOpen, handelClick }) => {
                 <Box mt={4}>
                   <Box mt={2}>
                     <Link
+                      to='/dashboard'
                       className={Id === 1 ? "DashboardLink1" : "DashboardLink"}
                       onClick={() => handelClick(1)}>
                       <div>

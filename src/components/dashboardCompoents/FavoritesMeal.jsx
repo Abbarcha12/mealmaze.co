@@ -3,9 +3,9 @@ import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./overview.css";
 import Frame from "../../assest/Frame.png"
-const FavoritesMeal = ({  heading, title, day, heart }) => {
+const FavoritesMeal = ({  heading, title, day, heart, handleId}) => {
   return (
-    <Box mt={2} >
+    <Box mt={2} onClick={()=>handleId(2)}>
       <Link className='Favlist'>
         <Box>
          <img src={Frame} alt="icon" />

@@ -2,7 +2,7 @@ const cardData = [
   {
     id: 1,
     days: " Get Started for Free",
-    p1: "2 Day of Meals",
+    p1: "2 Day  Meal plan",
     p2: "Shopping List",
     p3: "Nutritional Information",
     p4: "Basic Customisation",

@@ -188,30 +188,30 @@ const Weeklyplan = () => {
         </Button>
       </Box>
       <Box
-      className="FoodMatch"
+        className='FoodMatch'
         sx={{
           padding: "32px 32px 43px 32px",
           borderRadius: "24px",
           background: "#fff",
         }}
         mt={3}>
-       <Grid
-              container
-              spacing={1.5}
-              pb={3}
-              mt={0.1}
-              sx={{
-                borderRadius: "20px",
-                background: "#FEFEFE",
-                border: "1px solid  #E8ECEF",
-              }}>
-              <Grid item lg={6} md={6}>
-                <Ingredients />
-              </Grid>
-              <Grid item lg={6} md={6}>
-                <Recipe />
-              </Grid>
-            </Grid>
+        <Grid
+          container
+          spacing={1.5}
+          pb={3}
+          mt={0.1}
+          sx={{
+            borderRadius: "20px",
+            background: "#FEFEFE",
+            border: "1px solid  #E8ECEF",
+          }}>
+          <Grid item lg={6} md={6}>
+            <Ingredients />
+          </Grid>
+          <Grid item lg={6} md={6}>
+            <Recipe />
+          </Grid>
+        </Grid>
       </Box>
     </>
   );

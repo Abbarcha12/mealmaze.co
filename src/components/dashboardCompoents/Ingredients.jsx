@@ -407,12 +407,12 @@ const Ingredients = () => {
           <Box className='MealBage1' width='80%'>
             348 Cal
           </Box>
-          <Box className='MealBage2' width='80%' ml={3}>
+          <Box className='MealBage3' width='80%' ml={3}>
             28g Carbs
           </Box>
         </Box>
         <Box mt={4} display='flex' justifyContent={"space-between"}>
-          <Box className='MealBage3' width='80%'>
+          <Box className='MealBage2' width='80%'>
             28g Protein
           </Box>
           <Box className='MealBage4' width='80%' ml={3}>

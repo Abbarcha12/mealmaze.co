@@ -624,7 +624,7 @@ const FoodMatch = () => {
                         View all Foodmatch
                       </Button>
                     </Grid>
-                    <Grid item lg={12} mt={4} className="FoodMatch">
+                    <Grid item lg={12} mt={4} sm={12} xs={12}>
                       <Button
                         sx={{
                           "&:hover": {
@@ -637,7 +637,7 @@ const FoodMatch = () => {
                           padding: "11px 18px",
                           borderRadius: "10px",
                           textTransform:"capitalize",
-
+                           
                           width: "100%",
                         }}>
                         Generate
@@ -930,8 +930,9 @@ const FoodMatch = () => {
           <Grid item lg={8} md={8} className='FoodMatch'>
             <Grid
               container
+              p={1}
               spacing={1.5}
-              pb={3}
+              
               mt={0.1}
               sx={{
                 borderRadius: "20px",
