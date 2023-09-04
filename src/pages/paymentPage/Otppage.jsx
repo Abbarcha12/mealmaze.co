@@ -73,7 +73,7 @@ const OtpPage = () => {
                             </Button>
                           </Box>
                         </Box>
-                        <Box className='smallpriceBox1' sx={{ display:show? "none":"block"}} >
+                        <Box mt={1.5} className='smallpriceBox1' sx={{ display:show? "none":"block"}} >
                            <ul>
                             <li>{item.p1}</li>
                             <li>{item.p2}</li>

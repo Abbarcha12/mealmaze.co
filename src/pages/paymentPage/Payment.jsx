@@ -23,14 +23,14 @@ const Payment = () => {
   const [checked, setChecked] = useState(false);
   const [show, setShow] = useState(true);
 
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
   const handleView =()=>{
     setShow(!show)
     console.log("hh",show)
   }
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
+ 
   return (
     <>
       <Box m={2.5} >
@@ -81,7 +81,7 @@ const Payment = () => {
                             </Button>
                           </Box>
                         </Box>
-                        <Box className='smallpriceBox1' sx={{ display:show? "none":"block"}} >
+                        <Box mt={1.5} className='smallpriceBox1' sx={{ display:show? "none":"block"}} >
                            <ul>
                             <li>{item.p1}</li>
                             <li>{item.p2}</li>
