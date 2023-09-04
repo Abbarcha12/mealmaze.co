@@ -86,6 +86,8 @@ const PurchaseFoodmatchpopUp = () => {
             </Box>
             <Button
               sx={{
+              padding: {lg:"15px 26px",sm:"10px 16px",xs:"10px 16px"},
+
                 borderRadius: "13px",
                 width: {lg:"35%",sm:"30%",xs:"25%"},
                 color: "#22C55E",

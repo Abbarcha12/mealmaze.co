@@ -62,6 +62,7 @@ const PasswordModelSmallScreen = () => {
             borderRadius: "16px",
           }}>
           <Box mt={4} width='100%'>
+            <Box  sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box
               display={"flex"}
               sx={{
@@ -84,13 +85,17 @@ const PasswordModelSmallScreen = () => {
                 </Typography>
               </div>
             </Box>
+            <Button className='accountBtnFocus1'>Log Out</Button>
+            
+            </Box>
+           
 
             <Box mt={2}>
               <Divider />
 
               <Box sx={{ width: "100%", typography: "body1" }}>
                 <Box
-                  sx={{ display: "flex", justifyContent: "space-between" }}
+                  sx={{ display: "flex"}}
                   mt={2}>
                   <Button
                     className={value===1?'accountBtnFocus':"accountBtn"}
@@ -102,7 +107,6 @@ const PasswordModelSmallScreen = () => {
                     onClick={() => handleChange(2)}>
                     Contact{" "}
                   </Button>
-                  <Button className='accountBtnFocus1'>Log Out</Button>
                 </Box>
 
                 {value === 1 ? (

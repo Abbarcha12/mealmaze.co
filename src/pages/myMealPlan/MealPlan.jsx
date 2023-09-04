@@ -14,6 +14,7 @@ import PurchaseFoodmatchpopUp from "../../components/dashboardCompoents/Purchase
 import Logo from "../../assest/logo.png"
 import "swiper/css";
 import "swiper/css";
+import ContactModel from "../../components/dashboardCompoents/contactModel";
 const MealPlan = () => {
   const [openModel, setOpenModel] = React.useState(false);
   const [value, setValue] = React.useState("1");
@@ -39,6 +40,7 @@ const MealPlan = () => {
         openModel={openModel}
         setOpenModel={setOpenModel}
       />
+      <ContactModel/>
       <PurchaseFoodmatchpopUp />
       <Box>
        {Id===1? <DashboradMobileTopNavBar  />:""}

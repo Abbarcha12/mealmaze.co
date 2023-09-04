@@ -129,7 +129,7 @@ const PasswordModel = () => {
             <Input
               id='standard-adornment-amount'
               className='InputPassword'
-              placeholder='Password'
+              placeholder=' Enter Password'
               type={showPassword ? "text" : "password"}
               startAdornment={
                 <InputAdornment position='start'>
@@ -206,7 +206,7 @@ const PasswordModel = () => {
             <Input
               id='standard-adornment-amount'
               className='InputPassword'
-              placeholder='Password'
+              placeholder='Enter New Password'
               type={showPassword1 ? "text" : "password"}
               startAdornment={
                 <InputAdornment position='start'>
@@ -286,7 +286,7 @@ const PasswordModel = () => {
             <Input
               id='standard-adornment-amount'
               className='InputPassword'
-              placeholder='Password'
+              placeholder='Confirm New Password '
               type={showPassword2 ? "text" : "password"}
               startAdornment={
                 <InputAdornment position='start'>

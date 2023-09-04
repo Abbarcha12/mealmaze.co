@@ -28,8 +28,8 @@ const CreateMeal = () => {
   const [selectedOption1, setSelectedOption1] = useState("");
   const [selectedOption2, setSelectedOption2] = useState("");
   const [selectedOption3, setSelectedOption3] = useState("");
-  const [metaData, setMetaData] = useState("");
 
+  const [metaData, setMetaData] = useState("");
   const [metaData1, setMetaData1] = useState("");
   const [metaData2, setMetaData2] = useState("");
 
@@ -51,20 +51,21 @@ const CreateMeal = () => {
     setMetaData2(e.target.value);
   };
 
+  
   const handleSubmit = () => {
     if (metaData.trim() !== "") {
       setData((prevData) => [...prevData, metaData]);
       Data.push(metaData);
     }
     setMetaData(" ");
-    
   };
+
   const handleSubmit1 = () => {
     if (metaData1.trim() !== "") {
       setData1((prevData) => [...prevData, metaData1]);
       Data1.push(metaData1);
     }
-    setMetaData(" ");
+    setMetaData1(" ");
   };
   const handleSubmit2 = () => {
     if (metaData2.trim() !== "") {
@@ -526,7 +527,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-                    fontSize: { lg: "16px", xs: "14px" },
+                    fontSize: { lg: "16px", xs: "14.3px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
