@@ -435,7 +435,7 @@ const CreateMeal = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid item lg={4}>
+              <Grid item lg={4} md={4} sm={12} xs={12}>
                 <InputLabel
                   sx={{
                     color: " #888587",
@@ -523,7 +523,7 @@ const CreateMeal = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid item lg={4}>
+              <Grid item lg={4} md={4} sm={12} xs={12}>
                 <InputLabel
                   sx={{
                     color: " #888587",
