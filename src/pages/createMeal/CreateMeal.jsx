@@ -440,7 +440,7 @@ const CreateMeal = () => {
                   sx={{
                     color: " #888587",
 
-                    fontSize: { lg: "16px", xs: "13px" },
+                    fontSize: { lg: "16px", xs: "12.7px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>
@@ -527,7 +527,7 @@ const CreateMeal = () => {
                 <InputLabel
                   sx={{
                     color: " #888587",
-                    fontSize: { lg: "16px", xs: "14.3px" },
+                    fontSize: { lg: "16px", xs: "13.8px" },
                     fontWeight: 400,
                     lineHeight: "24px",
                   }}>

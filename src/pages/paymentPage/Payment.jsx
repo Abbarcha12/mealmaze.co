@@ -21,10 +21,16 @@ const Payment = () => {
     setRadio(id);
   };
   const [checked, setChecked] = useState(false);
+  const [show, setShow] = useState(true);
+
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
+  const handleView =()=>{
+    setShow(!show)
+    console.log("hh",show)
+  }
   return (
     <>
       <Box m={2.5} >
@@ -60,7 +66,7 @@ const Payment = () => {
                               xs: "block",
                             },
                           }}>
-                          <Box>
+                          <Box  >
                             <Typography className='amount'>
                               <span className='doller'> $</span>
                               {item.amount}
@@ -70,10 +76,20 @@ const Payment = () => {
                             </Typography>
                           </Box>
                           <Box>
-                            <Button className='viewDetailBtn'>
+                            <Button className='viewDetailBtn' onClick={handleView}>
                               View Details
                             </Button>
                           </Box>
+                        </Box>
+                        <Box className='smallpriceBox1' sx={{ display:show? "none":"block"}} >
+                           <ul>
+                            <li>{item.p1}</li>
+                            <li>{item.p2}</li>
+                            <li>{item.p3}</li>
+                            <li>{item.p4}</li>
+                            <li>{item.p5}</li>
+
+                           </ul>
                         </Box>
 
                         <Box

@@ -238,3 +238,11 @@ font-size: 13px !important;
   padding: 13.269px 14.649px !important;
 }
 }
+.smallpriceBox1{
+  border-radius: 8px !important;
+border: 0.472px solid var(--blue-grey-300, #F0EDEE) !important;
+background: #FFF !important; 
+box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.10) !important;
+padding: 10px 16px !important;
+
+}

@@ -17,7 +17,12 @@ const OtpPage = () => {
   const handleRadio = (id) => {
     setRadio(id);
   };
+  const [show, setShow] = useState(true);
 
+  const handleView =()=>{
+    setShow(!show)
+    console.log("hh",show)
+  }
   return (
     <>
       <Box m={2.5}>
@@ -63,12 +68,21 @@ const OtpPage = () => {
                             </Typography>
                           </Box>
                           <Box>
-                            <Button className='viewDetailBtn'>
+                            <Button className='viewDetailBtn' onClick={handleView}>
                               View Details
                             </Button>
                           </Box>
                         </Box>
+                        <Box className='smallpriceBox1' sx={{ display:show? "none":"block"}} >
+                           <ul>
+                            <li>{item.p1}</li>
+                            <li>{item.p2}</li>
+                            <li>{item.p3}</li>
+                            <li>{item.p4}</li>
+                            <li>{item.p5}</li>
 
+                           </ul>
+                        </Box>
                         <Box
                           mt={3}
                           sx={{

@@ -866,7 +866,7 @@ const FoodMatch = () => {
             </Grid>
           )}
               {Id === 3 ? (
-                  <Box sx={{ width: "100%", typography: "body1" }}>
+                  <Box p={1} sx={{ width: "100%", typography: "body1" }}>
                      <Box className='mobileHeader' mt={5}>
                   <Box>
                     <img src={Logo} alt='Logo' height={"20px"} />
