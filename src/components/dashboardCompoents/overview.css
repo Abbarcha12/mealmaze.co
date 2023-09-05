@@ -370,7 +370,7 @@ fieldset {
 .accountBtnFocus1 {
   color: white !important;
   text-transform: capitalize !important;
-
+border-radius: 20px !important;
   background-color: rgb(238, 115, 115) !important;
   padding: 2px 18px !important;
 }
@@ -378,7 +378,7 @@ fieldset {
 .accountBtnFocus {
   color: white !important;
   text-transform: capitalize !important;
-
+border-radius: 20px !important;
   background-color: #22c05c !important;
   padding: 2px 18px !important;
 }

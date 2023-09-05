@@ -80,8 +80,8 @@ const PurchaseFoodmatchpopUp = () => {
               </Typography>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"18px",sm:"12px",xs:"12px"} }}>
-                <TaskAltIcon /> &nbsp;&nbsp; 10 Foodmatch searches
+                sx={{display:"flex",justifyItems:"center", color: "#2C2126", fontWeight: 500, fontSize: {lg:"18px",sm:"12px",xs:"12px"} }}>
+                <div><TaskAltIcon  sx={{ fontSize:{lg:"18px",sm:"14px",xs:"14px"},marginTop:{lg:"4px",xs:"2px"}}}/></div> <div>&nbsp; 10 Foodmatch searches</div>
               </Typography>
             </Box>
             <Button
@@ -106,24 +106,26 @@ const PurchaseFoodmatchpopUp = () => {
               padding: {lg:"15px 26px",sm:"10px 16px",xs:"10px 16px"},
               display: "flex",
               justifyContent: "space-between",
+              alignItems:"center",
               borderRadius: "24px",
               border: "2px solid #F0EDEE",
             }}>
             <Box>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"32px",sm:"18px",xs:"18px"}}}>
+                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"32px",sm:"18px",xs:"18px"} }}>
                 $2.99
               </Typography>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"18px",sm:"12px",xs:"12px"}}}>
-                <TaskAltIcon /> &nbsp; &nbsp; 20 Foodmatch searches
+                sx={{display:"flex",justifyItems:"center", color: "#2C2126", fontWeight: 500, fontSize: {lg:"18px",sm:"12px",xs:"12px"} }}>
+                <div><TaskAltIcon  sx={{ fontSize:{lg:"18px",sm:"14px",xs:"14px"},marginTop:{lg:"4px",xs:"2px"}}}/></div> <div>&nbsp; 10 Foodmatch searches</div>
               </Typography>
             </Box>
             <Button
               sx={{
-               
+              padding: {lg:"15px 26px",sm:"10px 16px",xs:"10px 16px"},
+
                 borderRadius: "13px",
                 width: {lg:"35%",sm:"30%",xs:"25%"},
                 color: "#22C55E",
@@ -134,37 +136,39 @@ const PurchaseFoodmatchpopUp = () => {
               Buy
             </Button>
           </Box>
-        </Link>{" "}
+        </Link>
         <Link className='BuyBtn'>
           <Box
             mt={4}
             sx={{
-              padding: "15px 26px",
+              padding: {lg:"15px 26px",sm:"10px 16px",xs:"10px 16px"},
               display: "flex",
               justifyContent: "space-between",
+              alignItems:"center",
               borderRadius: "24px",
               border: "2px solid #F0EDEE",
             }}>
             <Box>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"32px",sm:"18px",xs:"18px" }}}>
+                sx={{ color: "#2C2126", fontWeight: 500, fontSize: {lg:"32px",sm:"18px",xs:"18px"} }}>
                 $4.99
               </Typography>
               <Typography
                 className='Money'
-                sx={{ color: "#2C2126", fontWeight: 500,fontSize: {lg:"18px",sm:"12px",xs:"12px"}}}>
-                <TaskAltIcon /> &nbsp;&nbsp;40 Foodmatch searches
+                sx={{display:"flex",justifyItems:"center", color: "#2C2126", fontWeight: 500, fontSize: {lg:"18px",sm:"12px",xs:"12px"} }}>
+                <div><TaskAltIcon  sx={{ fontSize:{lg:"18px",sm:"14px",xs:"14px"},marginTop:{lg:"4px",xs:"2px"}}}/></div> <div>&nbsp; 10 Foodmatch searches</div>
               </Typography>
             </Box>
             <Button
               sx={{
-                
+              padding: {lg:"15px 26px",sm:"10px 16px",xs:"10px 16px"},
+
                 borderRadius: "13px",
                 width: {lg:"35%",sm:"30%",xs:"25%"},
                 color: "#22C55E",
                 backgroundColor: "#DCFCE7",
-                fontSize: {lg:"20px",sm:"12px",xs:"12px"},
+                fontSize: {lg:"18px",sm:"12px",xs:"12px"},
                 fontWeight: 700,
               }}>
               Buy

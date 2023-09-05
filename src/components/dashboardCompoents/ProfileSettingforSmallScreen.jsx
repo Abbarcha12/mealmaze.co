@@ -123,7 +123,7 @@ const PasswordModelSmallScreen = () => {
                       <Input
                         id='standard-adornment-amount'
                         className='InputPassword'
-                        placeholder='Password'
+                        placeholder='Enter Password'
                         type={showPassword ? "text" : "password"}
                         startAdornment={
                           <InputAdornment position='start'>
@@ -205,7 +205,7 @@ const PasswordModelSmallScreen = () => {
                       <Input
                         id='standard-adornment-amount'
                         className='InputPassword'
-                        placeholder='Password'
+                        placeholder='Enter New Password'
                         type={showPassword1 ? "text" : "password"}
                         startAdornment={
                           <InputAdornment position='start'>
@@ -292,7 +292,7 @@ const PasswordModelSmallScreen = () => {
                       <Input
                         id='standard-adornment-amount'
                         className='InputPassword'
-                        placeholder='Password'
+                        placeholder='Confirm new password'
                         type={showPassword2 ? "text" : "password"}
                         startAdornment={
                           <InputAdornment position='start'>
@@ -411,17 +411,7 @@ const PasswordModelSmallScreen = () => {
 
                 {value === 2 ? (
                   <Box p={2}>
-                    <Box mt={2} 
-                      sx={{ display: "flex", justifyContent: "space-between" }}>
-                      <Typography
-                        sx={{
-                          color: "#4C4448",
-                          fontSize: "24px",
-                          fontWeight: "600",
-                        }}>
-                        Contact
-                      </Typography>
-                    </Box>
+                    
                    
                     <InputLabel className='Label' sx={{ marginTop: "10px" }}>
                       Name
