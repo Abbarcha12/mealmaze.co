@@ -1,8 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
+
 import {
   Tab,
   TextField,
@@ -62,7 +60,7 @@ const PasswordModelSmallScreen = () => {
             borderRadius: "16px",
           }}>
           <Box mt={4} width='100%'>
-            <Box  sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box  sx={{ display: "flex", justifyContent: "space-between" ,}}>
             <Box
               display={"flex"}
               sx={{
@@ -95,7 +93,7 @@ const PasswordModelSmallScreen = () => {
 
               <Box sx={{ width: "100%", typography: "body1" }}>
                 <Box
-                  sx={{ display: "flex"}}
+                  sx={{ display: "flex",justifyContent:"center"}}
                   mt={2}>
                   <Button
                     className={value===1?'accountBtnFocus':"accountBtn"}
