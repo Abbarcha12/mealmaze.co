@@ -9,6 +9,7 @@ import MealPlan from "../myMealPlan/MealPlan";
 import FoodMatch from "../FoodMatch/foodMatch";
 import SmallScreenNavigation from "../../components/dashboardCompoents/SmallScreenNavigation";
 import PasswordModelSmallScreen from "../../components/dashboardCompoents/ProfileSettingforSmallScreen";
+import Weeklyplan from "../../components/dashboardCompoents/Weeklyplan";
 
 const Dashboard = () => {
   const [Id, setId] = useState(1);
@@ -65,11 +66,14 @@ const Dashboard = () => {
       </Grid>
       <Grid item lg={open ? 10.5 : 9.7} md={open ? 10.5 : 9.7} sm={11} xs={11}>
         <Box pb={{ xs: 10 }}>
-          {Id === 1 ? <Overview /> : ""}
+          {Id === 1 ? <Overview handelClick={handelClick} /> : ""}
           {Id === 2 ? <Myplans /> : ""}
           {Id === 3 ? <MealPlan /> : ""}
           {Id === 4 ? <FoodMatch /> : ""}
           {Id === 5 ? <PasswordModelSmallScreen /> : ""}
+          {Id === 6 ? <Weeklyplan 
+           /> : ""}
+
         </Box>
       </Grid>
       <Box className='SmallScreenNavigation'>

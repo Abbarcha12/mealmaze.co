@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 import IngredientsPopUp from "./IngredientsPopUp";
 import DashboradMobileTopNavBar from "./DashboradMobileTopNavBar";
 import "./smallScreen.css";
-const Overview = () => {
+const Overview = ({handelClick}) => {
   const [redHeart, setNormalHeart] = useState(1);
   const [Open, SetOpen] = useState(false);
   const [week, setWeek] = React.useState("week 1");
@@ -389,7 +389,7 @@ const Overview = () => {
                               <FavoriteBorderIcon sx={{ color: "#62585D" }} />
                             )}
                           </Box>
-                          <Link className='openBox' to='/weekly'>
+                          <Link className='openBox' onClick={()=>handelClick(6)}>
                             open {item.openIcon}
                           </Link>
                         </Box>

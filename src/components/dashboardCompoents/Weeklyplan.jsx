@@ -8,7 +8,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Logo from "../../assest/logo.png";
 import Ingredients from "./Ingredients";
-const Weeklyplan = () => {
+const Weeklyplan = ({handelClick}) => {
   const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
